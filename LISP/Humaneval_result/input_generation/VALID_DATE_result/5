@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `date` with an invalid day for months with 31 days.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_VALID_DATE {
+    
+    @Test
+    public void testInvalidDayForMonthsWith31Days() {
+        assertFalse(VALID_DATE.valid_date("04-31-2022")); // April has 30 days, so 31 is an invalid day
+        assertFalse(VALID_DATE.valid_date("06-31-2022")); // June has 30 days, so 31 is an invalid day
+        assertFalse(VALID_DATE.valid_date("09-31-2022")); // September has 30 days, so 31 is an invalid day
+        assertFalse(VALID_DATE.valid_date("11-31-2022")); // November has 30 days, so 31 is an invalid day
+    }
+}
+```
+
+In this test case, we are checking if the method `valid_date` correctly identifies dates with an invalid day for months with 31 days.

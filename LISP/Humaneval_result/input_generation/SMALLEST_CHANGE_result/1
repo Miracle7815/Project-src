@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SMALLEST_CHANGE {
+
+    @Test
+    public void testSmallestChange_NullArray() {
+        int[] arr = null;
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `smallest_change` method with a null array as input, as specified in the input specification. The expected result is 0 since there are no elements to compare in a null array.

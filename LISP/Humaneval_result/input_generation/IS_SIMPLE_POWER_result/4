@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_simple_power` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SIMPLE_POWER {
+
+    @Test
+    public void testIsSimplePower_1() {
+        assertTrue(IS_SIMPLE_POWER.is_simple_power(1, 2));
+    }
+
+    @Test
+    public void testIsSimplePower_2() {
+        assertTrue(IS_SIMPLE_POWER.is_simple_power(27, 3));
+    }
+
+    @Test
+    public void testIsSimplePower_3() {
+        assertTrue(IS_SIMPLE_POWER.is_simple_power(1, 3));
+    }
+
+    @Test
+    public void testIsSimplePower_4() {
+        assertTrue(IS_SIMPLE_POWER.is_simple_power(1, 5));
+    }
+
+    @Test
+    public void testIsSimplePower_5() {
+        assertTrue(IS_SIMPLE_POWER.is_simple_power(625, 5));
+    }
+}
+```
+
+In the above test cases, we are testing the `is_simple_power` method with different combinations of `x` and `n` values that satisfy the input specification. The `assertTrue` method is used to assert that the result of the method matches the expected output.

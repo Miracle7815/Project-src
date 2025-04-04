@@ -1,0 +1,28 @@
+According to the signature of the code, we can see that the method `equalsIgnoreMissingFractionDigits` takes two `double` values as input parameters.
+The input specification states that `accurate` is a finite value and `approximate` is negative infinity.
+
+Based on the input specification, we can provide the following test inputs:
+
+Example 1:
+- Part 1. The objects initialized:
+```java
+double accurate = 10.0;
+double approximate = Double.NEGATIVE_INFINITY;
+```
+
+- Part 2. Required import statements:
+```java
+import java.lang.Double;
+```
+
+Example 2:
+- Part 1. The objects initialized:
+```java
+double accurate = 3.14;
+double approximate = Double.NEGATIVE_INFINITY;
+```
+
+- Part 2. Required import statements:
+```java
+import java.lang.Double;
+```

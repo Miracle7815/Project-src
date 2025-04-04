@@ -1,0 +1,49 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `PARSE_MUSIC` class:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import java.util.ArrayList;
+
+public class PARSE_MUSICTest {
+
+    @Test
+    public void testParseMusic_WithMappedNotes() {
+        String musicString = "o o| .| o";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(2);
+        expected.add(1);
+        expected.add(4);
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testParseMusic_WithUnmappedNotes() {
+        String musicString = "o x .| o";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        // Assuming 'x' is an unmapped note, it should not be added to the result
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testParseMusic_EmptyString() {
+        String musicString = "";
+        List<Integer> expected = new ArrayList<>();
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `parse_music` method of the `PARSE_MUSIC` class with different scenarios such as mapped notes, unmapped notes, and an empty string.

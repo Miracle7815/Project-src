@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVEN_Test {
+
+    @Test
+    public void testSortEven_NullInput() {
+        int[] l = null;
+        int[] expected = null;
+        int[] result = SORT_EVEN.sort_even(l);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+This test case covers the scenario where the input array `l` is null.

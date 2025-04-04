@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_PALINDROME {
+
+    @Test
+    public void testIsPalindrome_singleCharacter() {
+        String text = "a";
+        boolean result = IS_PALINDROME.is_palindrome(text);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsPalindrome_singleCharacter_false() {
+        String text = "b";
+        boolean result = IS_PALINDROME.is_palindrome(text);
+        assertFalse(result);
+    }
+}
+```

@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_ODD_COUNT {
+    
+    @Test
+    public void testEmptyList() {
+        ArrayList<String> lst = new ArrayList<>();
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        assertEquals(0, result.size());
+    }
+    
+    @Test
+    public void testSingleElementList() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("12345");
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        assertEquals(1, result.size());
+        assertEquals("the number of odd elements 3 in the string 3 of the input.", result.get(0));
+    }
+    
+    @Test
+    public void testMultipleElementList() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("2468");
+        lst.add("13579");
+        lst.add("111");
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        assertEquals(3, result.size());
+        assertEquals("the number of odd elements 0 in the string 0 of the input.", result.get(0));
+        assertEquals("the number of odd elements 5 in the string 5 of the input.", result.get(1));
+        assertEquals("the number of odd elements 3 in the string 3 of the input.", result.get(2));
+    }
+}
+```
+
+In the above test cases, we are testing the `odd_count` method with an empty list, a list with a single element, and a list with multiple elements to cover different scenarios.

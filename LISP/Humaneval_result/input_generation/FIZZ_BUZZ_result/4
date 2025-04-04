@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzz_1() {
+        int result = FIZZ_BUZZ.fizz_buzz(77);
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_2() {
+        int result = FIZZ_BUZZ.fizz_buzz(143);
+        assertEquals(1, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_3() {
+        int result = FIZZ_BUZZ.fizz_buzz(286);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `fizz_buzz` method of the `FIZZ_BUZZ` class with different inputs that satisfy the input specification provided.

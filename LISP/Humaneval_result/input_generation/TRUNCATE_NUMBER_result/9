@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+
+public class TestTRUNCATE_NUMBER {
+    
+    @Test
+    public void testTruncateNumber_PositiveInfinity() {
+        double number = Double.POSITIVE_INFINITY;
+        double result = TRUNCATE_NUMBER.truncate_number(number);
+        // Since positive infinity % 1.0 is NaN, we need to check for NaN using Double.isNaN()
+        org.junit.Assert.assertTrue(Double.isNaN(result));
+    }
+}
+```
+
+This test case covers the scenario where the input number is positive infinity.

@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MONOTONICTest {
+
+    @Test
+    public void testMonotonic_1() {
+        int[] l = {1, 2, 3, 4, 5};
+        assertTrue(MONOTONIC.monotonic(l));
+    }
+
+    @Test
+    public void testMonotonic_2() {
+        int[] l = {5, 4, 3, 2, 1};
+        assertTrue(MONOTONIC.monotonic(l));
+    }
+
+    @Test
+    public void testMonotonic_3() {
+        int[] l = {1, 3, 2, 4, 5};
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to check the `monotonic` method with different input arrays.
+- The first two test cases check for strictly increasing and strictly decreasing sequences, which should return true.
+- The third test case checks for an array that is not sorted but has a strictly increasing sequence, which should return false.

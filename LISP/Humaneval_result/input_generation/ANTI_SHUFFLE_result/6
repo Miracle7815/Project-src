@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains words with varying lengths.
+
+Here is an example of how we can write test cases for the `anti_shuffle` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ANTI_SHUFFLE {
+    
+    @Test
+    public void testAntiShuffle_1() {
+        String input = "hello world";
+        String expectedOutput = "ehllo dlorw";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testAntiShuffle_2() {
+        String input = "testing shuffle method";
+        String expectedOutput = "eginstt eflsuh dehotm";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `anti_shuffle` method with different inputs containing words with varying lengths. The expected output is based on sorting the characters within each word in the input string.

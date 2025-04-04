@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSOLVE_STRING {
+
+    @Test
+    public void testNullString() {
+        String result = SOLVE_STRING.solve_string(null);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `solve_string` method with a `null` input string as per the input specification. The expected result is an empty string `""`.

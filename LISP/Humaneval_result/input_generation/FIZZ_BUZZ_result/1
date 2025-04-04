@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzz_NegativeInput() {
+        int result = FIZZ_BUZZ.fizz_buzz(-5);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_ZeroInput() {
+        int result = FIZZ_BUZZ.fizz_buzz(0);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_PositiveInput() {
+        int result = FIZZ_BUZZ.fizz_buzz(20);
+        assertEquals(1, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `fizz_buzz` method with negative input, zero input, and positive input as per the input specification provided.

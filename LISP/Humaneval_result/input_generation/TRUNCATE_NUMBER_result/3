@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `truncate_number` method with a zero input. Here is the code snippet with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestTRUNCATE_NUMBER {
+    
+    @Test
+    public void testTruncateNumberWithZeroInput() {
+        double number = 0.0;
+        double result = TRUNCATE_NUMBER.truncate_number(number);
+        assertEquals(0.0, result, 0.0001);
+    }
+}
+```

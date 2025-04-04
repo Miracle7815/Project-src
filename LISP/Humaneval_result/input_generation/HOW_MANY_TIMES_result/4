@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestHOW_MANY_TIMES {
+
+    @Test
+    public void testHowManyTimes_1() {
+        String string = "hellohellohello";
+        String substring = "hello";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testHowManyTimes_2() {
+        String string = "ababababab";
+        String substring = "ab";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testHowManyTimes_3() {
+        String string = "programmingprogramming";
+        String substring = "gram";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(2, result);
+    }
+}
+``` 
+
+These test cases cover different scenarios where the `substring` occurs multiple times in the `string`.

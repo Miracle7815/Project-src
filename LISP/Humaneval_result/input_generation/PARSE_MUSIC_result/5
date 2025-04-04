@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import java.util.ArrayList;
+
+public class PARSE_MUSIC_Test {
+
+    @Test
+    public void testParseMusic_NullInput() {
+        List<Integer> expected = new ArrayList<>();
+        String music_string = null;
+        List<Integer> result = PARSE_MUSIC.parse_music(music_string);
+        assertEquals(expected, result);
+    }
+}
+```

@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `do_algebra` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DO_ALGEBRA {
+
+    @Test
+    public void testDoAlgebra_Addition() throws NumberFormatException, ScriptException {
+        String[] operator = {"+", "*", "-"};
+        int[] operand = {5, 3, 2, 4};
+        double result = DO_ALGEBRA.do_algebra(operator, operand);
+        assertEquals(11.0, result, 0.001);
+    }
+
+    @Test
+    public void testDoAlgebra_Multiplication() throws NumberFormatException, ScriptException {
+        String[] operator = {"*", "+"};
+        int[] operand = {2, 3, 4};
+        double result = DO_ALGEBRA.do_algebra(operator, operand);
+        assertEquals(14.0, result, 0.001);
+    }
+}
+```
+
+In the above test cases, we are testing the `do_algebra` method with different sets of operators and operands to cover different arithmetic operations.

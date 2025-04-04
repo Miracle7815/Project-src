@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` list with special values like null or non-integer elements.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_SUM_PRODUCT {
+    
+    @Test
+    public void testSpecialValues_NullElement() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, null, 4));
+        Integer[] expected = {7, 0}; // Sum of 1, 2, and 4 is 7, product is 0
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+    
+    @Test
+    public void testSpecialValues_NonIntegerElement() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, "4"));
+        Integer[] expected = {6, 0}; // Sum of 1, 2, and 3 is 6, product is 0 (due to non-integer element)
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to cover scenarios with special values like null and non-integer elements in the `numbers` list.

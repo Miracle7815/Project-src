@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_ANY_INT {
+
+    @Test
+    public void testInvalidTriangle() {
+        assertFalse(ANY_INT.any_int(3.5, 4.5, 5.0));
+    }
+
+    @Test
+    public void testInvalidTriangle2() {
+        assertFalse(ANY_INT.any_int(1.1, 2.2, 3.3));
+    }
+
+    @Test
+    public void testInvalidTriangle3() {
+        assertFalse(ANY_INT.any_int(2.0, 3.0, 5.0));
+    }
+}
+```
+
+In the above test cases, we are testing the `any_int` method with input values that do not satisfy the condition for forming a valid integer triangle. The `assertFalse` method is used to assert that the method should return false for these invalid inputs.

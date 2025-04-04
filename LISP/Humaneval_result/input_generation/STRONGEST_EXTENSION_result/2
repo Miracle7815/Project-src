@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRONGEST_EXTENSION {
+
+    @Test
+    public void testStrongestExtension_1() {
+        String class_name = null;
+        String[] extensions = {"txt", "java", "html", "css"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals(null + ".java", result);
+    }
+
+    @Test
+    public void testStrongestExtension_2() {
+        String class_name = null;
+        String[] extensions = {"png", "jpg", "gif", "bmp"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals(null + ".png", result);
+    }
+}
+```
+
+These test cases cover scenarios where the `class_name` is null and the `extensions` array contains different sets of strings.

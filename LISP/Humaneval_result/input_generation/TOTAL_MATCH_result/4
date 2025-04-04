@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `total_match` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TOTAL_MATCHTest {
+
+    @Test
+    public void testTotalMatch() {
+        List<String> lst1 = new ArrayList<>();
+        lst1.add("apple");
+        lst1.add("banana");
+        
+        List<String> lst2 = new ArrayList<>();
+        lst2.add("orange");
+        lst2.add("grape");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst1, result);
+    }
+}
+```
+
+In this test case, we are creating two lists `lst1` and `lst2` with strings of varying lengths. We are then calling the `total_match` method with these lists and asserting that the result matches `lst1` since the total length of `lst1` is greater than the total length of `lst2`.

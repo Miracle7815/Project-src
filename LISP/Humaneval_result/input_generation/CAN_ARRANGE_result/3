@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import org.junit.Test;
+
+public class TestCAN_ARRANGE {
+    
+    @Test
+    public void test_can_arrange_singleElement() {
+        int[] arr = {5};
+        int result = CAN_ARRANGE.can_arrange(arr);
+        org.junit.Assert.assertEquals(-1, result);
+    }
+}
+```
+
+This test case covers the scenario where the input array `arr` contains only one element.

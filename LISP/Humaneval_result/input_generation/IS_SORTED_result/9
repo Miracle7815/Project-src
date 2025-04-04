@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `lst` array that contains multiple elements with duplicates and is not sorted.
+
+Here is an example of how we can write test cases for the `is_sorted` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void testIsSorted_NotSorted() {
+        int[] lst = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
+        assertFalse(IS_SORTED.is_sorted(lst));
+    }
+
+    @Test
+    public void testIsSorted_Sorted() {
+        int[] lst = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        assertTrue(IS_SORTED.is_sorted(lst));
+    }
+
+    @Test
+    public void testIsSorted_Duplicates() {
+        int[] lst = {2, 4, 2, 6, 1, 4, 8, 3, 5, 7};
+        assertFalse(IS_SORTED.is_sorted(lst));
+    }
+}
+```
+
+In the above test cases, we are testing the `is_sorted` method with different scenarios - an unsorted array, a sorted array, and an array with duplicates. The `assertTrue` and `assertFalse` methods are used to assert the expected results based on the input arrays.

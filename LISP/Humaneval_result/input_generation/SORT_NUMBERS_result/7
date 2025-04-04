@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` containing multiple words representing numbers with some words not valid.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_NUMBERS {
+    
+    @Test
+    public void testValidNumbers() {
+        String numbers = "one three five seven nine";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("one three five seven nine", sortedNumbers);
+    }
+    
+    @Test
+    public void testInvalidNumbers() {
+        String numbers = "one invalid two three four";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("one two three four", sortedNumbers);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, one with valid numbers and one with invalid numbers.
+- We call the `sort_numbers` method with the input numbers and assert that the sorted result matches the expected output.

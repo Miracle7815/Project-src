@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class Test_ADD_ELEMENTS {
+    
+    @Test
+    public void testAddElements_NullArray() {
+        ArrayList<Integer> arr = null;
+        int k = 5;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testAddElements_EmptyArray() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int k = 3;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testAddElements_ValidInput() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(45);
+        arr.add(6);
+        int k = 3;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(174, result);
+    }
+}
+

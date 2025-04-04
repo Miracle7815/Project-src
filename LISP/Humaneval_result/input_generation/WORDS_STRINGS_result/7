@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `words_strings` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class Test_WORDS_STRINGS {
+
+    @Test
+    public void testWordsStrings_WithSpecialCharacters() {
+        String input = "hello,world!how,are;you";
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("hello");
+        expected.add("world!how");
+        expected.add("are;you");
+
+        ArrayList<String> result = WORDS_STRINGS.words_strings(input);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testWordsStrings_EmptyString() {
+        String input = "";
+        ArrayList<String> expected = new ArrayList<>();
+
+        ArrayList<String> result = WORDS_STRINGS.words_strings(input);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testWordsStrings_NullString() {
+        String input = null;
+        ArrayList<String> expected = new ArrayList<>();
+
+        ArrayList<String> result = WORDS_STRINGS.words_strings(input);
+
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `words_strings` method with different inputs including a string with special characters, an empty string, and a null string. The expected output is compared with the actual output to ensure the correctness of the method.

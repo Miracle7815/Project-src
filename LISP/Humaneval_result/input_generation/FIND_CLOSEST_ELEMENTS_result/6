@@ -1,0 +1,19 @@
+Based on the provided method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_FIND_CLOSEST_ELEMENTS {
+
+    @Test
+    public void testFindClosestElements() {
+        double[] numbers = {3.0, 3.0, 3.0, 3.0, 3.0};
+        double[] expected = {3.0, 3.0};
+        double[] result = FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers);
+        assertArrayEquals(expected, result, 0.0);
+    }
+}
+```
+
+In this test case, we are testing the `find_closest_elements` method with an input array where all elements have the same value. The expected result is an array containing the same value twice.

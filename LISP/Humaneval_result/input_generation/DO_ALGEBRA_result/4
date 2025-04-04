@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios where the `operator` contains invalid arithmetic operators and the `operand` contains valid integers. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DO_ALGEBRA {
+    
+    @Test
+    public void testInvalidOperator() {
+        String[] operator = {"+", "*", "-", "&"};
+        int[] operand = {5, 3, 2, 1};
+        try {
+            double result = DO_ALGEBRA.do_algebra(operator, operand);
+            // If the method throws an exception for invalid operator, the test will fail
+            assertEquals(Double.NaN, result, 0.001);
+        } catch (NumberFormatException | ScriptException e) {
+            // This is expected for invalid operator, so the test should pass
+        }
+    }
+    
+    @Test
+    public void testValidInput() {
+        String[] operator = {"+", "*", "-"};
+        int[] operand = {5, 3, 2, 1};
+        try {
+            double result = DO_ALGEBRA.do_algebra(operator, operand);
+            // Add the expected result based on the input values
+            assertEquals(6.0, result, 0.001);
+        } catch (NumberFormatException | ScriptException e) {
+            // This should not happen for valid input, so the test will fail
+            assertEquals("Exception occurred for valid input", e.getMessage());
+        }
+    }
+}
+```
+
+These test cases cover the scenarios where the `operator` contains an invalid arithmetic operator and where the `operand` contains valid integers.

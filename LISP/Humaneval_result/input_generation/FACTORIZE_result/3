@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of negative numbers for the input `n` and verify that the `factorize` method returns the correct list of factors.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFACTORIZE {
+    
+    @Test
+    public void testNegativeNumber() {
+        int n = -12;
+        List<Integer> expectedFactors = new ArrayList<>();
+        expectedFactors.add(-1);
+        expectedFactors.add(2);
+        expectedFactors.add(2);
+        expectedFactors.add(3);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expectedFactors, result);
+    }
+}
+```
+
+In this test case, we are testing the `factorize` method with a negative number `-12` and expecting the factors to be `-1, 2, 2, 3`. The test will pass if the actual result matches the expected list of factors.

@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVENTest {
+
+    @Test
+    public void testSort_even_withDuplicates() {
+        int[] input = {3, 6, 2, 6, 1, 4};
+        int[] expectedOutput = {2, 6, 1, 6, 3, 4};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testSort_even_withDifferentDuplicates() {
+        int[] input = {5, 2, 5, 1, 2, 4};
+        int[] expectedOutput = {2, 5, 1, 5, 2, 4};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sort_even` method with arrays containing duplicate elements as specified in the input specification. The `assertArrayEquals` method is used to compare the expected output with the result obtained from the method.

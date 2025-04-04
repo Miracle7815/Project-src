@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains multiple elements in descending order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRANGE_SORT_LIST {
+
+    @Test
+    public void testDescendingOrder() {
+        List<Integer> lst = new ArrayList<>(Arrays.asList(10, 8, 6, 4, 2));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(2, 10, 4, 8, 6));
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testDescendingOrderWithNegativeNumbers() {
+        List<Integer> lst = new ArrayList<>(Arrays.asList(-5, -8, -10, -15));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(-15, -5, -10, -8));
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `strange_sort_list` method with descending order lists containing both positive and negative numbers.

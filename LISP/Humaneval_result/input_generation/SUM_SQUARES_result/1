@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARES {
+
+    @Test
+    public void testEmptyArray() {
+        int[] lst = {};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testNullArray() {
+        int[] lst = null;
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover the scenarios where the input array `lst` is empty or null, as specified in the input specification.

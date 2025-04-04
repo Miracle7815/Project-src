@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `prod_signs` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class PROD_SIGNSTest {
+
+    @Test
+    public void testEmptyArray() {
+        int[] arr = {};
+        int result = PROD_SIGNS.prod_signs(arr);
+        assertEquals(-10, result);
+    }
+
+    @Test
+    public void testPositiveNumbers() {
+        int[] arr = {2, 3, 4};
+        int result = PROD_SIGNS.prod_signs(arr);
+        assertEquals(18, result);
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        int[] arr = {-2, -3, -4};
+        int result = PROD_SIGNS.prod_signs(arr);
+        assertEquals(-18, result);
+    }
+
+    @Test
+    public void testMixedNumbers() {
+        int[] arr = {-2, 3, -4};
+        int result = PROD_SIGNS.prod_signs(arr);
+        assertEquals(14, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `prod_signs` method with different scenarios such as an empty array, an array with all positive numbers, an array with all negative numbers, and an array with mixed positive and negative numbers.

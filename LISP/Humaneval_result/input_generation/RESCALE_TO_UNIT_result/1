@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class RESCALE_TO_UNITTest {
+
+    @Test
+    public void testRescaleToUnit_emptyArray() {
+        double[] numbers = new double[]{};
+        double[] expected = new double[]{};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+}
+```
+
+In this test case, we are testing the `rescale_to_unit` method with an empty array as input. The expected result is also an empty array. The `assertArrayEquals` method is used to compare the expected and actual arrays. The delta value of `0.0001` is used for double comparison precision.

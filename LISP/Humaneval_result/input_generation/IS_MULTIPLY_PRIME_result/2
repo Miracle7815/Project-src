@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `a` which is a prime number for testing the `is_multiply_prime` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_MULTIPLY_PRIME {
+    
+    @Test
+    public void testIsMultiplyPrime_1() {
+        assertTrue(IS_MULTIPLY_PRIME.is_multiply_prime(5));
+    }
+    
+    @Test
+    public void testIsMultiplyPrime_2() {
+        assertTrue(IS_MULTIPLY_PRIME.is_multiply_prime(17));
+    }
+    
+    @Test
+    public void testIsMultiplyPrime_3() {
+        assertTrue(IS_MULTIPLY_PRIME.is_multiply_prime(23));
+    }
+}
+```
+
+In the above test cases, we are testing the `is_multiply_prime` method with prime numbers 5, 17, and 23 as input, as specified in the input specification.

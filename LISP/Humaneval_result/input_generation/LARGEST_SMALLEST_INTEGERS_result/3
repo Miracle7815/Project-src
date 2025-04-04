@@ -1,0 +1,21 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario where the input array `lst` contains only negative integers. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+    
+    @Test
+    public void testLargestSmallestIntegers_OnlyNegativeIntegers() {
+        int[] lst = {-5, -10, -3, -7, -1};
+        int[] expected = {-1, 0}; // Expected output where max_negative is -1 and min_positive is 0
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are passing an array `lst` containing only negative integers to the `largest_smallest_integers` method and asserting that the output array matches the expected array where `max_negative` is the largest negative integer in the input array and `min_positive` is set to 0 as there are no positive integers in the input array.

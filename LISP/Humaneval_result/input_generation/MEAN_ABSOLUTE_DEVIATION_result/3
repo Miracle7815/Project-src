@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `mean_absolute_deviation` method:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class MEAN_ABSOLUTE_DEVIATIONTest {
+
+    @Test
+    public void testMeanAbsoluteDeviation_singleElementPositive() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(5.0);
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(0.0, result, 0.0001);
+    }
+
+    @Test
+    public void testMeanAbsoluteDeviation_singleElementNegative() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(-3.0);
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(0.0, result, 0.0001);
+    }
+
+    @Test
+    public void testMeanAbsoluteDeviation_singleElementZero() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(0.0);
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(0.0, result, 0.0001);
+    }
+}
+```
+
+In the above test cases, we are testing the `mean_absolute_deviation` method with single-element lists containing positive, negative, and zero values. The expected result for all these cases is 0.0, as the absolute deviation from the mean of a single element is always 0.

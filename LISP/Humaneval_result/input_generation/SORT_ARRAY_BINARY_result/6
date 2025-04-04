@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `sort_array_binary` method. We need to create instances of `arr` which contains zero and import the required classes.
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_ARRAY_BINARY {
+    
+    @Test
+    public void testSortArrayWithZero() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(0);
+        arr.add(5);
+        arr.add(3);
+        arr.add(0);
+        
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        
+        ArrayList<Integer> expectedArr = new ArrayList<>();
+        expectedArr.add(0);
+        expectedArr.add(0);
+        expectedArr.add(3);
+        expectedArr.add(5);
+        
+        assertEquals(expectedArr, sortedArr);
+    }
+}
+```
+
+In this test case, we are testing the `sort_array_binary` method with an `arr` that contains zero. The expected output after sorting the array based on the number of ones in the binary representation of the integers is provided in `expectedArr`.

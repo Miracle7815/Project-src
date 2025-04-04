@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+First, we need to import the necessary classes and annotations for JUnit testing:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+```
+
+Now, we can write test cases for the `will_it_fly` method:
+
+```java
+import humaneval.correct.WILL_IT_FLY;
+
+public class TestWILL_IT_FLY {
+
+    @Test
+    public void testWillItFly_1() {
+        int[] q = {1, 2, 3, 4, 5};
+        int w = 10;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testWillItFly_2() {
+        int[] q = {3, 3, 3, 3};
+        int w = 8;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testWillItFly_3() {
+        int[] q = {5, 10, 15};
+        int w = 25;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertTrue(result);
+    }
+}
+```
+
+In the test cases above, we are testing the `will_it_fly` method with different input scenarios to cover the conditions specified in the input specification.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SMALLEST_CHANGE {
+
+    @Test
+    public void testAllSameElements() {
+        int[] arr = {5, 5, 5, 5, 5};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testAllSameElementsDifferentSize() {
+        int[] arr = {2, 2, 2, 2, 2, 2, 2};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `smallest_change` method with arrays where all elements are the same. The expected result in these cases is 0, as there are no changes needed when all elements are the same.

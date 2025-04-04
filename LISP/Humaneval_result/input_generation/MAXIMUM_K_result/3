@@ -1,0 +1,42 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAXIMUM_K {
+    
+    @Test
+    public void test_maximum_k_singleElement() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        int k = 1;
+        
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void test_maximum_k_negativeK() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(3);
+        arr.add(7);
+        arr.add(1);
+        arr.add(9);
+        int k = -2;
+        
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios for a single element in the input array and a negative value of `k`. You can add more test cases based on different scenarios to further validate the `maximum_k` method.

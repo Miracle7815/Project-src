@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVENTest {
+
+    @Test
+    public void testSort_even_oddLength() {
+        int[] input = {3, 7, 2, 5, 1};
+        int[] expected = {2, 7, 1, 5, 3};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSort_even_oddLength2() {
+        int[] input = {9, 4, 6, 2, 8, 1};
+        int[] expected = {2, 4, 1, 6, 8, 9};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sort_even` method from the `SORT_EVEN` class with arrays of odd length as per the input specification. The expected output arrays are defined based on the logic of the method.

@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FILE_NAME_CHECK_Test {
+
+    @Test
+    public void testValidFileName() {
+        String file_name = "example";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testInvalidFileNameWithDot() {
+        String file_name = "invalid.file";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void testInvalidFileNameWithDigits() {
+        String file_name = "file123";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void testInvalidFileNameWithUpperCase() {
+        String file_name = "File";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+}
+```

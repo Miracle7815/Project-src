@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains multiple elements in random order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRANGE_SORT_LIST {
+
+    @Test
+    public void testStrangeSortList() {
+        List<Integer> lst = new ArrayList<>(Arrays.asList(5, 2, 8, 1, 3));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(1, 8, 2, 5, 3));
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testStrangeSortListEmptyList() {
+        List<Integer> lst = new ArrayList<>();
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testStrangeSortListSingleElement() {
+        List<Integer> lst = new ArrayList<>(Arrays.asList(10));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(10));
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created test cases for the `strange_sort_list` method with different scenarios - a list with multiple elements in random order, an empty list, and a list with a single element.

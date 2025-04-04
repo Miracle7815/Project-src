@@ -1,0 +1,51 @@
+Based on the provided API method and input specification, we need to create test cases for the `sort_array_binary` method. We will need to create instances of `arr` which contains both positive and negative integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class TEST_SORT_ARRAY_BINARY {
+    
+    @Test(timeout = 4000)
+    public void testSortArrayBinary_1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        arr.add(-3);
+        arr.add(7);
+        arr.add(-1);
+        
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        
+        ArrayList<Integer> expectedArr = new ArrayList<>();
+        expectedArr.add(-1);
+        expectedArr.add(-3);
+        expectedArr.add(5);
+        expectedArr.add(7);
+        
+        org.junit.Assert.assertEquals(expectedArr, sortedArr);
+    }
+    
+    @Test(timeout = 4000)
+    public void testSortArrayBinary_2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-10);
+        arr.add(15);
+        arr.add(-5);
+        arr.add(3);
+        
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        
+        ArrayList<Integer> expectedArr = new ArrayList<>();
+        expectedArr.add(-5);
+        expectedArr.add(3);
+        expectedArr.add(15);
+        expectedArr.add(-10);
+        
+        org.junit.Assert.assertEquals(expectedArr, sortedArr);
+    }
+}
+```
+
+These test cases cover scenarios where the input array `arr` contains both positive and negative integers.

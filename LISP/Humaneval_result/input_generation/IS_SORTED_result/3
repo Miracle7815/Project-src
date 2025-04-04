@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void testIsSorted_singleElement() {
+        int[] lst = {5};
+        boolean result = IS_SORTED.is_sorted(lst);
+        assertTrue(result);
+    }
+}
+```
+
+In this test case, we are testing the `is_sorted` method with an input array `lst` that contains only one element. The expected behavior is that the method should return `true` since a single element array is always considered sorted.

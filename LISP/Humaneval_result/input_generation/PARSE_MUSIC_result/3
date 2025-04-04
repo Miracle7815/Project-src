@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `music_string` that contain notes not mapped in the `note_map`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_PARSE_MUSIC {
+
+    @Test
+    public void testNotesNotMapped() {
+        String music_string = "c d e"; // Notes 'c', 'd', 'e' are not mapped in the note_map
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> result = PARSE_MUSIC.parse_music(music_string);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testEmptyString() {
+        String music_string = "";
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> result = PARSE_MUSIC.parse_music(music_string);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test code, we have two test cases:
+1. `testNotesNotMapped`: Tests the scenario where the `music_string` contains notes that are not mapped in the `note_map`.
+2. `testEmptyString`: Tests the scenario where the `music_string` is an empty string.
+
+These test cases cover the input specification provided for the `parse_music` method.

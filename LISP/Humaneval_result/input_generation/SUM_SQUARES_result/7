@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains positive numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARES {
+    
+    @Test
+    public void test_sum_squares_1() {
+        int[] lst = {1, 2, 3, 4, 5};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(55, result);
+    }
+    
+    @Test
+    public void test_sum_squares_2() {
+        int[] lst = {2, 3, 4, 5, 6};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(54, result);
+    }
+}
+```
+
+In the above code, we have created two test cases with different input arrays containing positive numbers. The expected results are calculated manually based on the provided logic in the `sum_squares` method.

@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_MIN_SUBARRAY_SUM {
+
+    @Test
+    public void testAllZeroElements() {
+        ArrayList<Long> nums = new ArrayList<>();
+        nums.add(0L);
+        nums.add(0L);
+        nums.add(0L);
+        
+        long result = MIN_SUBARRAY_SUM.min_subarray_sum(nums);
+        
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the `nums` list contains multiple elements with all elements being zero. The expected result is 0.

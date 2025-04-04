@@ -1,0 +1,51 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class MAKE_A_PILE_Test {
+    
+    @Test
+    public void testMakeAPileWithPositiveInteger() {
+        int n = 5;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(7);
+        expected.add(9);
+        expected.add(11);
+        expected.add(13);
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+        assertTrue(result.isEmpty());
+    }
+    
+    @Test
+    public void testMakeAPileWithZero() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>();
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+        assertTrue(result.isEmpty());
+    }
+    
+    @Test
+    public void testMakeAPileWithLargeNumber() {
+        int n = 100;
+        ArrayList<Integer> expected = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            expected.add(100 + 2 * i);
+        }
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+        assertTrue(result.isEmpty());
+    }
+}
+``` 
+
+In the above test cases, we are testing the `make_a_pile` method with different input values including a positive integer, zero, and a large number. We are checking if the generated ArrayList matches the expected values and if the generated ArrayList is empty as specified in the input specification.

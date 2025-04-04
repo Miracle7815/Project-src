@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+
+    @Test
+    public void testLargestSmallestIntegers_NullList() {
+        int[] lst = null;
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        int[] expected = {0, 0};
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `largest_smallest_integers` method with a `null` input list `lst`. The expected result is an array containing `{0, 0}` as specified in the input specification.

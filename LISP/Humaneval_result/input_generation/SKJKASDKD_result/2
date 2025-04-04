@@ -1,0 +1,34 @@
+Based on the provided API method and input specification, we can write test cases for the `skjkasdkd` method. We need to test the method with different inputs, including a non-prime number as specified.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSKJKASDKD {
+    
+    @Test
+    public void testNonPrimeNumber() {
+        int[] lst = {4, 7, 10, 13};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(1, result);
+    }
+    
+    @Test
+    public void testAllPrimes() {
+        int[] lst = {2, 3, 5, 7, 11};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(1, result);
+    }
+    
+    @Test
+    public void testMixedNumbers() {
+        int[] lst = {6, 8, 11, 15, 17};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(8, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `skjkasdkd` method with different arrays containing both prime and non-prime numbers. The expected results are based on the logic inside the method.

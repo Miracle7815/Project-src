@@ -1,0 +1,44 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `count_nums` method. We need to create instances of `ArrayList<Integer>` with different scenarios, including the case where `arr` is null.
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_COUNT_NUMS {
+    
+    @Test
+    public void testCountNums_NullArrayList() {
+        ArrayList<Integer> arr = null;
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testCountNums_EmptyArrayList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testCountNums_PositiveNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(456);
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testCountNums_NegativeNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-123);
+        arr.add(-456);
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above code, we have included test cases for scenarios where the input `arr` is null, empty, contains positive numbers, and contains negative numbers. Each test case verifies the expected count of numbers returned by the `count_nums` method.

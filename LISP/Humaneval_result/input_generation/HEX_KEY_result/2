@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_HEX_KEY {
+    
+    @Test
+    public void testAllCharactersNotMatching() {
+        String num = "AFCG";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testSomeCharactersMatching() {
+        String num = "B2D3F5";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(3, result);
+    }
+    
+    @Test
+    public void testAllCharactersMatching() {
+        String num = "BDBDBD";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(6, result);
+    }
+}
+```
+
+These test cases cover scenarios where all characters in `num` do not match, some characters match, and all characters match the specified characters in the `hex_key` method.

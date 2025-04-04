@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MATCH_PARENS_Test {
+
+    @Test
+    public void testEmptyArray() {
+        String[] lst = new String[0];
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```
+
+In this test case, we are testing the `match_parens` method with an empty array as input, which should return "No" according to the provided input specification.

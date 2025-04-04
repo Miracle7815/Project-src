@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class TestFACTORIAL {
+    
+    @Test
+    public void testFactorialWithZero() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>();
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `factorial` method with input `n` as 0. The expected result is an empty ArrayList since the loop will not execute for `n = 0`.

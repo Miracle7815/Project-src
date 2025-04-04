@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class IS_BOREDTest {
+
+    @Test
+    public void testIsBored_WithValidInput() {
+        String S = "I am bored. I need some entertainment!";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testIsBored_WithInvalidInput() {
+        String S = "This is not about boredom.";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(0, result);
+    }
+}
+```

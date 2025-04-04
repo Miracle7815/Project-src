@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst1` and `lst2` as ArrayLists of Integers and test the `exchange` method with different scenarios.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestEXCHANGE {
+    
+    @Test
+    public void testExchange_1() {
+        ArrayList<Integer> lst1 = new ArrayList<>(Arrays.asList(1, 3, 5, 7));
+        ArrayList<Integer> lst2 = new ArrayList<>(Arrays.asList(2, 4, 6, 8));
+        String result = EXCHANGE.exchange(lst1, lst2);
+        assertEquals("YES", result);
+    }
+    
+    @Test
+    public void testExchange_2() {
+        ArrayList<Integer> lst1 = new ArrayList<>(Arrays.asList(2, 4, 6, 8));
+        ArrayList<Integer> lst2 = new ArrayList<>(Arrays.asList(1, 3, 5, 7));
+        String result = EXCHANGE.exchange(lst1, lst2);
+        assertEquals("NO", result);
+    }
+    
+    @Test
+    public void testExchange_3() {
+        ArrayList<Integer> lst1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        ArrayList<Integer> lst2 = new ArrayList<>(Arrays.asList(6, 7, 8, 9, 10));
+        String result = EXCHANGE.exchange(lst1, lst2);
+        assertEquals("YES", result);
+    }
+}
+```
+
+In the above code, we have created three test cases to cover different scenarios where `lst1` contains a mix of odd and even numbers, and `lst2` can be any list. The test cases verify if the `exchange` method returns the correct output "YES" or "NO" based on the number of even and odd elements in the input lists.

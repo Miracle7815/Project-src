@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class TestADD {
+    
+    @Test
+    public void testAdd_negativeNumbers() {
+        int x = -5;
+        int y = -3;
+        int result = ADD.add(x, y);
+        org.junit.Assert.assertEquals(result, -8);
+    }
+}
+```

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `remove_vowels` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REMOVE_VOWELS {
+
+    @Test
+    public void testRemoveVowels_1() {
+        String input = "Hello World!";
+        String expectedOutput = "Hll Wrld!";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testRemoveVowels_2() {
+        String input = "Testing 123";
+        String expectedOutput = "Tstng 123";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testRemoveVowels_3() {
+        String input = "aeiouAEIOU123!@#";
+        String expectedOutput = "123!@#";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary JUnit classes and written test cases for the `remove_vowels` method. Each test case provides an input string with a mix of vowels, consonants, special characters, and numbers, and asserts that the output of the method matches the expected output after removing the vowels.

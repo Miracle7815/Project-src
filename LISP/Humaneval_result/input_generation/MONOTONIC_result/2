@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. 
+
+First, we need to import the required classes and packages for testing:
+
+```java
+import static org.junit.Assert.*;
+import org.junit.Test;
+```
+
+Now, we can write the test cases for the `monotonic` method:
+
+```java
+public class TestMONOTONIC {
+
+    @Test
+    public void testEmptyArray() {
+        int[] l = new int[]{};
+        assertTrue(MONOTONIC.monotonic(l));
+    }
+}
+```
+
+In this test case, we are testing the `monotonic` method with an empty array as input. The expected behavior is that the method should return `true` since an empty array is considered both sorted and reverse sorted.

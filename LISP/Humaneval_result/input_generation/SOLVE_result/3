@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SOLVE_Test {
+
+    @Test
+    public void testSolve_1() {
+        int N = 5;
+        String result = SOLVE.solve(N);
+        assertEquals("101", result);
+    }
+
+    @Test
+    public void testSolve_2() {
+        int N = 7;
+        String result = SOLVE.solve(N);
+        assertEquals("111", result);
+    }
+
+    @Test
+    public void testSolve_3() {
+        int N = 3;
+        String result = SOLVE.solve(N);
+        assertEquals("11", result);
+    }
+}
+```
+
+In the above test cases, we are testing the `solve` method of the `SOLVE` class with different positive integers with a single digit as input. The expected output is the binary representation of the sum of the digits of the input number.

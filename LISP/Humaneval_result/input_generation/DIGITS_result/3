@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create positive integer inputs with only one odd digit for testing the `digits` method in the `DIGITS` class.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DIGITSTest {
+
+    @Test
+    public void testDigitsWithOneOddDigit() {
+        int n = 13579; // Positive integer with only one odd digit
+        int result = DIGITS.digits(n);
+        assertEquals(945, result);
+    }
+}
+```
+
+In this test case, we are testing the `digits` method with a positive integer `n` that has only one odd digit (13579). The expected result is the product of the odd digits (9 * 5 * 3 * 1 = 945).

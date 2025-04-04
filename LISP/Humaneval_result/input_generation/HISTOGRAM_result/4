@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where the input string `s` contains multiple characters with the same frequency. We will need to create test cases with different input strings that satisfy this condition.
+
+Here is an example of a JUnit test class with test cases for the `histogram` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import java.util.HashMap;
+
+public class TestHistogram {
+
+    @Test
+    public void testHistogram_MultipleCharactersWithSameFrequency() {
+        String inputString = "aaabbbccc";
+        HashMap<Character, Integer> expectedOutput = new HashMap<>();
+        expectedOutput.put('a', 3);
+        expectedOutput.put('b', 3);
+        expectedOutput.put('c', 3);
+
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(inputString);
+
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testHistogram_EmptyString() {
+        String inputString = "";
+        HashMap<Character, Integer> expectedOutput = new HashMap<>();
+
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(inputString);
+
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above test class, we have two test cases. The first test case covers the scenario where the input string contains multiple characters with the same frequency. The second test case covers the scenario where the input string is empty.

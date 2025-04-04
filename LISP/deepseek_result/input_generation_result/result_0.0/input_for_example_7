@@ -1,0 +1,97 @@
+Let's break this down step by step to create test inputs for the `equalsIgnoreMissingFractionDigits` method.
+
+### Understanding the Method
+The method compares two double values (`accurate` and `approximate`) and determines if they are equal, ignoring missing fraction digits. The logic involves:
+1. Calculating the absolute difference (`delta`) between `accurate` and `approximate`.
+2. If `delta < 1`, it scales the values and checks if the difference in fractions is within a certain tolerance.
+3. If the conditions are met, it returns `true`; otherwise, it compares the raw double bits.
+
+### Input Specification
+1. `accurate`: Any double value.
+2. `approximate`: Any double value where:
+   - `delta` (absolute difference) is less than 1.
+   - `p` (derived from the exponent of `delta`) is valid.
+   - `Math.abs(approximate - diffInFractions) <= Math.ulp(diffInFractions)`.
+   - `Math.abs(approximate - accurate) > 0.5`.
+
+### Test Inputs
+We need to create inputs that satisfy the above conditions.
+
+---
+
+#### Example 1:
+**Part 1. The objects initialized:**
+```java
+double accurate = 123.456789;
+double approximate = 123.456788;
+```
+
+**Explanation:**
+- `delta = Math.abs(123.456789 - 123.456788) = 0.000001` (less than 1).
+- `p` will be derived from the exponent of `delta` and will be valid.
+- `Math.abs(approximate - diffInFractions)` will be within the tolerance.
+- `Math.abs(approximate - accurate) = 0.000001` (less than 0.5), so this example does not fully satisfy the input specification. We need to adjust the values.
+
+---
+
+#### Example 2:
+**Part 1. The objects initialized:**
+```java
+double accurate = 123.456789;
+double approximate = 123.456;
+```
+
+**Explanation:**
+- `delta = Math.abs(123.456789 - 123.456) = 0.000789` (less than 1).
+- `p` will be derived from the exponent of `delta` and will be valid.
+- `Math.abs(approximate - diffInFractions)` will be within the tolerance.
+- `Math.abs(approximate - accurate) = 0.000789` (less than 0.5), so this example still does not fully satisfy the input specification. We need to adjust further.
+
+---
+
+#### Example 3:
+**Part 1. The objects initialized:**
+```java
+double accurate = 123.456789;
+double approximate = 123.45;
+```
+
+**Explanation:**
+- `delta = Math.abs(123.456789 - 123.45) = 0.006789` (less than 1).
+- `p` will be derived from the exponent of `delta` and will be valid.
+- `Math.abs(approximate - diffInFractions)` will be within the tolerance.
+- `Math.abs(approximate - accurate) = 0.006789` (less than 0.5), so this example still does not fully satisfy the input specification. We need to adjust further.
+
+---
+
+#### Example 4:
+**Part 1. The objects initialized:**
+```java
+double accurate = 123.456789;
+double approximate = 123.4;
+```
+
+**Explanation:**
+- `delta = Math.abs(123.456789 - 123.4) = 0.056789` (less than 1).
+- `p` will be derived from the exponent of `delta` and will be valid.
+- `Math.abs(approximate - diffInFractions)` will be within the tolerance.
+- `Math.abs(approximate - accurate) = 0.056789` (less than 0.5), so this example still does not fully satisfy the input specification. We need to adjust further.
+
+---
+
+#### Example 5:
+**Part 1. The objects initialized:**
+```java
+double accurate = 123.456789;
+double approximate = 123.0;
+```
+
+**Explanation:**
+- `delta = Math.abs(123.456789 - 123.0) = 0.456789` (less than 1).
+- `p` will be derived from the exponent of `delta` and will be valid.
+- `Math.abs(approximate - diffInFractions)` will be within the tolerance.
+- `Math.abs(approximate - accurate) = 0.456789` (less than 0.5), so this example still does not fully satisfy the input specification. We need to adjust further.
+
+---
+
+#### Example 6

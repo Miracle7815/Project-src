@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_HEX_KEY {
+    
+    @Test
+    public void testNullInput() {
+        String num = null;
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(0, result);
+    }
+}
+```
+
+This test case covers the scenario where the input `num` is null, as specified in the input specification.

@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases for the `encode_shift` and `decode_shift` methods. The input specification states that the `string` parameter contains uppercase alphabetic characters only.
+
+Here are the test cases in JUnit format:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift() {
+        String input = "ABC";
+        String expectedOutput = "FGH";
+        String actualOutput = DECODE_SHIFT.encode_shift(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testDecodeShift() {
+        String input = "FGH";
+        String expectedOutput = "ABC";
+        String actualOutput = DECODE_SHIFT.decode_shift(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+```
+
+These test cases cover the encoding and decoding functionality of the `encode_shift` and `decode_shift` methods for uppercase alphabetic characters.

@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_TO_N {
+    
+    @Test
+    public void testSumToN_PositiveInteger() {
+        int n = 5;
+        int expectedResult = 15;
+        int result = SUM_TO_N.sum_to_n(n);
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testSumToN_Zero() {
+        int n = 0;
+        int expectedResult = 0;
+        int result = SUM_TO_N.sum_to_n(n);
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testSumToN_LargeNumber() {
+        int n = 100;
+        int expectedResult = 5050;
+        int result = SUM_TO_N.sum_to_n(n);
+        assertEquals(expectedResult, result);
+    }
+}
+```

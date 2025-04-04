@@ -1,0 +1,52 @@
+Based on the provided API method and input specification, we can write the JUnit test cases as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class TOTAL_MATCHTest {
+
+    @Test
+    public void testTotalMatch_lst1Null() {
+        List<String> lst1 = null;
+        List<String> lst2 = Arrays.asList("apple", "banana", "cherry");
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        assertEquals(lst2, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst1Empty() {
+        List<String> lst1 = new ArrayList<>();
+        List<String> lst2 = Arrays.asList("dog", "cat", "rabbit");
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        assertEquals(lst2, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst2Empty() {
+        List<String> lst1 = Arrays.asList("elephant", "giraffe");
+        List<String> lst2 = new ArrayList<>();
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        assertEquals(lst1, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst1ShorterThan_lst2() {
+        List<String> lst1 = Arrays.asList("red", "blue");
+        List<String> lst2 = Arrays.asList("green", "yellow", "purple");
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        assertEquals(lst1, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst2ShorterThan_lst1() {
+        List<String> lst1 = Arrays.asList("one", "two", "three");
+        List<String> lst2 = Arrays.asList("four", "five");
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        assertEquals(lst2, result);
+    }
+}
+```
+
+In the above test cases, we cover scenarios where `lst1` is null, empty, shorter than `lst2`, longer than `lst2`, and equal in length to `lst2`.

@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `lst` which contains multiple elements without duplicates, and the second smallest element is the smallest element.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Test_NEXT_SMALLEST {
+    
+    @Test
+    public void testNextSmallest_1() {
+        int[] lst = {3, 1, 4, 5, 2};
+        assertEquals(Integer.valueOf(2), NEXT_SMALLEST.next_smallest(lst));
+    }
+    
+    @Test
+    public void testNextSmallest_2() {
+        int[] lst = {9, 7, 5, 3, 1};
+        assertEquals(Integer.valueOf(3), NEXT_SMALLEST.next_smallest(lst));
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes for testing.
+- We create two test cases with different input arrays `lst`.
+- We use the `assertEquals` method to verify that the output of the `next_smallest` method matches the expected second smallest element in the array.

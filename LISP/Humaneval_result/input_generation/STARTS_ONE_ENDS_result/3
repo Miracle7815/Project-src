@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STARTS_ONE_ENDS {
+    
+    @Test
+    public void testStartsOneEnds_2() {
+        int result = STARTS_ONE_ENDS.starts_one_ends(2);
+        assertEquals(90, result);
+    }
+    
+    @Test
+    public void testStartsOneEnds_3() {
+        int result = STARTS_ONE_ENDS.starts_one_ends(3);
+        assertEquals(900, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create a test class `Test_STARTS_ONE_ENDS` to test the `starts_one_ends` method.
+- We define two test methods to test the method with input values 2 and 3 respectively.
+- We use the `assertEquals` method to verify that the actual result matches the expected result for each test case.

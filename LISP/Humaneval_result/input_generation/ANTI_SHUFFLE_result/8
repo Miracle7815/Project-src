@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains words with the same characters in the same order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ANTI_SHUFFLE {
+    
+    @Test
+    public void test_0() {
+        String s = "hello world";
+        String result = ANTI_SHUFFLE.anti_shuffle(s);
+        assertEquals("ehllo dlorw", result);
+    }
+    
+    @Test
+    public void test_1() {
+        String s = "testing shuffle";
+        String result = ANTI_SHUFFLE.anti_shuffle(s);
+        assertEquals("eginstt eflfhsu", result);
+    }
+}
+```

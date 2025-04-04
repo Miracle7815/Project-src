@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzz_1() {
+        int n = 25;
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_2() {
+        int n = 30;
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_3() {
+        int n = 50;
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios where `n` is not a multiple of 11 or 13 and does not contain the digit 7.

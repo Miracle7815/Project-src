@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test cases for the `make_palindrome` method with an empty string as input.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAKE_PALINDROME {
+    
+    @Test
+    public void testMakePalindromeWithEmptyString() {
+        String input = "";
+        String expectedOutput = "";
+        String result = MAKE_PALINDROME.make_palindrome(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In this test case, we are testing the `make_palindrome` method with an empty string as input. The expected output is also an empty string.

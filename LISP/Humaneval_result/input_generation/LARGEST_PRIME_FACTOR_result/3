@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases to test the `largest_prime_factor` method. We need to provide a prime number `n` as input.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestLARGEST_PRIME_FACTOR {
+
+    @Test
+    public void testLargestPrimeFactor() {
+        int n = 17; // Prime number
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(17, result);
+    }
+}
+```
+
+In this test case, we are testing the `largest_prime_factor` method with a prime number `n = 17`. The expected result is `17`, as `17` is a prime number and its largest prime factor is itself.

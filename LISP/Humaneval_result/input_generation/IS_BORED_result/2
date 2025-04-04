@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_IS_BORED {
+    
+    @Test
+    public void testEmptyString() {
+        String S = "";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `is_bored` method with an empty string as input, as specified in the input specification. The expected result is 0, as there are no sentences to check in an empty string.

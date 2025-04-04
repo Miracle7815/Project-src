@@ -1,0 +1,42 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst1` and `lst2`, which contain single strings, and then test the `total_match` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TOTAL_MATCHTest {
+
+    @Test
+    public void testTotalMatch_lst1Shorter() {
+        List<String> lst1 = new ArrayList<>();
+        lst1.add("hello");
+        
+        List<String> lst2 = new ArrayList<>();
+        lst2.add("world");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst1, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst2Shorter() {
+        List<String> lst1 = new ArrayList<>();
+        lst1.add("apple");
+        
+        List<String> lst2 = new ArrayList<>();
+        lst2.add("banana");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst2, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to cover scenarios where `lst1` is shorter than `lst2` and where `lst2` is shorter than `lst1`. The test cases instantiate the lists with single strings and then call the `total_match` method to compare the lengths of the strings in the lists. The assertions verify that the method returns the correct list based on the total length of the strings.

@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class TestMAXIMUM_K {
+    
+    @Test
+    public void testMaximumKWithNullArray() {
+        ArrayList<Integer> arr = null;
+        int k = 3;
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        assertNull(result);
+    }
+    
+    @Test
+    public void testMaximumKWithValidArray() {
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(5, 2, 8, 1, 9, 4));
+        int k = 3;
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(5, 8, 9));
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios for a null array and a valid array with different integer values.

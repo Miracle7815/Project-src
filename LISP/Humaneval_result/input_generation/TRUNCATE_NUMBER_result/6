@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_TRUNCATE_NUMBER {
+
+    @Test
+    public void testTruncate_number() {
+        double number = 123456.789;
+        double result = TRUNCATE_NUMBER.truncate_number(number);
+        assertEquals(0.789, result, 0.0001);
+    }
+}
+```

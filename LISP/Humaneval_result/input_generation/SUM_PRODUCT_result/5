@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `sum_product` method:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SUM_PRODUCT {
+
+    @Test
+    public void testSumProduct_1() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        Integer[] expected = {15, 120};
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSumProduct_2() {
+        List<Integer> numbers = Arrays.asList(-1, 2, -3, 4, -5);
+        Integer[] expected = {-3, 120};
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSumProduct_3() {
+        List<Integer> numbers = Arrays.asList(0, 0, 0, 0);
+        Integer[] expected = {0, 0};
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sum_product` method with different input scenarios containing positive, negative, and zero integers in the `numbers` list. The `assertArrayEquals` method is used to compare the expected result with the actual result returned by the `sum_product` method.

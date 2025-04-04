@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Test_DECIMAL_TO_BINARY {
+    
+    @Test
+    public void testDecimalToBinary_PositiveInteger() {
+        int decimal = 10;
+        String expected = "db1010db";
+        String result = DECIMAL_TO_BINARY.decimal_to_binary(decimal);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testDecimalToBinary_Zero() {
+        int decimal = 0;
+        String expected = "db0db";
+        String result = DECIMAL_TO_BINARY.decimal_to_binary(decimal);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testDecimalToBinary_LargeNumber() {
+        int decimal = 255;
+        String expected = "db11111111db";
+        String result = DECIMAL_TO_BINARY.decimal_to_binary(decimal);
+        assertEquals(expected, result);
+    }
+}
+```
+
+These test cases cover scenarios with a positive decimal integer, zero, and a large number to ensure the correctness of the `decimal_to_binary` method.

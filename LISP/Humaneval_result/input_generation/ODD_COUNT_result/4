@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `lst` which contains strings with only odd digits.
+
+Here is an example of how we can write test cases for the `odd_count` method:
+
+```java
+import java.util.ArrayList;
+
+public class TestODD_COUNT {
+    
+    @Test
+    public void testOddCount_WithOddDigits() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("13579");
+        lst.add("97531");
+        
+        ArrayList<String> expectedResult = new ArrayList<>();
+        expectedResult.add("the number of odd elements 5 in the string 5 of the input.");
+        expectedResult.add("the number of odd elements 5 in the string 5 of the input.");
+        
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In this test case, we are testing the `odd_count` method with input `lst` containing strings with only odd digits. We expect the method to return the correct count of odd elements in each string.

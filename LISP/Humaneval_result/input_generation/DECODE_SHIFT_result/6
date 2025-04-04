@@ -1,0 +1,29 @@
+Based on the provided API method, we need to test the `encode_shift` and `decode_shift` methods from the `DECODE_SHIFT` class. The input specification mentions that the `string` parameter can contain non-alphabetic characters.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DECODE_SHIFT {
+    
+    @Test
+    public void test_encode_shift_withNonAlphabeticCharacters() {
+        String input = "Hello123!";
+        String expectedOutput = "Mjqqt123!";
+        String result = DECODE_SHIFT.encode_shift(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void test_decode_shift_withNonAlphabeticCharacters() {
+        String input = "Mjqqt123!";
+        String expectedOutput = "Hello123!";
+        String result = DECODE_SHIFT.decode_shift(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above test code, we have included test cases for both `encode_shift` and `decode_shift` methods with non-alphabetic characters in the input string.

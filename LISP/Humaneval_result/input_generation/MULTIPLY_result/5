@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MULTIPLY {
+    
+    @Test
+    public void testMultiply_PositiveAndNegative() {
+        int result = MULTIPLY.multiply(15, -7);
+        assertEquals(5, result);
+    }
+    
+    @Test
+    public void testMultiply_PositiveAndNegative2() {
+        int result = MULTIPLY.multiply(20, -3);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test methods to test the `multiply` method of the `MULTIPLY` class.
+- In the test methods, we provide positive and negative numbers as input to test the functionality of the `multiply` method.
+- We use the `assertEquals` method to verify that the actual result matches the expected result.

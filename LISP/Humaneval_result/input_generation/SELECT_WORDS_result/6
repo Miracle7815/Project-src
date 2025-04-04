@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` and `n` to test the `select_words` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SELECT_WORDS {
+
+    @Test
+    public void testSelectWords_1() {
+        String s = "aeiou AEIOU";
+        int n = 5;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("aeiou");
+        expected.add("AEIOU");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSelectWords_2() {
+        String s = "hello world";
+        int n = 3;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("world");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `select_words` method with different inputs. The test cases include creating instances of `s` and `n`, calling the `select_words` method, and asserting the expected output with the actual result.

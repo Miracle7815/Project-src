@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class TestADD {
+    
+    @Test
+    public void testAdd() {
+        int x = 0;
+        int y = 5;
+        int result = ADD.add(x, y);
+        assertEquals(5, result);
+    }
+}
+```
+
+This test case verifies the `add` method of the `ADD` class when `x` is zero and `y` is a non-zero integer.

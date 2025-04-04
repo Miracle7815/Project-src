@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n` and `p` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class MODPTest {
+
+    @Test
+    public void testModp() {
+        int n = -5;
+        int p = 7;
+        int expectedResult = 4;
+        int result = MODP.modp(n, p);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testModp2() {
+        int n = -3;
+        int p = 5;
+        int expectedResult = 2;
+        int result = MODP.modp(n, p);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different values of `n` and `p`.
+- We define the expected results for each test case.
+- We call the `modp` method with the test inputs and compare the actual result with the expected result using `assertEquals`.
+
+You can run these test cases to verify the correctness of the `modp` method.

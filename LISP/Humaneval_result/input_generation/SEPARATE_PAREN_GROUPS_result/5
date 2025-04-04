@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `paren_string` which contains an unbalanced set of parentheses.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_SEPARATE_PAREN_GROUPS {
+    
+    @Test
+    public void testSeparateParenGroups_1() {
+        String paren_string = "((()))()";
+        List<String> expected = new ArrayList<>();
+        expected.add("((()))");
+        expected.add("()");
+        
+        List<String> result = SEPARATE_PAREN_GROUPS.separate_paren_groups(paren_string);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSeparateParenGroups_2() {
+        String paren_string = "((())())";
+        List<String> expected = new ArrayList<>();
+        expected.add("((())())");
+        
+        List<String> result = SEPARATE_PAREN_GROUPS.separate_paren_groups(paren_string);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `separate_paren_groups` method with different input `paren_string` containing unbalanced sets of parentheses.

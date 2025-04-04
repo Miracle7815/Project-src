@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `words_in_sentence` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_WORDS_IN_SENTENCE {
+
+    @Test
+    public void testWordsInSentence_1() {
+        String sentence = "The quick brown fox jumps over the lazy dog";
+        String expectedResult = "The quick brown fox jumps over the lazy dog";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testWordsInSentence_2() {
+        String sentence = "Hello world";
+        String expectedResult = "Hello world";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testWordsInSentence_3() {
+        String sentence = "Java is fun";
+        String expectedResult = "Java is fun";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `words_in_sentence` method with different input sentences to ensure that it returns the expected result as per the input specification.

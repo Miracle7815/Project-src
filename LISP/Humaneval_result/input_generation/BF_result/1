@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestBF {
+    
+    @Test
+    public void testPlanetsBetween() {
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("Venus");
+        expected.add("Earth");
+        expected.add("Mars");
+        
+        ArrayList<String> result = BF.bf("Mercury", "Jupiter");
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testPlanetsBetweenReverseOrder() {
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("Venus");
+        expected.add("Earth");
+        expected.add("Mars");
+        
+        ArrayList<String> result = BF.bf("Jupiter", "Mercury");
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testPlanetsBetweenInvalidInput() {
+        ArrayList<String> expected = new ArrayList<String>();
+        
+        ArrayList<String> result = BF.bf(null, "Mars");
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `bf` method of the `BF` class with different scenarios such as valid planet names in both orders and an invalid input where `planet1` is null.

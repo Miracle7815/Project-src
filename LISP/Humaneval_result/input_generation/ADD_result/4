@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `add` method in the `ADD` class. Here is the code snippet for the test case:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestADD {
+    
+    @Test
+    public void testAdd() {
+        int x = -5;
+        int y = 10;
+        int result = ADD.add(x, y);
+        assertEquals(5, result);
+    }
+}
+```
+
+In this test case, we are testing the `add` method with a negative value for `x` and a positive value for `y`. The expected result is the sum of `x` and `y`, which is 5 in this case.

@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class PARSE_MUSIC_Test {
+
+    @Test
+    public void testEmptyString() {
+        String music_string = "";
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> result = PARSE_MUSIC.parse_music(music_string);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `parse_music` method with an empty string as input. The expected result is an empty list.

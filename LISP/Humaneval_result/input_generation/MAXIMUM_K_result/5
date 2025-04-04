@@ -1,0 +1,51 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `arr` and `k` as input parameters for the `maximum_k` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAXIMUM_K {
+    
+    @Test
+    public void testMaximumK_1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(3);
+        arr.add(7);
+        arr.add(1);
+        arr.add(9);
+        int k = 2;
+        
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(7);
+        expected.add(9);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testMaximumK_2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        arr.add(2);
+        arr.add(8);
+        arr.add(4);
+        int k = 3;
+        
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(5);
+        expected.add(8);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `maximum_k` method with different input scenarios. The test cases instantiate the `arr` ArrayList and `k` value as per the input specification and then compare the expected output with the actual output of the method.

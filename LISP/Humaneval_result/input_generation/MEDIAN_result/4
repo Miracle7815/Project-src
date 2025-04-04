@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `list` which contains an even number of elements.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEDIAN {
+    
+    @Test
+    public void testMedianEvenElements() {
+        int[] list = {4, 7, 2, 9, 5, 1};
+        double result = MEDIAN.median(list);
+        assertEquals(4.5, result, 0.001);
+    }
+    
+    @Test
+    public void testMedianEvenElements2() {
+        int[] list = {10, 20, 30, 40, 50, 60, 70, 80};
+        double result = MEDIAN.median(list);
+        assertEquals(45.0, result, 0.001);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, each with an even number of elements in the `list`.
+- We call the `median` method from the `MEDIAN` class with the test input `list`.
+- We use `assertEquals` to verify that the calculated median matches the expected result with a delta of 0.001.

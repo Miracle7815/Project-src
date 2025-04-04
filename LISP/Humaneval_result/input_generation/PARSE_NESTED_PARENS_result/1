@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_PARSE_NESTED_PARENS {
+    
+    @Test
+    public void test_parse_nested_parens_nullString() {
+        List<Integer> expected = new ArrayList<>();
+        String paren_string = null;
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `parse_nested_parens` method with a `null` input string `paren_string`. The expected result is an empty list.

@@ -1,0 +1,18 @@
+Based on the provided method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ADD_EVEN_AT_ODD {
+
+    @Test
+    public void testAddEvenAtOdd_NullList() {
+        int[] lst = null;
+        int result = ADD_EVEN_AT_ODD.add_even_at_odd(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `add_even_at_odd` method with a null list as input, as specified in the input specification. The expected result is 0 since the method should return 0 when the input list is null.

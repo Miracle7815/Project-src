@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class MODPTest {
+
+    @Test
+    public void testModp() {
+        int n = 5;
+        int p = -7;
+        int expectedResult = 1;
+        int result = MODP.modp(n, p);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testModp2() {
+        int n = 3;
+        int p = -5;
+        int expectedResult = 3;
+        int result = MODP.modp(n, p);
+        assertEquals(expectedResult, result);
+    }
+}
+```

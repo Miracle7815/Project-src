@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIB4 {
+
+    @Test
+    public void testFib4_nLessThan4() {
+        int n = 0;
+        int result = FIB4.fib4(n);
+        assertEquals(0, result);
+        
+        n = 1;
+        result = FIB4.fib4(n);
+        assertEquals(0, result);
+        
+        n = 2;
+        result = FIB4.fib4(n);
+        assertEquals(2, result);
+        
+        n = 3;
+        result = FIB4.fib4(n);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `fib4` method with input values of `n` less than 4 as specified in the input specification.

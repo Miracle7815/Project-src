@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class HOW_MANY_TIMES_Test {
+
+    @Test
+    public void testEmptyString() {
+        String string = "";
+        String substring = "abc";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSubstringPresentOnce() {
+        String string = "hello world";
+        String substring = "world";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testSubstringPresentMultipleTimes() {
+        String string = "abababab";
+        String substring = "ab";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(4, result);
+    }
+}
+```

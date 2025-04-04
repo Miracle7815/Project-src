@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_GET_ROW {
+    
+    @Test
+    public void test_get_row_withNullList() {
+        ArrayList<ArrayList<Integer>> lst = null;
+        int x = 5;
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        assertEquals(0, result.size());
+    }
+    
+    @Test
+    public void test_get_row_withValidList() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        lst.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
+        lst.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        int x = 5;
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        assertEquals(1, result.size());
+        GET_ROW.Tuple expectedTuple = new GET_ROW().new Tuple(1, 1);
+        assertEquals(expectedTuple, result.get(0));
+    }
+}
+```
+
+In the above code snippet, we have written two test cases for the `GET_ROW` class. The first test case checks the behavior when the input list `lst` is null, and the second test case checks the behavior with a valid input list.

@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains a mix of uppercase vowels and other characters.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_UPPER {
+    
+    @Test
+    public void testCount_upper_1() {
+        String s = "AaEeIiOoUu";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(5, result);
+    }
+    
+    @Test
+    public void testCount_upper_2() {
+        String s = "HelloWorld";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(1, result);
+    }
+    
+    @Test
+    public void testCount_upper_3() {
+        String s = "AEIOU";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(5, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases with different inputs for the `count_upper` method.
+- We use the `assertEquals` method to verify the expected output of the method with the actual output.

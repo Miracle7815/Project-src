@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases for the `skjkasdkd` method. We need to create instances of `lst` which contains only non-prime numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SKJKASDKDTest {
+
+    @Test
+    public void test_skjkasdkd_1() {
+        int[] lst = {4, 6, 9, 15, 25};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void test_skjkasdkd_2() {
+        int[] lst = {8, 10, 12, 18, 21};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(8, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `skjkasdkd` method with arrays containing only non-prime numbers as per the input specification.

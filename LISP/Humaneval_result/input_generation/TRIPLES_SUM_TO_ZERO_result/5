@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TRIPLES_SUM_TO_ZERO_Test {
+
+    @Test
+    public void testTriplesSumToZero_1() {
+        int[] numbers = {1, 2, 3, 4, 5};
+        assertFalse(TRIPLES_SUM_TO_ZERO.triples_sum_to_zero(numbers));
+    }
+
+    @Test
+    public void testTriplesSumToZero_2() {
+        int[] numbers = {2, -2, 3, 1, 5};
+        assertTrue(TRIPLES_SUM_TO_ZERO.triples_sum_to_zero(numbers));
+    }
+
+    @Test
+    public void testTriplesSumToZero_3() {
+        int[] numbers = {0, 0, 0, 1, 2, 3};
+        assertTrue(TRIPLES_SUM_TO_ZERO.triples_sum_to_zero(numbers));
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where the input array `numbers` contains three or more elements without any triplet that sums up to zero. The test cases include both cases where the method should return `true` and `false` based on the input array.

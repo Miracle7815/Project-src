@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class FILTER_BY_PREFIX_Test {
+
+    @Test
+    public void testFilterByPrefix() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("orange");
+        strings.add("apricot");
+
+        String prefix = "ap";
+
+        List<String> filteredList = FILTER_BY_PREFIX.filter_by_prefix(strings, prefix);
+
+        List<String> expectedList = new ArrayList<>();
+        expectedList.add("apple");
+        expectedList.add("apricot");
+
+        assertEquals(expectedList, filteredList);
+    }
+}
+```
+
+In this test case, we are testing the `filter_by_prefix` method with a list of strings containing "apple", "banana", "orange", and "apricot", and the prefix "ap". The expected result is a list containing "apple" and "apricot".

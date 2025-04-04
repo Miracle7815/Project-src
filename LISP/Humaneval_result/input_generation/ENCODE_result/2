@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty string as the input message for the `encode` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestENCODE {
+    
+    @Test
+    public void testEmptyString() {
+        String message = "";
+        String result = ENCODE.encode(message);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `encode` method with an empty string as input. The expected result is also an empty string.

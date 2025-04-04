@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `string_sequence` method in the `STRING_SEQUENCE` class. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRING_SEQUENCE {
+    
+    @Test
+    public void testStringSequence() {
+        int n = 0;
+        String expected = "0";
+        String result = STRING_SEQUENCE.string_sequence(n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+This test case will verify that the `string_sequence` method returns the expected string when `n` is zero.

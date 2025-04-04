@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list of integers as input to the `remove_duplicates` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REMOVE_DUPLICATES {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> result = REMOVE_DUPLICATES.remove_duplicates(numbers);
+        assertEquals(0, result.size());
+    }
+}
+```
+
+In this test case, we are creating an empty list of integers and passing it to the `remove_duplicates` method. The test asserts that the size of the result list should be 0 when there are no elements in the input list.

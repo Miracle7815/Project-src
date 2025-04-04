@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_CORRECT_BRACKETING {
+
+    @Test
+    public void testCorrectBracketing_1() {
+        String brackets = "<><><>";
+        assertTrue(CORRECT_BRACKETING.correct_bracketing(brackets));
+    }
+
+    @Test
+    public void testCorrectBracketing_2() {
+        String brackets = "<<<<>>>>";
+        assertFalse(CORRECT_BRACKETING.correct_bracketing(brackets));
+    }
+
+    @Test
+    public void testCorrectBracketing_3() {
+        String brackets = "<><<>>";
+        assertFalse(CORRECT_BRACKETING.correct_bracketing(brackets));
+    }
+}
+``` 
+
+In the above code, we have imported the necessary JUnit classes and written test cases to test the `correct_bracketing` method of the `CORRECT_BRACKETING` class. The test cases cover scenarios with balanced and unbalanced brackets as per the input specification.

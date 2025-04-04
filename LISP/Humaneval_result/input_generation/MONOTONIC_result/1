@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MONOTONIC_Test {
+
+    @Test
+    public void testMonotonic_NullInput() {
+        int[] l = null;
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+}
+```
+
+In this test case, we are testing the `monotonic` method with a null input array `l`. The expected behavior is that the method should return `false` when the input array is null.

@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `strings` which contains a mix of null and non-null strings.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CONCATENATE_Test {
+
+    @Test
+    public void testConcatenateWithNonNullStrings() {
+        String[] strings = {"Hello", "World"};
+        String result = CONCATENATE.concatenate(strings);
+        assertEquals("HelloWorld", result);
+    }
+
+    @Test
+    public void testConcatenateWithNullStrings() {
+        String[] strings = {null, "Concatenate"};
+        String result = CONCATENATE.concatenate(strings);
+        assertEquals("Concatenate", result);
+    }
+
+    @Test
+    public void testConcatenateWithMixedStrings() {
+        String[] strings = {"Hello", null, "World"};
+        String result = CONCATENATE.concatenate(strings);
+        assertEquals("HelloWorld", result);
+    }
+}
+```

@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_NUMBERS {
+    
+    @Test
+    public void testSortNumbers_EmptyString() {
+        String numbers = "";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("", sortedNumbers);
+    }
+}
+```
+
+In this test case, we are testing the `sort_numbers` method with an empty string as input to verify that it returns an empty string as expected.

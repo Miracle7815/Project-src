@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write the following JUnit test case:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_RIGHT_ANGLE_TRIANGLE {
+    
+    @Test
+    public void testRightAngleTriangle() {
+        boolean result = RIGHT_ANGLE_TRIANGLE.right_angle_triangle(-3, -4, -5);
+        assertTrue(result);
+    }
+}
+```
+
+This test case verifies the `right_angle_triangle` method of the `RIGHT_ANGLE_TRIANGLE` class with negative integers for `a`, `b`, and `c`.

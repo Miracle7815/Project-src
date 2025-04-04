@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `sorted_list_sum` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SORTED_LIST_SUMTest {
+
+    @Test
+    public void testSorted_list_sum() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("abc");
+        lst.add("defg");
+        lst.add("hijklm");
+        lst.add("nopqrs");
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("defg");
+        expected.add("hijklm");
+        
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+        
+        assertEquals(expected, result);
+    }
+}
+```

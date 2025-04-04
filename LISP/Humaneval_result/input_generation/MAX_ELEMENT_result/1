@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAX_ELEMENT {
+
+    @Test
+    public void testMaxElementWithNullList() {
+        List<Integer> l = null;
+        int result = MAX_ELEMENT.max_element(l);
+        assertEquals(Integer.MIN_VALUE, result);
+    }
+}
+```
+
+In this test case, we are testing the `max_element` method with a null list `l`. The expected behavior is to return `Integer.MIN_VALUE` when the input list is null.

@@ -1,0 +1,30 @@
+Anwser: Let's do this step by step. 
+According to the signature of the code, we can see that the method `equalsIgnoreMissingFractionDigits` takes two double values `accurate` and `approximate`.
+In the input specification, both `accurate` and `approximate` are positive non-zero values.
+Based on the method signature and body, we can write instances of `accurate` and `approximate` and required import statements based on the input specification:
+
+Example 1: 
+    Part 1. The objects initialized:
+        ```java
+        double accurate = 10.5;
+        double approximate = 10.6;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        import java.lang.Math;
+        ```
+
+Example 2:
+    Part 1. The objects initialized:
+        ```java
+        double accurate = 3.14159;
+        double approximate = 3.1416;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        import java.lang.Math;
+        ```

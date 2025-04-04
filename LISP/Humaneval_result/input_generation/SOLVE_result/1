@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SOLVE_Test {
+    
+    @Test
+    public void testSolve_NegativeInteger() {
+        int N = -123;
+        String result = SOLVE.solve(N);
+        assertEquals("1111011", result);
+    }
+    
+    @Test
+    public void testSolve_AnotherNegativeInteger() {
+        int N = -456;
+        String result = SOLVE.solve(N);
+        assertEquals("1011000", result);
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary JUnit classes for writing test cases. We have then created two test cases to test the `solve` method with negative integer inputs. The expected binary string outputs are provided for each test case, and the `assertEquals` method is used to verify if the actual output matches the expected output.

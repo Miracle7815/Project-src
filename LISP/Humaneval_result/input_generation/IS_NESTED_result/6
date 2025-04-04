@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `is_nested` method. 
+
+Here are the required import statements and a test case example:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_NESTED {
+
+    @Test
+    public void testNonNestedBrackets() {
+        String brackets = "[][][][]";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+
+}
+``` 
+
+In the above test case, we are testing the `is_nested` method with a string of non-nested brackets "[ ] [ ] [ ] [ ]". The expected result is `false` as there are no nested brackets.

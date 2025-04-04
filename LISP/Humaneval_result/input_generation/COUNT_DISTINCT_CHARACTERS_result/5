@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `string` input that contains uppercase and lowercase versions of the same character.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_DISTINCT_CHARACTERS {
+    
+    @Test
+    public void testCountDistinctCharacters_1() {
+        String inputString = "aAaAaA";
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(inputString);
+        assertEquals(1, result);
+    }
+    
+    @Test
+    public void testCountDistinctCharacters_2() {
+        String inputString = "AbCdEfG";
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(inputString);
+        assertEquals(7, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases to cover scenarios where the input string contains uppercase and lowercase versions of the same character.
+- We call the `count_distinct_characters` method with the input strings and assert the expected results using `assertEquals`.
+
+These test cases will help ensure that the `count_distinct_characters` method behaves as expected for inputs containing uppercase and lowercase versions of the same character.

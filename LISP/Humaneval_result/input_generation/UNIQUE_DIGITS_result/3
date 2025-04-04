@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `x` which contains only one element with at least one even digit.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_UNIQUE_DIGITS {
+    
+    @Test
+    public void testUniqueDigits() {
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(13579); // Contains only odd digits
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        
+        ArrayList<Integer> result = UNIQUE_DIGITS.unique_digits(x);
+        
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testUniqueDigitsWithEvenDigit() {
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(24681357); // Contains at least one even digit
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(24681357);
+        
+        ArrayList<Integer> result = UNIQUE_DIGITS.unique_digits(x);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above code, we have two test cases - one with an input that contains only odd digits and one with an input that contains at least one even digit. The expected results are defined accordingly.

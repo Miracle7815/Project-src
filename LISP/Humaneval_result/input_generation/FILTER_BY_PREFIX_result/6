@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class FILTER_BY_PREFIXTest {
+
+    @Test
+    public void testFilterByPrefix_emptyPrefix() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("cherry");
+        strings.add("date");
+        
+        String prefix = "";
+        
+        List<String> result = FILTER_BY_PREFIX.filter_by_prefix(strings, prefix);
+        
+        assertEquals(4, result.size());
+        assertTrue(result.contains("apple"));
+        assertTrue(result.contains("banana"));
+        assertTrue(result.contains("cherry"));
+        assertTrue(result.contains("date"));
+    }
+}
+```

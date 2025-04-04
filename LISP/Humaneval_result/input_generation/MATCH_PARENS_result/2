@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+First, we need to import the necessary classes and annotations for JUnit testing:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+```
+
+Now, we can write test cases for the `MATCH_PARENS` class:
+
+```java
+public class Test_MATCH_PARENS {
+
+    @Test
+    public void testMatchParens_1() {
+        String[] lst = {"(", ")"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testMatchParens_2() {
+        String[] lst = {")", "("};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testMatchParens_3() {
+        String[] lst = {"(", "("};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```
+
+In these test cases, we are testing the `match_parens` method of the `MATCH_PARENS` class with different input scenarios to cover the functionality of checking if the parentheses are matched correctly.

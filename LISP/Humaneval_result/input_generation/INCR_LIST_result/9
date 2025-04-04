@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `incr_list` method when the input list `l` is null. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_INCR_LIST {
+    
+    @Test
+    public void test_incr_list_withNullList() {
+        List<Integer> l = null;
+        List<Integer> result = INCR_LIST.incr_list(l);
+        assertNull(result);
+    }
+}
+```

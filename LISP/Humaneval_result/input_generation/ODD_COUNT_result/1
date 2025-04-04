@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `odd_count` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_ODD_COUNT {
+    
+    @Test
+    public void testOddCount_NullList() {
+        ArrayList<String> lst = null;
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        Assert.assertNull(result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input list `lst` is null. The expected behavior is that the method should return null.

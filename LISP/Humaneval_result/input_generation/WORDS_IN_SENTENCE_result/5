@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `sentence` which contains words with a length of 2.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_WORDS_IN_SENTENCE {
+    
+    @Test
+    public void testWordsInSentence() {
+        String sentence = "He is on it";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("is on", result);
+    }
+    
+    @Test
+    public void testWordsInSentence2() {
+        String sentence = "Go to bed";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("Go to", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different sentences containing words with a length of 2.
+- We call the `words_in_sentence` method from the `WORDS_IN_SENTENCE` class with the given sentences.
+- We use `assertEquals` to verify that the output matches the expected result.

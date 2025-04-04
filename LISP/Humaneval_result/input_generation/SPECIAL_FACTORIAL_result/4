@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SPECIAL_FACTORIAL {
+
+    @Test
+    public void testSpecialFactorial_1() {
+        long n = 2;
+        long result = SPECIAL_FACTORIAL.special_factorial(n);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testSpecialFactorial_2() {
+        long n = 3;
+        long result = SPECIAL_FACTORIAL.special_factorial(n);
+        assertEquals(12, result);
+    }
+
+    @Test
+    public void testSpecialFactorial_3() {
+        long n = 4;
+        long result = SPECIAL_FACTORIAL.special_factorial(n);
+        assertEquals(288, result);
+    }
+}
+```

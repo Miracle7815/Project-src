@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `a` and `b` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRING_XOR {
+    
+    @Test
+    public void testStringXORWithNullA() {
+        String a = null;
+        String b = "110011";
+        String expectedResult = "";
+        assertEquals(expectedResult, STRING_XOR.string_xor(a, b));
+    }
+    
+    @Test
+    public void testStringXORWithNonEmptyStrings() {
+        String a = "101010";
+        String b = "110011";
+        String expectedResult = "011001";
+        assertEquals(expectedResult, STRING_XOR.string_xor(a, b));
+    }
+}
+```
+
+In the above code:
+- The first test case checks the scenario where `a` is `null`.
+- The second test case checks the scenario with non-null strings `a` and `b`.
+
+Make sure to have the `STRING_XOR` class and the `string_xor` method accessible for the test class.

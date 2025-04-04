@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class GENERATE_INTEGERS_Test {
+    
+    @Test
+    public void testGenerateIntegers() {
+        int a = 4;
+        int b = 10;
+        
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(4);
+        expectedResult.add(6);
+        expectedResult.add(8);
+        
+        ArrayList<Integer> result = GENERATE_INTEGERS.generate_integers(a, b);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In this test case, we are testing the `generate_integers` method with `a = 4` and `b = 10`. The expected result is an ArrayList containing even numbers between 4 and 8.

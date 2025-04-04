@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `order_by_points` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class ORDER_BY_POINTS_Test {
+
+    @Test
+    public void testOrder_by_points_1() {
+        Integer[] nums = {5, -5, 3, -3, 2, -2};
+        Integer[] expected = {-5, 5, -3, 3, -2, 2};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrder_by_points_2() {
+        Integer[] nums = {10, -10, 20, -20, 30, -30};
+        Integer[] expected = {-10, 10, -20, 20, -30, 30};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We define two test cases to test the `order_by_points` method with different input arrays containing integers with the same absolute value but different signs.
+- We compare the expected output with the result obtained from the method using `assertArrayEquals` method.

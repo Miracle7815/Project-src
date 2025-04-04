@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_RIGHT_ANGLE_TRIANGLE {
+
+    @Test
+    public void testRightAngleTriangle1() {
+        boolean result = RIGHT_ANGLE_TRIANGLE.right_angle_triangle(-3, 0, 4);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testRightAngleTriangle2() {
+        boolean result = RIGHT_ANGLE_TRIANGLE.right_angle_triangle(0, -4, 3);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testRightAngleTriangle3() {
+        boolean result = RIGHT_ANGLE_TRIANGLE.right_angle_triangle(-5, 0, -12);
+        assertTrue(result);
+    }
+}
+```
+
+In the above code, we have imported the necessary JUnit classes and written test cases to cover the input specification where one or more values are negative while others are zero. Each test case asserts that the `right_angle_triangle` method returns `true` for the given input values.

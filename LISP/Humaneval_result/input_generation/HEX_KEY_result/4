@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `hex_key` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class HEX_KEYTest {
+
+    @Test
+    public void testHexKey1() {
+        String num = "2357BD";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testHexKey2() {
+        String num = "2B3D5";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testHexKey3() {
+        String num = "1234567890";
+        int result = HEX_KEY.hex_key(num);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `hex_key` method with different inputs to ensure that it correctly counts the occurrences of '2', '3', '5', '7', 'B', and 'D' in the input string `num`.

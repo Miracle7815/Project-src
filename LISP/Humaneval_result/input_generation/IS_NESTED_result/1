@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_NESTED {
+
+    @Test
+    public void testEmptyString() {
+        assertTrue(IS_NESTED.is_nested(""));
+    }
+}
+```
+
+In this test case, we are testing the `is_nested` method with an empty string as input, which according to the input specification should return `true` if the count of opening brackets is greater than or equal to 2.

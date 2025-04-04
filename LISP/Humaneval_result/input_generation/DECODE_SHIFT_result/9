@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here are the test cases for the `DECODE_SHIFT` class:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift() {
+        String input = "abcxyz";
+        String expectedOutput = "fghcde";
+        String actualOutput = DECODE_SHIFT.encode_shift(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testDecodeShift() {
+        String input = "fghcde";
+        String expectedOutput = "abcxyz";
+        String actualOutput = DECODE_SHIFT.decode_shift(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+```
+
+These test cases cover the encoding and decoding functionality of the `DECODE_SHIFT` class for lowercase alphabetic characters only.

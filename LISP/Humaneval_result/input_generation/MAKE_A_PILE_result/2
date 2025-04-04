@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to import the necessary classes and then create test cases to verify the functionality of the `make_a_pile` method when `n` is zero.
+
+Here is the JUnit test code:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class Test_MAKE_A_PILE {
+    
+    @Test
+    public void testMakeAPileWithZero() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>();
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are verifying that when `n` is zero, the `make_a_pile` method returns an empty ArrayList.

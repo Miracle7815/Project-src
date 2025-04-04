@@ -1,0 +1,14 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestCORRECT_BRACKETING {
+
+    @Test
+    public void testEmptyString() {
+        assertTrue(CORRECT_BRACKETING.correct_bracketing(""));
+    }
+}
+```

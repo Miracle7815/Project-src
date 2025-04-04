@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_FIND_CLOSEST_ELEMENTS {
+
+    @Test
+    public void testEmptyArray() {
+        double[] numbers = new double[]{};
+        double[] expected = new double[]{};
+        double[] result = FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers);
+        assertArrayEquals(expected, result, 0.0);
+    }
+}
+```
+
+This test case covers the scenario where the input array `numbers` is empty.

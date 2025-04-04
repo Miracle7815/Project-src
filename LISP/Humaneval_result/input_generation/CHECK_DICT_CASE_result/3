@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `check_dict_case` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import java.util.HashMap;
+
+public class Test_CHECK_DICT_CASE {
+
+    @Test
+    public void testAllUppercaseKeys() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put("KEY1", "value1");
+        dict.put("KEY2", "value2");
+        dict.put("KEY3", "value3");
+
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void testMixedCaseKeys() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put("KEY1", "value1");
+        dict.put("Key2", "value2");
+        dict.put("KEY3", "value3");
+
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+
+        assertEquals(false, result);
+    }
+
+    @Test
+    public void testEmptyDictionary() {
+        HashMap<Object, Object> dict = new HashMap<>();
+
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+
+        assertEquals(false, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `check_dict_case` method with different scenarios - all uppercase keys, mixed case keys, and an empty dictionary. The `assertEquals` method is used to verify the expected result against the actual result returned by the method.

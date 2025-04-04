@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DERIVATIVE_Test {
+    
+    @Test
+    public void testDerivative_1() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(1);
+        xs.add(2);
+        xs.add(3);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0);
+        expected.add(2);
+        expected.add(6);
+        
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testDerivative_2() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(4);
+        xs.add(5);
+        xs.add(6);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0);
+        expected.add(5);
+        expected.add(12);
+        
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        
+        assertEquals(expected, result);
+    }
+}
+```

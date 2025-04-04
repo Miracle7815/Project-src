@@ -1,0 +1,49 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `common` method in the `COMMON` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import static org.junit.Assert.assertArrayEquals;
+import org.junit.Test;
+
+public class COMMONTest {
+
+    @Test
+    public void testCommon_1() {
+        int[] l1 = {1, 3, 5, 7, 9};
+        int[] l2 = {2, 4, 6, 8, 10};
+        int[] expected = {};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCommon_2() {
+        int[] l1 = {2, 4, 6, 8, 10};
+        int[] l2 = {1, 3, 5, 7, 9};
+        int[] expected = {};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCommon_3() {
+        int[] l1 = {1, 3, 5, 7, 9};
+        int[] l2 = {1, 2, 3, 4, 5};
+        int[] expected = {1, 3, 5};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCommon_4() {
+        int[] l1 = {2, 4, 6, 8, 10};
+        int[] l2 = {2, 4, 6, 8, 10};
+        int[] expected = {2, 4, 6, 8, 10};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have written multiple test cases to cover different scenarios such as when the arrays have no common elements, when one array is a subset of the other, and when both arrays have some common elements. The `assertArrayEquals` method is used to compare the expected output with the actual output of the `common` method.

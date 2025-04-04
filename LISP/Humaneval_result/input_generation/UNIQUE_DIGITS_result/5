@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `unique_digits` method. We need to create instances of `x` which contains multiple elements where at least one element has at least one even digit.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_UNIQUE_DIGITS {
+    
+    @Test
+    public void testUniqueDigits() {
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(13579); // All odd digits
+        x.add(2468);  // Contains even digit
+        x.add(97531); // All odd digits
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(2468);
+        
+        ArrayList<Integer> result = UNIQUE_DIGITS.unique_digits(x);
+        
+        assertEquals(expected, result);
+    }
+}
+```

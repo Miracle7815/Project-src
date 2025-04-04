@@ -1,0 +1,29 @@
+Based on the provided API method, we need to test the `encode_shift` and `decode_shift` methods from the `DECODE_SHIFT` class. The input specification mentions that the `string` parameter contains a mix of lowercase and uppercase alphabetic characters.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift() {
+        String inputString = "HelloWorld";
+        String expectedResult = "MjqqtBtwqi";
+        String encodedString = DECODE_SHIFT.encode_shift(inputString);
+        assertEquals(expectedResult, encodedString);
+    }
+
+    @Test
+    public void testDecodeShift() {
+        String inputString = "MjqqtBtwqi";
+        String expectedResult = "HelloWorld";
+        String decodedString = DECODE_SHIFT.decode_shift(inputString);
+        assertEquals(expectedResult, decodedString);
+    }
+}
+```
+
+In the above test code, we have included two test cases - one for encoding a string using `encode_shift` method and one for decoding a string using `decode_shift` method. The test cases compare the expected result with the actual result obtained from the methods.

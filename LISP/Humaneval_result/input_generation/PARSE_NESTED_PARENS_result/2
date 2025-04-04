@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an instance of the `PARSE_NESTED_PARENS` class and pass an empty string as the `paren_string` parameter.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_PARSE_NESTED_PARENS {
+    
+    @Test
+    public void testEmptyString() {
+        PARSE_NESTED_PARENS parser = new PARSE_NESTED_PARENS();
+        String paren_string = "";
+        List<Integer> result = parser.parse_nested_parens(paren_string);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `parse_nested_parens` method with an empty string as input. The expected result is an empty list.

@@ -1,0 +1,30 @@
+Based on the provided method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestWILL_IT_FLY {
+
+    @Test
+    public void testWillItFly_True() {
+        int[] q = {5};
+        int w = 5;
+        assertTrue(WILL_IT_FLY.will_it_fly(q, w));
+    }
+
+    @Test
+    public void testWillItFly_False() {
+        int[] q = {3};
+        int w = 2;
+        assertFalse(WILL_IT_FLY.will_it_fly(q, w));
+    }
+}
+``` 
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, one where the method should return true and one where it should return false based on the input specification.
+- We use the `assertTrue` and `assertFalse` methods to validate the expected output of the `will_it_fly` method.

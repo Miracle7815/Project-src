@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write the JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_RIGHT_ANGLE_TRIANGLE {
+    
+    @Test
+    public void testAllZeroValues() {
+        boolean result = RIGHT_ANGLE_TRIANGLE.right_angle_triangle(0, 0, 0);
+        assertFalse(result);
+    }
+}
+```
+
+This test case verifies that when all three input values `a`, `b`, and `c` are zero, the method `right_angle_triangle` returns `false`.

@@ -1,0 +1,15 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import org.junit.Test;
+
+public class TestCAR_RACE_COLLISION {
+    
+    @Test
+    public void testCarRaceCollisionWithZero() {
+        int n = 0;
+        int result = CAR_RACE_COLLISION.car_race_collision(n);
+        org.junit.Assert.assertEquals(0, result);
+    }
+}
+```

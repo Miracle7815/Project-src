@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of non-palindrome strings to test the `make_palindrome` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAKE_PALINDROME {
+    
+    @Test
+    public void testMakePalindrome_1() {
+        String input = "hello";
+        String expectedOutput = "helloleh";
+        String result = MAKE_PALINDROME.make_palindrome(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testMakePalindrome_2() {
+        String input = "testing";
+        String expectedOutput = "testingnitset";
+        String result = MAKE_PALINDROME.make_palindrome(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `make_palindrome` method with non-palindrome strings "hello" and "testing" to ensure that the method correctly creates a palindrome by appending characters from the beginning of the string.

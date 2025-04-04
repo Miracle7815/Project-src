@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases for the `encode_shift` and `decode_shift` methods. We need to provide input strings containing only lowercase alphabetic characters.
+
+Here are the test cases in JUnit format:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift() {
+        String input = "abcxyz";
+        String expectedOutput = "fghcde";
+        String result = DECODE_SHIFT.encode_shift(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testDecodeShift() {
+        String input = "fghcde";
+        String expectedOutput = "abcxyz";
+        String result = DECODE_SHIFT.decode_shift(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```

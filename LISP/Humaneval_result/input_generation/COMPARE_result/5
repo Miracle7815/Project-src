@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class COMPARETest {
+
+    @Test
+    public void testCompare_1() {
+        int[] game = {3, -5, 2, -7};
+        int[] guess = {1, -3, 4, -5};
+        int[] expected = {2, 2, 2, 2};
+        int[] result = COMPARE.compare(game, guess);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCompare_2() {
+        int[] game = {-1, 5, -4, 6};
+        int[] guess = {3, -2, 1, -3};
+        int[] expected = {4, 7, 5, 9};
+        int[] result = COMPARE.compare(game, guess);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have imported the necessary JUnit classes for testing. We have written two test cases to test the `compare` method of the `COMPARE` class. Each test case provides different input arrays for `game` and `guess` and asserts that the output of the `compare` method matches the expected result.

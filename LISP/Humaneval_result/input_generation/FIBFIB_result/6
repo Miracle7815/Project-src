@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `fibfib` method in the `FIBFIB` class. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import humaneval.correct.FIBFIB;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIBFIB {
+    
+    @Test
+    public void testFibfibWithZero() {
+        int n = 0;
+        int expectedResult = 0;
+        int result = FIBFIB.fibfib(n);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+This test case will verify that when `n` is 0, the `fibfib` method returns 0 as expected.

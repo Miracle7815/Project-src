@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_TRIPLES_SUM_TO_ZERO {
+
+    @Test
+    public void testTriplesSumToZero_singleElement() {
+        int[] numbers = {0};
+        assertTrue(TRIPLES_SUM_TO_ZERO.triples_sum_to_zero(numbers));
+    }
+}
+```
+
+In this test case, we are testing the `TRIPLES_SUM_TO_ZERO` method with an input array containing only one element, which is 0. The expected behavior is that the method should return `true` since there is a triple (0, 0, 0) that sums up to zero.

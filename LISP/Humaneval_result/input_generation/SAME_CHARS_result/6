@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s0` and `s1` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestSAME_CHARS {
+
+    @Test
+    public void testSameChars_1() {
+        String s0 = "hello";
+        String s1 = "world";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSameChars_2() {
+        String s0 = "aaaa";
+        String s1 = "abcd";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSameChars_3() {
+        String s0 = "apple";
+        String s1 = "elppa";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertTrue(result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create three test cases to cover different scenarios based on the input specification.
+- Each test case instantiates `s0` and `s1` with the specified strings and calls the `same_chars` method to check if the sets of characters are equal.
+- We use `assertTrue` and `assertFalse` to assert the expected results of the method.

@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class LONGESTTest {
+
+    @Test
+    public void testEmptyList() {
+        List<String> strings = new ArrayList<>();
+        String result = LONGEST.longest(strings);
+        assertNull(result);
+    }
+}
+```

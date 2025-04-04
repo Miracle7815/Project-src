@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARED_NUMS {
+
+    @Test
+    public void testSumSquaredNums_singleElement() {
+        double[] lst = {5.0};
+        long result = SUM_SQUARED_NUMS.sum_squared_nums(lst);
+        assertEquals(25, result);
+    }
+}
+```
+
+In this test case, we are testing the `sum_squared_nums` method with a single element array `[5.0]`. The expected result is 25, as the method calculates the sum of squared numbers for each element in the array.

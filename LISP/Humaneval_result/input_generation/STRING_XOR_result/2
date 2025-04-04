@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of non-empty strings `a` and `b` with the same length for testing the `string_xor` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRING_XOR {
+
+    @Test
+    public void testStringXOR_1() {
+        String a = "110010";
+        String b = "101101";
+        String expected = "011111";
+        String result = STRING_XOR.string_xor(a, b);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testStringXOR_2() {
+        String a = "abcde";
+        String b = "vwxyz";
+        String expected = "11111";
+        String result = STRING_XOR.string_xor(a, b);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test code, we have created two test cases with different input strings `a` and `b` to test the `string_xor` method. The expected results are provided based on the XOR operation between the characters of strings `a` and `b`.

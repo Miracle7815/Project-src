@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DOUBLE_THE_DIFFERENCE {
+
+    @Test
+    public void testEmptyArray() {
+        double[] lst = new double[]{};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array `lst` is empty. The expected result is 0 as there are no elements in the array to process.

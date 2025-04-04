@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases to cover the functionality of the `histogram` method. We need to create test cases where the input string `s` contains only one character.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import java.util.HashMap;
+
+public class TestHistogram {
+
+    @Test
+    public void testHistogramSingleCharacter() {
+        String s = "a";
+        HashMap<Character, Integer> expected = new HashMap<>();
+        expected.put('a', 1);
+
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `histogram` method with a single character input string "a". The expected output is a HashMap with key 'a' and value 1.

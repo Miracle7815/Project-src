@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestMULTIPLY {
+    
+    @Test
+    public void testMultiply_1() {
+        int result = MULTIPLY.multiply(5, 3);
+        assertEquals(15, result);
+    }
+    
+    @Test
+    public void testMultiply_2() {
+        int result = MULTIPLY.multiply(10, 7);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testMultiply_3() {
+        int result = MULTIPLY.multiply(8, 9);
+        assertEquals(72, result);
+    }
+}
+``` 
+
+These test cases cover scenarios where both `a` and `b` are positive numbers, ensuring that the `multiply` method behaves as expected.

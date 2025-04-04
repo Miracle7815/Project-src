@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `GET_POSITIVE` class.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_GET_POSITIVE {
+    
+    @Test
+    public void testGetPositive_NullInput() {
+        List<Integer> numbers = null;
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+    }
+}
+```
+
+This test case checks the behavior of the `get_positive` method when the input `numbers` is null. It verifies that the result is not null and is an empty list.

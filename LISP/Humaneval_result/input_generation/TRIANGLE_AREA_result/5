@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_TRIANGLE_AREA {
+    
+    @Test
+    public void testTriangleArea() {
+        double a = 5.0;
+        double h = -3.0;
+        double expectedArea = -7.5; // Expected area when h is negative
+        double actualArea = TRIANGLE_AREA.triangle_area(a, h);
+        assertEquals(expectedArea, actualArea, 0.0001);
+    }
+}
+```
+
+In this test case, we are testing the `triangle_area` method of the `TRIANGLE_AREA` class with a positive value for `a` and a negative value for `h`. The expected area is calculated based on the formula provided in the method.

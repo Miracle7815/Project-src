@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test cases that cover the different conditions mentioned in the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestENCODE {
+
+    @Test
+    public void testEncodeWithSpecialCharacters() {
+        String message = "Hello! How are you?";
+        String result = ENCODE.encode(message);
+        assertEquals("hIppU! hOw IrI yOw?", result);
+    }
+
+    @Test
+    public void testEncodeWithNumbers() {
+        String message = "Testing 123";
+        String result = ENCODE.encode(message);
+        assertEquals("tEstIng 123", result);
+    }
+
+    @Test
+    public void testEncodeWithMixedCharacters() {
+        String message = "AbCdEfGhIjKlMnOpQrStUvWxYz 12345";
+        String result = ENCODE.encode(message);
+        assertEquals("aBcDeFgHiJkLmNoPqRsTuVwXyZ 12345", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test methods to cover scenarios with special characters, numbers, and mixed characters in the input message.
+- Each test method calls the `ENCODE.encode` method with a specific input message and asserts that the output matches the expected result.
+
+These test cases ensure that the `encode` method handles special characters, numbers, and mixed characters correctly as per the input specification.

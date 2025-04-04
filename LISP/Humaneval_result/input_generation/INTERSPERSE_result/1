@@ -1,0 +1,50 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestINTERSPERSE {
+    
+    @Test
+    public void testIntersperse_emptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        int delimiter = 5;
+        List<Integer> result = INTERSPERSE.intersperse(numbers, delimiter);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testIntersperse_singleElementList() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        int delimiter = 5;
+        List<Integer> result = INTERSPERSE.intersperse(numbers, delimiter);
+        List<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testIntersperse_multipleElementsList() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        int delimiter = 0;
+        List<Integer> result = INTERSPERSE.intersperse(numbers, delimiter);
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(0);
+        expected.add(2);
+        expected.add(0);
+        expected.add(3);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have written test cases for the `intersperse` method of the `INTERSPERSE` class. The test cases cover scenarios with an empty list, a list with a single element, and a list with multiple elements.

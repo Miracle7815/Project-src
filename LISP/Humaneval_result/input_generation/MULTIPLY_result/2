@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write the test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MULTIPLY {
+    
+    @Test
+    public void testMultiply_negativeNumbers() {
+        int result = MULTIPLY.multiply(-15, -23);
+        assertEquals(5, result);
+    }
+    
+    @Test
+    public void testMultiply_negativeNumbers2() {
+        int result = MULTIPLY.multiply(-7, -9);
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary JUnit classes and written two test cases to test the `multiply` method of the `MULTIPLY` class with negative numbers as input. The expected output is calculated based on the absolute values of the last digits of the input numbers.

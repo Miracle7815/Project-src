@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestBELOW_ZERO {
+
+    @Test
+    public void testBelowZero_1() {
+        List<Integer> operations = new ArrayList<>();
+        operations.add(10);
+        operations.add(-15);
+        operations.add(5);
+        boolean result = BELOW_ZERO.below_zero(operations);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testBelowZero_2() {
+        List<Integer> operations = new ArrayList<>();
+        operations.add(20);
+        operations.add(30);
+        operations.add(-60);
+        operations.add(10);
+        boolean result = BELOW_ZERO.below_zero(operations);
+        assertTrue(result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `below_zero` method of the `BELOW_ZERO` class. The test cases include different lists of positive integers that sum up to a negative value.

@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DOUBLE_THE_DIFFERENCE {
+
+    @Test
+    public void test_double_the_difference_1() {
+        double[] lst = {3.0, 5.0, 7.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(83, result);
+    }
+
+    @Test
+    public void test_double_the_difference_2() {
+        double[] lst = {1.0, 9.0, 11.0, 13.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(211, result);
+    }
+
+    @Test
+    public void test_double_the_difference_3() {
+        double[] lst = {5.0, 15.0, 25.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(650, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `double_the_difference` method with different sets of input arrays that contain only positive odd integer double values. The expected results are calculated based on the logic inside the method.

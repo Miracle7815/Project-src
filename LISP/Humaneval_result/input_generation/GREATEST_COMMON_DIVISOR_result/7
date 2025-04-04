@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write the JUnit test case as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestGREATEST_COMMON_DIVISOR {
+    
+    @Test
+    public void testGreatestCommonDivisorWithZeroInputs() {
+        int a = 0;
+        int b = 0;
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(a, b);
+        assertEquals(0, result);
+    }
+}
+```
+
+This test case covers the scenario where both `a` and `b` are zero, as specified in the input specification.

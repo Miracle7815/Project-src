@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class STRLENTest {
+
+    @Test
+    public void testStringLength() {
+        String inputString = "Hello, World!";
+        int expectedLength = 13;
+        int actualLength = STRLEN.strlen(inputString);
+        assertEquals(expectedLength, actualLength);
+    }
+
+    @Test
+    public void testEmptyString() {
+        String inputString = "";
+        int expectedLength = 0;
+        int actualLength = STRLEN.strlen(inputString);
+        assertEquals(expectedLength, actualLength);
+    }
+
+    @Test
+    public void testSingleCharacterString() {
+        String inputString = "X";
+        int expectedLength = 1;
+        int actualLength = STRLEN.strlen(inputString);
+        assertEquals(expectedLength, actualLength);
+    }
+}
+```

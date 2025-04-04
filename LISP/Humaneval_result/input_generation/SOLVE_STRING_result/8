@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the input parameter `s` which contains a mix of characters with all lowercase alphabetic characters.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSOLVE_STRING {
+
+    @Test
+    public void testSolveString_1() {
+        String input = "helloWorld";
+        String expectedOutput = "HELLOwORLD";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testSolveString_2() {
+        String input = "javaIsFun";
+        String expectedOutput = "JAVAiSfUN";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testSolveString_3() {
+        String input = "testingString";
+        String expectedOutput = "TESTINGsTRING";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+``` 
+
+In the above code, we have created three test cases with different input strings containing a mix of characters with all lowercase alphabetic characters. The expected output is the string with the alphabetic characters converted to the opposite case. The `assertEquals` method is used to compare the expected output with the result obtained from the `solve_string` method.

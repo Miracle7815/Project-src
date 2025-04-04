@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `prime_length` method. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class PRIME_LENGTHTest {
+
+    @Test
+    public void testPrimeLength_NotPrime() {
+        String input = "Hello";
+        boolean result = PRIME_LENGTH.prime_length(input);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testPrimeLength_Prime() {
+        String input = "JUnit";
+        boolean result = PRIME_LENGTH.prime_length(input);
+        assertTrue(result);
+    }
+}
+``` 
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, one with a non-prime length string ("Hello") and one with a prime length string ("JUnit").
+- We call the `prime_length` method with the input strings and assert that the result matches the expected outcome.

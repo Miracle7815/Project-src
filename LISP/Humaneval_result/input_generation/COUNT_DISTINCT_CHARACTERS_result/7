@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `string` input containing non-English characters or symbols.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_DISTINCT_CHARACTERS {
+    
+    @Test
+    public void testCountDistinctCharacters_1() {
+        String string = "Hello, 你好, こんにちは, привет!";
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(string);
+        assertEquals(17, result);
+    }
+    
+    @Test
+    public void testCountDistinctCharacters_2() {
+        String string = "Testing with symbols: !@#$%^&*()_+";
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(string);
+        assertEquals(16, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different strings containing non-English characters and symbols.
+- We call the `count_distinct_characters` method from the `COUNT_DISTINCT_CHARACTERS` class with the test strings.
+- We use `assertEquals` to verify that the method returns the expected number of distinct characters for each input string.

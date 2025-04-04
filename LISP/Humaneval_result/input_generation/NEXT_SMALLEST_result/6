@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Test_NEXT_SMALLEST {
+    
+    @Test
+    public void testNextSmallest_NoSecondSmallest() {
+        int[] lst = {5, 5, 5, 5, 5};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(null, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array `lst` contains multiple elements without duplicates and all elements are the same. The expected result is `null` as there is no second smallest element in the array.

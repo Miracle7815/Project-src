@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `grades` array with elements falling into different grade range categories.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_NUMERICAL_LETTER_GRADE {
+
+    @Test
+    public void testNumericalLetterGrade() {
+        double[] grades = {3.0, 2.5, 1.0};
+        String[] expectedLetterGrades = {"B", "C", "D-"};
+        String[] actualLetterGrades = NUMERICAL_LETTER_GRADE.numerical_letter_grade(grades);
+        assertArrayEquals(expectedLetterGrades, actualLetterGrades);
+    }
+}
+```
+
+In this test case, we are testing the `numerical_letter_grade` method with an array of grades falling into different grade range categories. The expected output is an array of corresponding letter grades.

@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class GENERATE_INTEGERS_Test {
+    
+    @Test
+    public void test_generate_integers_case1() {
+        int a = 1;
+        int b = 4;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(4);
+        
+        ArrayList<Integer> result = GENERATE_INTEGERS.generate_integers(a, b);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void test_generate_integers_case2() {
+        int a = 3;
+        int b = 7;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(6);
+        
+        ArrayList<Integer> result = GENERATE_INTEGERS.generate_integers(a, b);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+These test cases cover the scenarios where `a` is less than 2 and `b` is between 2 and 8, as specified in the input specification.

@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_PAIRS_SUM_TO_ZERO {
+
+    @Test
+    public void testPairsSumToZero_NotExist() {
+        List<Integer> l = Arrays.asList(1, 2, 3, 4, 5);
+        assertFalse(PAIRS_SUM_TO_ZERO.pairs_sum_to_zero(l));
+    }
+
+    @Test
+    public void testPairsSumToZero_Exist() {
+        List<Integer> l = Arrays.asList(2, -2, 3, 4, 5);
+        assertTrue(PAIRS_SUM_TO_ZERO.pairs_sum_to_zero(l));
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where there exist pairs that sum up to zero and where there do not exist such pairs in the input list `l`.

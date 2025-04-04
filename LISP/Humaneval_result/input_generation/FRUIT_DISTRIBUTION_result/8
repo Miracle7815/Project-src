@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFRUIT_DISTRIBUTION {
+
+    @Test
+    public void testFruitDistribution_1() {
+        String s = "10";
+        int n = 5;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testFruitDistribution_2() {
+        String s = "20";
+        int n = 15;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testFruitDistribution_3() {
+        String s = "5";
+        int n = 10;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(5, result);
+    }
+}
+```
+
+These test cases cover different scenarios where the input `s` contains only one integer value and `n` can be any integer.

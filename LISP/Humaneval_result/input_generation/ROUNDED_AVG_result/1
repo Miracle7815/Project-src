@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ROUNDED_AVG {
+
+    @Test
+    public void testRoundedAvg_case1() {
+        assertEquals("101", ROUNDED_AVG.rounded_avg(1, 5));
+    }
+
+    @Test
+    public void testRoundedAvg_case2() {
+        assertEquals("110", ROUNDED_AVG.rounded_avg(3, 8));
+    }
+
+    @Test
+    public void testRoundedAvg_case3() {
+        assertEquals("111", ROUNDED_AVG.rounded_avg(2, 6));
+    }
+}
+```
+
+In the above test cases, we are testing the `rounded_avg` method with different input values for `n` and `m` as per the input specification provided.

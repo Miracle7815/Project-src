@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `order_by_points` method. We need to create instances of `nums` which contains integers with the same number of digits.
+
+Here is an example of how we can write test cases for the `order_by_points` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_ORDER_BY_POINTS {
+
+    @Test
+    public void testOrderPoints_1() {
+        Integer[] nums = {123, 456, 789};
+        Integer[] expected = {123, 456, 789};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrderPoints_2() {
+        Integer[] nums = {987, 654, 321};
+        Integer[] expected = {321, 654, 987};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrderPoints_3() {
+        Integer[] nums = {111, 222, 333};
+        Integer[] expected = {111, 222, 333};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `order_by_points` method with different sets of input `nums` containing integers with the same number of digits. We expect the method to order the integers based on their digits and return the sorted array.
+
+Make sure to import the necessary classes and packages for the test cases to run successfully.

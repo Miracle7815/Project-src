@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `txt` that contain a space character for testing the `split_words` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SPLIT_WORDS {
+    
+    @Test
+    public void testSplitWordsWithSpace() {
+        String txt = "hello world";
+        String[] expected = {"hello", "world"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `split_words` method with a `txt` input that contains a space character. The expected output is an array containing the split words "hello" and "world".

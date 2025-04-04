@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `HashMap<Object, Object>` with keys that are not of type String to test the `check_dict_case` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.HashMap;
+
+public class Test_CHECK_DICT_CASE {
+
+    @Test
+    public void testCheckDictCaseWithNonStringKeys() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put(123, "value1");
+        dict.put(true, "value2");
+        dict.put(3.14, "value3");
+
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+
+        assertFalse(result);
+    }
+}
+```
+
+In this test case, we are creating a `HashMap` with keys that are not of type String and then calling the `check_dict_case` method to check if it returns `false` as expected.

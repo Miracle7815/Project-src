@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestSAME_CHARS {
+
+    @Test
+    public void testSameChars_1() {
+        String s0 = "hello";
+        String s1 = "helo";
+        assertTrue(SAME_CHARS.same_chars(s0, s1));
+    }
+
+    @Test
+    public void testSameChars_2() {
+        String s0 = "world";
+        String s1 = "dorlw";
+        assertTrue(SAME_CHARS.same_chars(s0, s1));
+    }
+
+    @Test
+    public void testSameChars_3() {
+        String s0 = "good";
+        String s1 = "dog";
+        assertFalse(SAME_CHARS.same_chars(s0, s1));
+    }
+}
+``` 
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to verify the functionality of the `same_chars` method in the `SAME_CHARS` class.
+- Each test case includes different input strings `s0` and `s1` with specific characteristics as per the input specification.
+- We use the `assertTrue` and `assertFalse` methods to check if the method behaves as expected for the given inputs.

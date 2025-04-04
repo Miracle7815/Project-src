@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where the `arr` contains only negative numbers. We will need to create instances of `ArrayList<Integer>` with negative numbers for testing.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_COUNT_NUMS {
+    
+    @Test
+    public void testCountNums_OnlyNegativeNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-123);
+        arr.add(-456);
+        arr.add(-789);
+        
+        int result = COUNT_NUMS.count_nums(arr);
+        
+        assertEquals(3, result);
+    }
+}
+```
+
+In this test case, we are creating an `ArrayList` containing three negative numbers and then calling the `count_nums` method from the `COUNT_NUMS` class. The expected result is 3, as all numbers are negative and the sum of their digits is greater than 0.

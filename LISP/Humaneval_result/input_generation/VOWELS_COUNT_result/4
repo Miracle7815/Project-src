@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test inputs for the `vowels_count` method in the `VOWELS_COUNT` class.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestVowelsCount {
+
+    @Test
+    public void testVowelsCount1() {
+        String str = "Hello, World!";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testVowelsCount2() {
+        String str = "Testing vowels count";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testVowelsCount3() {
+        String str = "This is a test with Yy";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create three test cases with different input strings to test the `vowels_count` method.
+- We use the `assertEquals` method to verify that the actual result matches the expected result for each test case.

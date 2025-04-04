@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class ANTI_SHUFFLETest {
+
+    @Test
+    public void testAntiShuffle() {
+        String input = "hello";
+        String expectedOutput = "ehllo";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases for the `FIND_ZERO` class. We need to create instances of `List<Double>` with one or more coefficients to test the `find_zero` method.
+
+Here is an example of how we can write JUnit test cases for the `FIND_ZERO` class:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FIND_ZERO {
+    
+    @Test
+    public void testFindZeroWithSingleCoefficient() {
+        List<Double> coefficients = new ArrayList<>();
+        coefficients.add(1.0);
+        
+        double result = FIND_ZERO.find_zero(coefficients);
+        
+        assertEquals(0.0, result, 0.0001);
+    }
+    
+    @Test
+    public void testFindZeroWithMultipleCoefficients() {
+        List<Double> coefficients = new ArrayList<>();
+        coefficients.add(1.0);
+        coefficients.add(0.0);
+        coefficients.add(-1.0);
+        
+        double result = FIND_ZERO.find_zero(coefficients);
+        
+        assertEquals(1.0, result, 0.0001);
+    }
+}
+```
+
+In the above test cases, we are testing the `find_zero` method of the `FIND_ZERO` class with different sets of coefficients. The `assertEquals` method is used to verify that the expected result matches the actual result returned by the method.

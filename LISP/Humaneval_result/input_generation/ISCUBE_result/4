@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios where `a` is a perfect cube with decimals that are equivalent to whole numbers after being implicitly converted to integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+
+public class Test_ISCUBE {
+    
+    @Test
+    public void testPerfectCube1() {
+        int a = 27; // 27 is a perfect cube (3^3)
+        assertTrue(ISCUBE.iscube(a));
+    }
+    
+    @Test
+    public void testPerfectCube2() {
+        int a = 64; // 64 is a perfect cube (4^3)
+        assertTrue(ISCUBE.iscube(a));
+    }
+    
+    @Test
+    public void testPerfectCube3() {
+        int a = 125; // 125 is a perfect cube (5^3)
+        assertTrue(ISCUBE.iscube(a));
+    }
+}
+```
+
+In the above test cases, we are testing the `ISCUBE.iscube()` method with inputs that are perfect cubes (27, 64, 125) which are equivalent to whole numbers after being implicitly converted to integers.

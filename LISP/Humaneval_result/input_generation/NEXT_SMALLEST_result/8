@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Test_NEXT_SMALLEST {
+    
+    @Test
+    public void testNextSmallest_WithMultipleElements() {
+        int[] lst = {5, 2, 8, 3, 10};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(Integer.valueOf(3), result);
+    }
+    
+    @Test
+    public void testNextSmallest_WithSingleElement() {
+        int[] lst = {7};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(null, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where the input array `lst` contains multiple elements without duplicates and the second smallest element is the largest element.

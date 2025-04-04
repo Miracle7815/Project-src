@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `tri` method in the `TRI` class. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_TRI {
+    
+    @Test
+    public void testTriWithZero() {
+        int n = 0;
+        int[] expected = {1};
+        int[] result = TRI.tri(n);
+        assertArrayEquals(expected, result);
+    }
+}
+```

@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class SOLUTIONTest {
+
+    @Test
+    public void testSolution_NullList() {
+        ArrayList<Integer> lst = null;
+        int result = SOLUTION.solution(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `solution` method with a `null` list as input, as specified in the input specification. The expected result is 0.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the input parameter `s` which contains only commas.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class Test_WORDS_STRINGS {
+    
+    @Test
+    public void testWordsStrings_OnlyCommas() {
+        String s = ",,,,";
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("");
+        
+        ArrayList<String> result = WORDS_STRINGS.words_strings(s);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input string `s` contains only commas. The expected result is an ArrayList with an empty string.

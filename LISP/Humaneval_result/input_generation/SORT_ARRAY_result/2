@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `sort_array` method. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_ARRAYTest {
+
+    @Test
+    public void testSortArray_singleElement() {
+        int[] array = {5};
+        int[] sortedArray = SORT_ARRAY.sort_array(array);
+        assertArrayEquals(new int[]{5}, sortedArray);
+    }
+}
+``` 
+
+In this test case, we are testing the `sort_array` method with an input array containing only one element. The expected output is the same array as the input since there is only one element in the array.

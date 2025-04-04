@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `List<Double>` containing extreme values such as `Double.MAX_VALUE` and `Double.MIN_VALUE`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEAN_ABSOLUTE_DEVIATION {
+
+    @Test
+    public void testMeanAbsoluteDeviationWithExtremeValues() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(Double.MAX_VALUE);
+        numbers.add(Double.MIN_VALUE);
+
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+
+        // Define the expected result based on the extreme values
+        double expected = (Double.MAX_VALUE + Double.MIN_VALUE) / 2.0;
+
+        assertEquals(expected, result, 0.0001); // Using delta for double comparison
+    }
+}
+```

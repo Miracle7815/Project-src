@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `check_dict_case` method with an empty HashMap as input. Here is the code snippet for the test case:
+
+```java
+import java.util.HashMap;
+
+public class Test_CHECK_DICT_CASE {
+    
+    @Test
+    public void testEmptyHashMap() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+        assertFalse(result);
+    }
+}
+```
+
+In this test case, we are creating an empty HashMap and passing it to the `check_dict_case` method. We then assert that the result should be `false` as per the input specification.

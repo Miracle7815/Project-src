@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `sum_to_n` method with the boundary condition of `Integer.MIN_VALUE`.
+
+Here is the JUnit test case code along with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestSUM_TO_N {
+    
+    @Test
+    public void testSumToNWithMinValue() {
+        int n = Integer.MIN_VALUE;
+        int result = SUM_TO_N.sum_to_n(n);
+        assertEquals(result, -1073741824);
+    }
+}
+```
+
+In this test case, we are testing the `sum_to_n` method with the input `Integer.MIN_VALUE` to check how the method handles boundary conditions. The expected result is `-1073741824` based on the formula `(n + 1) * n / 2` for `Integer.MIN_VALUE`.

@@ -1,0 +1,48 @@
+Based on the provided API method and input specification, we can write test cases to cover the special cases mentioned (1, 2, and 3) for the `factorial` method. We will need to create instances of `n` and import statements for the test class.
+
+Here is the JUnit test class with the required import statements and test cases for the `factorial` method:
+
+```java
+import java.util.ArrayList;
+
+public class TEST_FACTORIAL {
+    
+    @Test
+    public void testFactorialCase1() {
+        int n = 1;
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(1);
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testFactorialCase2() {
+        int n = 2;
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(1);
+        expectedResult.add(2);
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testFactorialCase3() {
+        int n = 3;
+        ArrayList<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(1);
+        expectedResult.add(2);
+        expectedResult.add(6);
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above test class, we have covered the special cases of 1, 2, and 3 for the `factorial` method as per the input specification.

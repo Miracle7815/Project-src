@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class PLUCKTest {
+
+    @Test
+    public void testEmptyArray() {
+        int[] arr = {};
+        int[] result = PLUCK.pluck(arr);
+        assertArrayEquals(new int[]{}, result);
+    }
+}
+```
+
+In this test case, we are testing the `pluck` method with an empty array as input. The expected result is an empty array as well.

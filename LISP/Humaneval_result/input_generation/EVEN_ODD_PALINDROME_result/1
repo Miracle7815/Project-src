@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of negative integers for the input `n` and test the functionality of the `even_odd_palindrome` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import java.util.ArrayList;
+
+public class TestEVEN_ODD_PALINDROME {
+    
+    @Test
+    public void testNegativeInput() {
+        int n = -10;
+        ArrayList<Integer> result = EVEN_ODD_PALINDROME.even_odd_palindrome(n);
+        assertEquals(0, (int) result.get(0));
+        assertEquals(0, (int) result.get(1));
+    }
+}
+```
+
+In this test case, we are testing the `even_odd_palindrome` method with a negative integer input `n = -10`. The expected result is that both the counts of even and odd palindromes should be 0 for a negative input.

@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class COMPARETest {
+
+    @Test
+    public void testCompare_WithNullGame() {
+        int[] game = null;
+        int[] guess = {1, 2, 3, 4};
+        int[] expected = null;
+        
+        int[] result = COMPARE.compare(game, guess);
+        
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCompare_WithNonEmptyGame() {
+        int[] game = {5, 8, 2, 1};
+        int[] guess = {2, 4, 1, 5};
+        int[] expected = {3, 4, 1, 4};
+        
+        int[] result = COMPARE.compare(game, guess);
+        
+        assertArrayEquals(expected, result);
+    }
+}
+```

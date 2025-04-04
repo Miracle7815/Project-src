@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `List<String>` with `strings` as null.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestLONGEST {
+    
+    @Test
+    public void testLongestWithNullList() {
+        List<String> strings = null;
+        String result = LONGEST.longest(strings);
+        assertNull(result);
+    }
+}
+```

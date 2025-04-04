@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.HashMap;
+
+public class TestHistogram {
+    
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+        HashMap<Character, Integer> expected = new HashMap<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `histogram` method with an empty string as input. The expected result is an empty HashMap.

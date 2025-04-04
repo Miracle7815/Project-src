@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `class_name` and `extensions` and then test the `strongest_extension` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRONGEST_EXTENSION {
+
+    @Test
+    public void testStrongestExtension_1() {
+        String class_name = "TestClass";
+        String[] extensions = {"html", "CSS", "js", "JAVA"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals("TestClass.CSS", result);
+    }
+
+    @Test
+    public void testStrongestExtension_2() {
+        String class_name = "AnotherClass";
+        String[] extensions = {"py", "CPP", "java", "HTML"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals("AnotherClass.HTML", result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `strongest_extension` method with different inputs. The `assertEquals` method is used to compare the expected output with the actual output of the method.

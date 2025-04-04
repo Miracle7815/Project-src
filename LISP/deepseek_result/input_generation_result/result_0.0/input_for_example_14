@@ -1,0 +1,28 @@
+Anwser: Let's do this step by step. 
+According to the signature of the code, we can know that we should write instances of `accurate` and `approximate`.
+In the input specification, `accurate` is negative infinity and `approximate` is positive infinity. These are special double values in Java.
+Based on the method signature, body, we can write instances of `accurate` and `approximate` and required import statements based on and the input specification:
+
+Example 1: 
+    Part 1. The objects initialized:
+        ```java
+        double accurate = Double.NEGATIVE_INFINITY;
+        double approximate = Double.POSITIVE_INFINITY;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        ```
+
+Example 2:
+    Part 1. The objects initialized:
+        ```java
+        double accurate = Double.NEGATIVE_INFINITY;
+        double approximate = Double.POSITIVE_INFINITY;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        ```

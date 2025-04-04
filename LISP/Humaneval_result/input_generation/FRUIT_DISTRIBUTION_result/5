@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FRUIT_DISTRIBUTIONTest {
+
+    @Test
+    public void testFruitDistribution_validInput() {
+        String s = "10 apples 5 oranges 3 bananas";
+        int n = 20;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testFruitDistribution_invalidInput() {
+        String s = "10 apples invalid 3 bananas";
+        int n = 15;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(5, result);
+    }
+}
+```

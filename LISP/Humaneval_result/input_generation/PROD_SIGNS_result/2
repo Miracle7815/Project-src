@@ -1,0 +1,20 @@
+Based on the provided method signature and body, we can write test cases to cover the scenario where `arr` is an array with only one element.
+
+Example test case in JUnit format:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class PROD_SIGNS_Test {
+
+    @Test
+    public void testArrayWithOneElement() {
+        int[] arr = {5};
+        int result = PROD_SIGNS.prod_signs(arr);
+        assertEquals(5, result);
+    }
+}
+```
+
+This test case covers the scenario where `arr` is an array with only one element, which is 5. The expected result is the product of the sign of the element and the absolute value of the element, which in this case is 5.

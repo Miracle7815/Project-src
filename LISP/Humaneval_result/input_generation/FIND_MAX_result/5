@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `words` which contain multiple words with the same number of unique characters.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FIND_MAX {
+
+    @Test
+    public void testFindMax_1() {
+        String[] words = {"hello", "world", "apple", "banana"};
+        String result = FIND_MAX.find_max(words);
+        assertEquals("apple", result);
+    }
+
+    @Test
+    public void testFindMax_2() {
+        String[] words = {"cat", "dog", "bird", "fish"};
+        String result = FIND_MAX.find_max(words);
+        assertEquals("bird", result);
+    }
+}
+```
+
+In the above test cases, we are testing the `find_max` method with different sets of words where each set contains multiple words with the same number of unique characters. The expected output is the word with the maximum number of unique characters.

@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. 
+
+First, we need to import the required classes and packages:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+```
+
+Now, we can write test cases for the `INTERSECTION` class:
+
+```java
+public class Test_INTERSECTION {
+
+    @Test
+    public void testIntersection_WithNullInterval1() {
+        int[] interval1 = null;
+        int[] interval2 = {3, 7};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+
+    @Test
+    public void testIntersection_WithPrimeLength() {
+        int[] interval1 = {5, 10};
+        int[] interval2 = {7, 15};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("YES", result);
+    }
+
+    @Test
+    public void testIntersection_WithNonPrimeLength() {
+        int[] interval1 = {2, 8};
+        int[] interval2 = {4, 12};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+}
+```
+
+These test cases cover scenarios where `interval1` is null, the length of the intersection is a prime number, and the length of the intersection is not a prime number.

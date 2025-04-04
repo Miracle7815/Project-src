@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `is_prime` method. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_PRIME {
+
+    @Test
+    public void testIsPrimeWithPrimeNumber() {
+        int n = 7;
+        boolean result = IS_PRIME.is_prime(n);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsPrimeWithNonPrimeNumber() {
+        int n = 6;
+        boolean result = IS_PRIME.is_prime(n);
+        assertFalse(result);
+    }
+}
+```

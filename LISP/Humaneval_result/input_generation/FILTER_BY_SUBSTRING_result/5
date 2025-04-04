@@ -1,0 +1,53 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `strings` and `substring` and then test the `filter_by_substring` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FILTER_BY_SUBSTRING {
+
+    @Test
+    public void testFilterBySubstring_1() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("orange");
+        strings.add("grape");
+        
+        String substring = "an";
+        
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        
+        List<String> expected = new ArrayList<>();
+        expected.add("banana");
+            expected.add("orange");
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testFilterBySubstring_2() {
+        List<String> strings = new ArrayList<>();
+        strings.add("hello");
+        strings.add("world");
+        strings.add("java");
+        
+        String substring = "o";
+        
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        
+        List<String> expected = new ArrayList<>();
+        expected.add("hello");
+        expected.add("world");
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `filter_by_substring` method with different inputs. The test cases verify that the method correctly filters the strings based on the given substring.

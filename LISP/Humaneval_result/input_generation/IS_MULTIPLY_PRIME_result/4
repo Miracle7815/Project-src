@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios where the `is_multiply_prime` method should return `true` and `false`.
+
+Here are the test cases in JUnit format:
+
+```java
+import org.junit.Test;
+
+public class Test_IS_MULTIPLY_PRIME {
+    
+    @Test
+    public void testIsMultiplyPrime_True() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(30);
+        org.junit.Assert.assertTrue(result);
+    }
+    
+    @Test
+    public void testIsMultiplyPrime_False() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(25);
+        org.junit.Assert.assertFalse(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `is_multiply_prime` method with a product of three prime numbers (30) which should return `true`, and with a number that is not a product of three prime numbers (25) which should return `false`.

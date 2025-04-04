@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVEN_Test {
+
+    @Test
+    public void testSortEven_1() {
+        int[] input = {2, 4, 6, 8, 10};
+        int[] expected = {2, 4, 6, 8, 10};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSortEven_2() {
+        int[] input = {12, 20, 4, 8, 16, 6};
+        int[] expected = {4, 6, 8, 12, 16, 20};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sort_even` method from the `SORT_EVEN` class with input arrays containing all even numbers. The expected output arrays are also provided based on the input specification.

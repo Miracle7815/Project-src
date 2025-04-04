@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class IS_BOREDTest {
+
+    @Test
+    public void testIsBored_NullString() {
+        String S = null;
+        int result = IS_BORED.is_bored(S);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `is_bored` method with a `null` input string `S`. The expected result is `0` as specified in the input specification.

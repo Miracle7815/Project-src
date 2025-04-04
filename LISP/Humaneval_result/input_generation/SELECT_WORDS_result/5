@@ -1,0 +1,54 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test inputs for the `select_words` method from the `SELECT_WORDS` class.
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SELECT_WORDS_Test {
+
+    @Test
+    public void testSelectWords_WithValidInput() {
+        String s = "Hello World";
+        int n = 2;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Hello");
+        expected.add("World");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSelectWords_WithSpecialCharacters() {
+        String s = "Java is #1 Programming Language!";
+        int n = 3;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Programming");
+        expected.add("Language");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSelectWords_WithNoMatchingWords() {
+        String s = "Testing the method";
+        int n = 4;
+        ArrayList<String> expected = new ArrayList<>();
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes for testing.
+- We create test cases to cover scenarios with valid input, special characters, and no matching words.
+- We compare the expected output with the result obtained from the `select_words` method.

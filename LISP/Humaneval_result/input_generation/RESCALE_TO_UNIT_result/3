@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where the `numbers` array contains multiple elements with all elements being the same. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestRESCALE_TO_UNIT {
+    
+    @Test
+    public void testRescaleToUnit_AllSameElements() {
+        double[] numbers = {3.0, 3.0, 3.0, 3.0, 3.0};
+        double[] expected = {0.0, 0.0, 0.0, 0.0, 0.0};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+}
+```
+
+In this test case, we are testing the `rescale_to_unit` method with an input array where all elements are the same. The expected output is an array where all elements are 0.0.

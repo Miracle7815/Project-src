@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios mentioned. We will need to create instances of `s` and `n` to test the `select_words` method. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_SELECT_WORDS {
+    
+    @Test
+    public void testNullString() {
+        ArrayList<String> result = SELECT_WORDS.select_words(null, 3);
+        assertEquals(0, result.size());
+    }
+    
+    @Test
+    public void testNConsonants() {
+        String s = "This is a test sentence";
+        int n = 3;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("This");
+        expected.add("test");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the test cases above, we cover the scenario of a null string for `s` and a specific number of consonants `n`. The expected behavior is to return an empty list for a null string and to return words with the specified number of consonants.

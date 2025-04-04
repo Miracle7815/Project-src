@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n`, which is a prime number, and test the `largest_divisor` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestLARGEST_DIVISOR {
+
+    @Test
+    public void testLargestDivisor_PrimeNumber() {
+        int n = 17; // Prime number
+        int result = LARGEST_DIVISOR.largest_divisor(n);
+        assertEquals(1, result);
+    }
+}
+```
+
+In this test case, we are testing the `largest_divisor` method with a prime number `n = 17`. The expected result is `1` since prime numbers only have 1 and the number itself as divisors.

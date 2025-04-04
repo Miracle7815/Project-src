@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `l` which contains duplicate values and test the `incr_list` method from the `INCR_LIST` class.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_INCR_LIST {
+    
+    @Test
+    public void test_incr_list_withDuplicates() {
+        List<Integer> l = new ArrayList<>();
+        l.add(2);
+        l.add(3);
+        l.add(2);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(4);
+        expected.add(3);
+        
+        List<Integer> result = INCR_LIST.incr_list(l);
+        
+        assertEquals(expected, result);
+    }
+}
+```

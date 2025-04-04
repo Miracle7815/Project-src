@@ -1,0 +1,15 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_IS_PRIME {
+    
+    @Test
+    public void testIsPrimeWithTwo() {
+        boolean result = IS_PRIME.is_prime(2);
+        assertEquals(true, result);
+    }
+}
+```

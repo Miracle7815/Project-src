@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_PARSE_NESTED_PARENS {
+    
+    @Test
+    public void test_parse_nested_parens_1() {
+        String paren_string = "((())())";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(2);
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void test_parse_nested_parens_2() {
+        String paren_string = "((()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()

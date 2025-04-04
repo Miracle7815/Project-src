@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_REVERSE_DELETE {
+    
+    @Test
+    public void testReverseDelete_emptyString() {
+        String s = "";
+        String c = "abc";
+        
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        assertEquals("", result.get(0));
+        assertTrue((boolean) result.get(1));
+    }
+    
+    @Test
+    public void testReverseDelete_nonEmptyString() {
+        String s = "hello";
+        String c = "aeiou";
+        
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        assertEquals("hll", result.get(0));
+        assertFalse((boolean) result.get(1));
+    }
+}
+```
+
+These test cases cover the scenario of an empty string for `s` and a non-empty string for `s`, ensuring that the method `reverse_delete` behaves as expected.

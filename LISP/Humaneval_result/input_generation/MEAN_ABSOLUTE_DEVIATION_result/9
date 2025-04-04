@@ -1,0 +1,42 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `List<Double>` containing NaN or Infinity values to test the `mean_absolute_deviation` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEAN_ABSOLUTE_DEVIATION {
+
+    @Test
+    public void testMeanAbsoluteDeviationWithNaN() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(10.0);
+        numbers.add(Double.NaN);
+        numbers.add(20.0);
+        numbers.add(Double.NaN);
+        numbers.add(30.0);
+
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(Double.isNaN(result), true);
+    }
+
+    @Test
+    public void testMeanAbsoluteDeviationWithInfinity() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(5.0);
+        numbers.add(Double.POSITIVE_INFINITY);
+        numbers.add(10.0);
+        numbers.add(Double.NEGATIVE_INFINITY);
+        numbers.add(15.0);
+
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(Double.isInfinite(result), true);
+    }
+}
+```
+
+In the above test cases, we are testing the `mean_absolute_deviation` method with `List<Double>` instances containing NaN and Infinity values. The assertions check if the result is NaN or Infinite as expected.

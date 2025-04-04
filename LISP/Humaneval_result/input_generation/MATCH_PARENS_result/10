@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases for the `MATCH_PARENS` class. We need to create instances of `lst` which is an array of strings.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+
+    @Test
+    public void testUnbalancedStrings() {
+        String[] lst1 = {"(", ")"};
+        String[] lst2 = {")", "("};
+        
+        String result1 = MATCH_PARENS.match_parens(lst1);
+        String result2 = MATCH_PARENS.match_parens(lst2);
+        
+        assertEquals("No", result1);
+        assertEquals("No", result2);
+    }
+}
+```

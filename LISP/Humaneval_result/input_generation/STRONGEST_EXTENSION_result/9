@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `strongest_extension` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRONGEST_EXTENSION {
+
+    @Test
+    public void testStrongestExtension_1() {
+        String class_name = "TestClass";
+        String[] extensions = {"ExAmPle", "tEsTinG", "HeLLo"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals("TestClass.ExAmPle", result);
+    }
+
+    @Test
+    public void testStrongestExtension_2() {
+        String class_name = "AnotherClass";
+        String[] extensions = {"StRiNg", "TeSt", "ExAmPlE"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals("AnotherClass.ExAmPlE", result);
+    }
+
+    @Test
+    public void testStrongestExtension_3() {
+        String class_name = "ThirdClass";
+        String[] extensions = {"ExAmPlE", "tEsT", "StRiNg"};
+        String result = STRONGEST_EXTENSION.strongest_extension(class_name, extensions);
+        assertEquals("ThirdClass.ExAmPlE", result);
+    }
+}
+```
+
+In the above test cases, we are testing the `strongest_extension` method with different inputs to cover various scenarios as per the input specification.

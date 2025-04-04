@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `simplify` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class SIMPLIFYTest {
+
+    @Test
+    public void testSimplify_validInput() {
+        assertTrue(SIMPLIFY.simplify("2/3", "4/6"));
+    }
+
+    @Test
+    public void testSimplify_invalidInput() {
+        assertFalse(SIMPLIFY.simplify("5/2", "3/4"));
+    }
+
+    @Test(expected = NumberFormatException.class)
+    public void testSimplify_invalidFormatX() {
+        SIMPLIFY.simplify("5", "3/4");
+    }
+
+    @Test(expected = NumberFormatException.class)
+    public void testSimplify_invalidFormatN() {
+        SIMPLIFY.simplify("2/3", "3");
+    }
+}
+```
+
+In the above test cases:
+- `testSimplify_validInput` tests the method with valid input that should simplify to true.
+- `testSimplify_invalidInput` tests the method with input that should simplify to false.
+- `testSimplify_invalidFormatX` tests the method with invalid format for `x`.
+- `testSimplify_invalidFormatN` tests the method with invalid format for `n`.
+
+You can add more test cases based on different scenarios to ensure the correctness of the `simplify` method.

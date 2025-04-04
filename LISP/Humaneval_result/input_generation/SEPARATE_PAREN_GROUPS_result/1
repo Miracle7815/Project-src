@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an instance of the `SEPARATE_PAREN_GROUPS` class and call the `separate_paren_groups` method with an empty string as input. Here is the JUnit test code:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_SEPARATE_PAREN_GROUPS {
+
+    @Test
+    public void testSeparateParenGroups_emptyString() {
+        SEPARATE_PAREN_GROUPS separateParenGroups = new SEPARATE_PAREN_GROUPS();
+        String parenString = "";
+        List<String> result = separateParenGroups.separate_paren_groups(parenString);
+        List<String> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `separate_paren_groups` method with an empty string as input. The expected result is an empty list since there are no parentheses in the input string.

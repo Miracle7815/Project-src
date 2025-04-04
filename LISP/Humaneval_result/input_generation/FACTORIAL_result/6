@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases to cover edge cases like the maximum and minimum integer values for the input `n`. We will also need to import the necessary classes for testing.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class TestFACTORIAL {
+    
+    @Test
+    public void testFactorial_MaxInteger() {
+        ArrayList<Integer> expected = new ArrayList<>();
+        // Factorial of Integer.MAX_VALUE is not feasible to calculate
+        // Adding a placeholder value to the expected list
+        expected.add(0);
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(Integer.MAX_VALUE);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorial_MinInteger() {
+        ArrayList<Integer> expected = new ArrayList<>();
+        // Factorial of negative numbers is not defined
+        // Adding a placeholder value to the expected list
+        expected.add(0);
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(Integer.MIN_VALUE);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test code, we have covered edge cases for the input `n` with the maximum and minimum integer values. The expected result for these edge cases is handled by adding placeholder values to the expected list, as calculating factorial for such large or negative numbers is not feasible.

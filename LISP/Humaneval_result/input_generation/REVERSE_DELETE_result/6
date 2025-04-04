@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `s` and `c` and test the `reverse_delete` method with different scenarios.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_REVERSE_DELETE {
+    
+    @Test
+    public void testReverseDelete_NotPalindrome() {
+        String s = "hello";
+        String c = "abc";
+        
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        String new_s = (String) result.get(0);
+        boolean isPalindrome = (boolean) result.get(1);
+        
+        // Check if the modified string is correct
+        assertEquals("helo", new_s);
+        
+        // Check if the modified string is not a palindrome
+        assertFalse(isPalindrome);
+    }
+    
+    @Test
+    public void testReverseDelete_EmptyString() {
+        String s = "";
+        String c = "xyz";
+        
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        String new_s = (String) result.get(0);
+        boolean isPalindrome = (boolean) result.get(1);
+        
+        // Check if the modified string is empty
+        assertEquals("", new_s);
+        
+        // Check if the modified string is a palindrome (empty string is considered a palindrome)
+        assertTrue(isPalindrome);
+    }
+}
+```
+
+In the above code, we have written two test cases to test the `reverse_delete` method with different scenarios based on the input specification. The test cases check if the modified string `new_s` is correct and if it is a palindrome or not.

@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_COUNT_NUMS {
+    
+    @Test
+    public void testCountNums_Zero() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(0);
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testCountNums_EmptyArray() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testCountNums_PositiveNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(456);
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testCountNums_NegativeNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-123);
+        arr.add(-456);
+        int result = COUNT_NUMS.count_nums(arr);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios for an array containing zero, an empty array, an array with positive numbers, and an array with negative numbers as per the input specification.

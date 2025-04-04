@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain multiple words representing numbers in descending order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_NUMBERS {
+    
+    @Test
+    public void testSortNumbers_1() {
+        String numbers = "nine eight seven six five four three two one zero";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("zero one two three four five six seven eight nine", sortedNumbers);
+    }
+    
+    @Test
+    public void testSortNumbers_2() {
+        String numbers = "seven six five four three two one zero";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("zero one two three four five six seven", sortedNumbers);
+    }
+}
+```
+
+In the above test cases, we are testing the `sort_numbers` method with different inputs containing multiple words representing numbers in descending order. The expected output is the sorted numbers in ascending order separated by spaces.

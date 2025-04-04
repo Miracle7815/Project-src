@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases for the `intersection` method. We need to create instances of `interval1` and `interval2` arrays with valid values as specified in the input specification.
+
+Here are the required import statements and a sample JUnit test class with test cases:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_INTERSECTION {
+    
+    @Test
+    public void testIntersection_1() {
+        int[] interval1 = {3, 7};
+        int[] interval2 = {5, 10};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("YES", result);
+    }
+    
+    @Test
+    public void testIntersection_2() {
+        int[] interval1 = {1, 5};
+        int[] interval2 = {8, 12};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+}
+```
+
+In the above test class, we have two test cases to test the `intersection` method with different sets of `interval1` and `interval2` arrays.

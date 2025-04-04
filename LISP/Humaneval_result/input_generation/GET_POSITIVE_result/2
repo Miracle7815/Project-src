@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain only positive numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_GET_POSITIVE {
+    
+    @Test
+    public void testGetPositive_WithPositiveNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(10);
+        numbers.add(3);
+        
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(10);
+        expected.add(3);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testGetPositive_WithMixedNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(-2);
+        numbers.add(7);
+        numbers.add(-5);
+        
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(7);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have two test cases. The first test case checks if the method works correctly with a list of positive numbers only. The second test case checks if the method filters out negative numbers correctly.

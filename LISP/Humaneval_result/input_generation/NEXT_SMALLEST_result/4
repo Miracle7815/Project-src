@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `next_smallest` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class NEXT_SMALLESTTest {
+
+    @Test
+    public void testNextSmallestWithDuplicates() {
+        int[] lst = {5, 2, 8, 2, 3, 5};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(Integer.valueOf(3), result);
+    }
+
+    @Test
+    public void testNextSmallestWithNoDuplicates() {
+        int[] lst = {5, 2, 8, 3, 7};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(Integer.valueOf(5), result);
+    }
+
+    @Test
+    public void testNextSmallestWithSingleElement() {
+        int[] lst = {5};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(null, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `next_smallest` method with arrays containing duplicates, no duplicates, and a single element to cover different scenarios.

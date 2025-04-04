@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class TestCOUNT_UP_TO {
+    
+    @Test
+    public void testCount_up_to() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        
+        List<Integer> result = COUNT_UP_TO.count_up_to(2);
+        
+        assertEquals(expected, result);
+    }
+}
+```

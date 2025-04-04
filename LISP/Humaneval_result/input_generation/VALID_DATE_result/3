@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create valid and invalid date inputs in the format "MM-DD-YYYY" to test the `valid_date` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_VALID_DATE {
+
+    @Test
+    public void testValidDate() {
+        assertTrue(VALID_DATE.valid_date("01-15-2022"));
+        assertTrue(VALID_DATE.valid_date("02-29-2020"));
+        assertTrue(VALID_DATE.valid_date("12-31-2023"));
+    }
+
+    @Test
+    public void testInvalidDate() {
+        assertFalse(VALID_DATE.valid_date("13-15-2022")); // Invalid month
+        assertFalse(VALID_DATE.valid_date("02-30-2021")); // Invalid day for February
+        assertFalse(VALID_DATE.valid_date("04-31-2022")); // Invalid day for April
+        assertFalse(VALID_DATE.valid_date("11-31-2023")); // Invalid day for November
+        assertFalse(VALID_DATE.valid_date("02-29-2021")); // Invalid leap year
+        assertFalse(VALID_DATE.valid_date("02-28-2022")); // Invalid leap year
+        assertFalse(VALID_DATE.valid_date("02-29-")); // Invalid format
+        assertFalse(VALID_DATE.valid_date("02-29-2022-")); // Invalid format
+    }
+}
+```
+
+In the above code:
+- The `testValidDate` method tests valid date inputs.
+- The `testInvalidDate` method tests invalid date inputs.
+
+Make sure to adjust the test cases based on the specific requirements and edge cases of the `valid_date` method.

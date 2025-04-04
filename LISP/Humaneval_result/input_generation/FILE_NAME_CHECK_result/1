@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to import the necessary JUnit classes and the `FILE_NAME_CHECK` class to test the `file_name_check` method.
+
+Here is the JUnit test code for the `file_name_check` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FILE_NAME_CHECKTest {
+
+    @Test
+    public void testFileNameCheck_NullFileName() {
+        String file_name = null;
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+}
+```
+
+In this test case, we are testing the `file_name_check` method with a `null` file name as input, as specified in the input specification. The expected result is "No" since the method should return "No" when the file name is `null`.

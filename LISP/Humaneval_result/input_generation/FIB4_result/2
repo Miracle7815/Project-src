@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `fib4` method in the `FIB4` class. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIB4 {
+    
+    @Test
+    public void testFib4() {
+        int n = 4;
+        int expectedResult = 2;
+        int result = FIB4.fib4(n);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In this test case, we are testing the `fib4` method with the input `n = 4`. The expected result for this input is `2`. The test asserts that the actual result from the method matches the expected result.

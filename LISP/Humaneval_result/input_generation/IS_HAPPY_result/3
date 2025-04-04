@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_HAPPY {
+
+    @Test
+    public void testIsHappy_1() {
+        String s = "abc";
+        boolean result = IS_HAPPY.is_happy(s);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsHappy_2() {
+        String s = "aba";
+        boolean result = IS_HAPPY.is_happy(s);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsHappy_3() {
+        String s = "xyz";
+        boolean result = IS_HAPPY.is_happy(s);
+        assertTrue(result);
+    }
+}
+``` 
+
+In the above code snippet, we have imported the necessary JUnit classes and written test cases to test the `is_happy` method from the `IS_HAPPY` class. The test cases cover scenarios where the input string `s` has a length of 3 characters and satisfies the conditions to be considered "happy".

@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `is_sorted` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void testDescendingOrder() {
+        int[] lst = {5, 3}; // Contains two elements in descending order
+        boolean result = IS_SORTED.is_sorted(lst);
+        assertFalse(result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array `lst` contains two elements in descending order. The expected behavior is that the method should return `false` since the array is not sorted.

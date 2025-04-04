@@ -1,0 +1,17 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario where the `nums` list is empty. We will need to create an instance of an empty `ArrayList<Long>` as the input.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_MIN_SUBARRAY_SUM {
+    
+    @Test
+    public void testEmptyList() {
+        ArrayList<Long> nums = new ArrayList<>();
+        long result = MIN_SUBARRAY_SUM.min_subarray_sum(nums);
+        assertEquals(0, result);
+    }
+}
+```

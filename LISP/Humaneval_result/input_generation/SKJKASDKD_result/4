@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+First, we need to import the necessary classes and annotations for JUnit testing:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+```
+
+Now, we can write test cases for the `skjkasdkd` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSKJKASDKD {
+    
+    @Test
+    public void testEmptyArray() {
+        int[] lst = new int[]{};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `skjkasdkd` method with an empty array as input. The expected result is 0 since the array is empty and there are no prime numbers to consider.

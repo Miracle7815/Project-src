@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains a mix of odd and even numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ADD_EVEN_AT_ODD {
+    
+    @Test
+    public void testAddEvenAtOdd_1() {
+        int[] lst = {1, 2, 3, 4, 5};
+        int result = ADD_EVEN_AT_ODD.add_even_at_odd(lst);
+        assertEquals(6, result);
+    }
+    
+    @Test
+    public void testAddEvenAtOdd_2() {
+        int[] lst = {2, 3, 6, 7, 8};
+        int result = ADD_EVEN_AT_ODD.add_even_at_odd(lst);
+        assertEquals(14, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different input arrays `lst` containing a mix of odd and even numbers.
+- We call the `add_even_at_odd` method from the `ADD_EVEN_AT_ODD` class with the input array `lst`.
+- We use `assertEquals` to verify that the returned result matches the expected sum of even numbers at odd indices in the input array.

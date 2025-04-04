@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `valid_date` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class VALID_DATE_Test {
+
+    @Test
+    public void testInvalidDayForFebruary() {
+        assertFalse(VALID_DATE.valid_date("02-29-2021")); // Non-leap year
+        assertFalse(VALID_DATE.valid_date("02-30-2020")); // Leap year
+    }
+}
+```
+
+In this test case, we are testing the `valid_date` method with dates that have an invalid day for February (29 or less, but not a leap year). The `assertFalse` method is used to assert that the method should return `false` for these invalid dates.

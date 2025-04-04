@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DECIMAL_TO_BINARY {
+
+    @Test
+    public void testDecimalToBinary_negativeInput() {
+        int decimal = -10;
+        String expected = "db11111111111111111111111111110110db";
+        String result = DECIMAL_TO_BINARY.decimal_to_binary(decimal);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testDecimalToBinary_anotherNegativeInput() {
+        int decimal = -27;
+        String expected = "db11111111111111111111111111100101db";
+        String result = DECIMAL_TO_BINARY.decimal_to_binary(decimal);
+        assertEquals(expected, result);
+    }
+}
+```
+
+These test cases cover the scenario of converting negative decimal integers to binary strings as specified in the input specification.

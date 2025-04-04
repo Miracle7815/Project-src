@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFRUIT_DISTRIBUTION {
+
+    @Test
+    public void testFruitDistribution_1() {
+        String s = "10 5 3";
+        int n = 20;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testFruitDistribution_2() {
+        String s = "8 4 2";
+        int n = 15;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testFruitDistribution_3() {
+        String s = "15 7 3";
+        int n = 25;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input string `s` contains valid integer values separated by spaces and `n` is any integer. The expected results are calculated based on the subtraction of the parsed integers from `n`.

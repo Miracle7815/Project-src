@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DERIVATIVE_Test {
+
+    @Test
+    public void testDerivative_singleElementList() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(5);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0); // Derivative of a constant is 0
+        
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `derivative` method of the `DERIVATIVE` class with a single-element list as input. The expected result is a list containing a single element with value 0, as the derivative of a constant is 0.

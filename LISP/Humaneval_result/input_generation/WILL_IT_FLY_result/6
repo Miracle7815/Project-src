@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestWILL_IT_FLY {
+
+    @Test
+    public void testWillItFly_True() {
+        int[] q = {1, 2, 3, 2, 1}; // Palindromic array
+        int w = 10;
+        assertTrue(WILL_IT_FLY.will_it_fly(q, w));
+    }
+
+    @Test
+    public void testWillItFly_False() {
+        int[] q = {1, 2, 3, 4, 5}; // Non-palindromic array
+        int w = 10;
+        assertFalse(WILL_IT_FLY.will_it_fly(q, w));
+    }
+
+    @Test
+    public void testWillItFly_EmptyArray() {
+        int[] q = {}; // Empty array
+        int w = 5;
+        assertTrue(WILL_IT_FLY.will_it_fly(q, w));
+    }
+
+    @Test
+    public void testWillItFly_SingleElementArray() {
+        int[] q = {3}; // Single element array
+        int w = 3;
+        assertTrue(WILL_IT_FLY.will_it_fly(q, w));
+    }
+}
+```

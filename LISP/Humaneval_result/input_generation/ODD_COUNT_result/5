@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains strings with both odd and even digits.
+
+Here is an example of how we can write JUnit test cases for the `odd_count` method:
+
+```java
+import java.util.ArrayList;
+
+public class TestODD_COUNT {
+    
+    @Test
+    public void testOddCount_WithOddAndEvenDigits() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("12345");
+        lst.add("2468");
+        
+        ArrayList<String> expectedResult = new ArrayList<>();
+        expectedResult.add("the number of odd elements 3 in the string 3 of the input.");
+        expectedResult.add("the number of odd elements 0 in the string 0 of the input.");
+        
+        ArrayList<String> result = ODD_COUNT.odd_count(lst);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In this test case, we are testing the `odd_count` method with a list `lst` containing strings with both odd and even digits. We expect the method to count the number of odd elements in each string and return the result in the specified format.

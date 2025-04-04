@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `x` and `n` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_SIMPLIFY {
+    
+    @Test
+    public void testSimplify_ValidInput() {
+        String x = "2/3";
+        String n = "4/5";
+        boolean result = SIMPLIFY.simplify(x, n);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void testSimplify_InvalidInput() {
+        String x = "1/2";
+        String n = "3/4";
+        boolean result = SIMPLIFY.simplify(x, n);
+        assertFalse(result);
+    }
+}
+```
+
+In the above code:
+- The `testSimplify_ValidInput` test case checks the `simplify` method with valid input where the simplification is expected to be true.
+- The `testSimplify_InvalidInput` test case checks the `simplify` method with invalid input where the simplification is expected to be false.

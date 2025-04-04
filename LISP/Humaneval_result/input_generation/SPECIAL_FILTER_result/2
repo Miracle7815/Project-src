@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SPECIAL_FILTERTest {
+
+    @Test
+    public void testSpecialFilter_singleDigitLessThan10() {
+        int[] nums = {5};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSpecialFilter_singleDigitGreaterThan10() {
+        int[] nums = {15};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testSpecialFilter_singleDigitGreaterThan10NotMatchingCriteria() {
+        int[] nums = {12};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input array `nums` contains a single element that is less than 10, greater than 10 and meets the criteria specified in the `special_filter` method, and greater than 10 but does not meet the criteria.

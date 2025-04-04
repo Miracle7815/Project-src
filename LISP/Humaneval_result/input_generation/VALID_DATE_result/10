@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `valid_date` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class VALID_DATE_Test {
+
+    @Test
+    public void testValidDate1() {
+        assertTrue(VALID_DATE.valid_date("12-31-2022"));
+    }
+
+    @Test
+    public void testValidDate2() {
+        assertFalse(VALID_DATE.valid_date("13-31-2022"));
+    }
+
+    @Test
+    public void testValidDate3() {
+        assertFalse(VALID_DATE.valid_date("02-30-2022"));
+    }
+
+    @Test
+    public void testValidDate4() {
+        assertFalse(VALID_DATE.valid_date("02-29-2021"));
+    }
+}
+```
+
+In the above test cases:
+- `testValidDate1` checks a valid date "12-31-2022".
+- `testValidDate2` checks an invalid date with a month greater than 12.
+- `testValidDate3` checks an invalid date with February having 30 days.
+- `testValidDate4` checks an invalid date with February having 29 days in a non-leap year.
+
+You can add more test cases based on different scenarios to ensure the correctness of the `valid_date` method.

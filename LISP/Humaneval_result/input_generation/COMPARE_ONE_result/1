@@ -1,0 +1,50 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_COMPARE_ONE {
+
+    @Test
+    public void test_compare_one_withNullA() {
+        Object a = null;
+        Object b = 5.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        org.junit.Assert.assertEquals(b, result);
+    }
+
+    @Test
+    public void test_compare_one_withNullB() {
+        Object a = 3.0;
+        Object b = null;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        org.junit.Assert.assertEquals(a, result);
+    }
+
+    @Test
+    public void test_compare_one_withStringAandB() {
+        Object a = "7,5";
+        Object b = "6.2";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        org.junit.Assert.assertEquals(7.5, result);
+    }
+
+    @Test
+    public void test_compare_one_withIntegerAandB() {
+        Object a = 10;
+        Object b = 15;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        org.junit.Assert.assertEquals(b, result);
+    }
+
+    @Test
+    public void test_compare_one_withDoubleAandB() {
+        Object a = 3.5;
+        Object b = 3.5;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        org.junit.Assert.assertNull(result);
+    }
+}
+```
+
+These test cases cover scenarios where `a` is null, `b` is null, `a` and `b` are strings, `a` and `b` are integers, and `a` and `b` are doubles.

@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `List<Double>` with `numbers` as null. Here is the JUnit test code:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class MEAN_ABSOLUTE_DEVIATIONTest {
+
+    @Test
+    public void testMeanAbsoluteDeviationWithNullList() {
+        List<Double> numbers = null;
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(0.0, result, 0.0001);
+    }
+}
+```

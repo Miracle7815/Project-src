@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSOLVE_STRING {
+
+    @Test
+    public void testNoAlphabeticCharacters() {
+        String input = "123!@#456";
+        String expectedOutput = "654#@$321";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testAllUpperCaseCharacters() {
+        String input = "HELLO";
+        String expectedOutput = "hello";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testAllLowerCaseCharacters() {
+        String input = "world";
+        String expectedOutput = "WORLD";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testMixedCharacters() {
+        String input = "HeLLo123";
+        String expectedOutput = "hEllO123";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input string contains no alphabetic characters, all uppercase characters, all lowercase characters, and a mix of characters.

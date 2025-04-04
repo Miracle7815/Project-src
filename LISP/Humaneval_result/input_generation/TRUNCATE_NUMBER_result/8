@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `TRUNCATE_NUMBER` class with a NaN input.
+
+Here is the JUnit test case code snippet along with the required import statements:
+
+```java
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class TestTRUNCATE_NUMBER {
+
+    @Test
+    public void testTruncateNumberWithNaN() {
+        double nan = Double.NaN;
+        double result = TRUNCATE_NUMBER.truncate_number(nan);
+        assertTrue(Double.isNaN(result));
+    }
+}
+```
+
+In this test case, we are passing a NaN value as input to the `truncate_number` method and asserting that the result is also NaN.

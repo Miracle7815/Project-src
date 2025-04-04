@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MONOTONICTest {
+
+    @Test
+    public void testMonotonicStrictlyDecreasing() {
+        int[] arr = {10, 8, 6, 4, 2};
+        assertTrue(MONOTONIC.monotonic(arr));
+    }
+
+    @Test
+    public void testMonotonicNotSorted() {
+        int[] arr = {5, 8, 3, 1, 9};
+        assertFalse(MONOTONIC.monotonic(arr));
+    }
+
+    @Test
+    public void testMonotonicEqualElements() {
+        int[] arr = {3, 3, 3, 3, 3};
+        assertTrue(MONOTONIC.monotonic(arr));
+    }
+}
+```
+
+In the above test cases:
+1. `testMonotonicStrictlyDecreasing` tests the scenario where the input array `l` is in a strictly decreasing sequence but not sorted.
+2. `testMonotonicNotSorted` tests the scenario where the input array `l` is not sorted.
+3. `testMonotonicEqualElements` tests the scenario where all elements in the input array `l` are equal.

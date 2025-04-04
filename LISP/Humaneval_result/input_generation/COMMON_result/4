@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `l1` and `l2` arrays with some common elements for testing the `common` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertArrayEquals;
+import org.junit.Test;
+
+public class TestCOMMON {
+    
+    @Test
+    public void testCommon_1() {
+        int[] l1 = {1, 2, 3, 4, 5};
+        int[] l2 = {4, 5, 6, 7, 8};
+        int[] expected = {4, 5};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+    
+    @Test
+    public void testCommon_2() {
+        int[] l1 = {2, 4, 6, 8, 10};
+        int[] l2 = {1, 3, 5, 7, 9};
+        int[] expected = {};
+        int[] result = COMMON.common(l1, l2);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `common` method with different input arrays `l1` and `l2` to check if the method correctly finds the common elements and returns them in sorted order.

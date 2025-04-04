@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write the following JUnit test case:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_BELOW_ZERO {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> operations = new ArrayList<>();
+        boolean result = BELOW_ZERO.below_zero(operations);
+        assertFalse(result);
+    }
+}
+```
+
+This test case creates an empty list of integers and verifies that the `below_zero` method returns `false` as expected when the list is empty.

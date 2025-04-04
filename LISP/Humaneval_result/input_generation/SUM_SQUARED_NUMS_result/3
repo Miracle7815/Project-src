@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARED_NUMS {
+
+    @Test
+    public void testSumSquaredNums_PositiveNumbers() {
+        double[] lst = {2.5, 3.7, 1.2};
+        long result = SUM_SQUARED_NUMS.sum_squared_nums(lst);
+        assertEquals(29, result);
+    }
+
+    @Test
+    public void testSumSquaredNums_NegativeNumbers() {
+        double[] lst = {-2.5, -3.7, -1.2};
+        long result = SUM_SQUARED_NUMS.sum_squared_nums(lst);
+        assertEquals(29, result);
+    }
+
+    @Test
+    public void testSumSquaredNums_MixedNumbers() {
+        double[] lst = {-2.5, 3.7, -1.2};
+        long result = SUM_SQUARED_NUMS.sum_squared_nums(lst);
+        assertEquals(19, result);
+    }
+}
+``` 
+
+These test cases cover scenarios with positive numbers, negative numbers, and a mix of positive and negative numbers in the input array `lst`.

@@ -1,0 +1,21 @@
+Based on the method signature and body, the instances of `accurate` and `approximate` should be generated to test the API method, which compares two double values while ignoring missing fraction digits.
+
+To achieve high code coverage, diverse instances should be generated to reach different branches in the Method Body. Therefore, we can partition the following equivalence classes for `accurate` and `approximate`:
+- class:
+    1. `accurate`: is NaN; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: is positive infinity; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: is negative infinity; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: is a finite value; 2. `approximate`: is NaN
+- class:
+    1. `accurate`: is a finite value; 2. `approximate`: is positive infinity
+- class:
+    1. `accurate`: is a finite value; 2. `approximate`: is negative infinity
+- class:
+    1. `accurate`: is a finite value; 2. `approximate`: is a finite value, and the difference between them is less than 1
+- class:
+    1. `accurate`: is a finite value; 2. `approximate`: is a finite value, and the difference between them is greater than or equal to 1
+
+These equivalence classes cover various scenarios to ensure thorough testing of the `equalsIgnoreMissingFractionDigits` method.

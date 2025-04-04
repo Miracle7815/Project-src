@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestFIBFIB {
+    
+    @Test
+    public void testFibfib() {
+        int result = FIBFIB.fibfib(0);
+        assertEquals(0, result);
+    }
+}
+```
+
+This test case imports the necessary classes and methods for testing the `fibfib` method with the input value of 0. The test asserts that the result of calling `fibfib(0)` should be 0.

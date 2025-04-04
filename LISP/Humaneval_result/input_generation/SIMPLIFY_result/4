@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `simplify` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class SIMPLIFYTest {
+
+    @Test
+    public void testSimplify_validInput() {
+        assertTrue(SIMPLIFY.simplify("2/3", "4/6"));
+    }
+
+    @Test
+    public void testSimplify_invalidInput() {
+        assertFalse(SIMPLIFY.simplify("1/2", "3/4"));
+    }
+
+    @Test
+    public void testSimplify_edgeCase() {
+        assertTrue(SIMPLIFY.simplify("0/1", "5/6"));
+    }
+}
+```
+
+In the above code snippet, we import the necessary JUnit classes and write test cases for the `simplify` method. The test cases cover valid input, invalid input, and an edge case scenario.

@@ -1,0 +1,51 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `PARSE_MUSIC` class:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import java.util.ArrayList;
+
+public class PARSE_MUSICTest {
+
+    @Test
+    public void testParseMusic_WithValidInput() {
+        String musicString = "o o| .| o";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(2);
+        expected.add(1);
+        expected.add(4);
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testParseMusic_WithEmptyInput() {
+        String musicString = "";
+        List<Integer> expected = new ArrayList<>();
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testParseMusic_WithInvalidNote() {
+        String musicString = "o x .| o";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(null);
+        expected.add(1);
+        expected.add(4);
+        
+        List<Integer> result = PARSE_MUSIC.parse_music(musicString);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `parse_music` method of the `PARSE_MUSIC` class with valid input, empty input, and input containing an invalid note. The test cases cover different scenarios to ensure the correctness of the method.

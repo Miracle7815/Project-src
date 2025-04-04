@@ -1,0 +1,44 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `by_length` method in the `BY_LENGTH` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class BY_LENGTHTest {
+
+    @Test
+    public void testByLength_1() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(3);
+        input.add(1);
+        input.add(4);
+        input.add(2);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Four");
+        expected.add("Three");
+        expected.add("Two");
+        expected.add("One");
+        assertEquals(expected, BY_LENGTH.by_length(input));
+    }
+
+    @Test
+    public void testByLength_2() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(9);
+        input.add(5);
+        input.add(7);
+        input.add(1);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Nine");
+        expected.add("Seven");
+        expected.add("Five");
+        expected.add("One");
+        assertEquals(expected, BY_LENGTH.by_length(input));
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `by_length` method with different input scenarios. The test cases include unique integers in the input list and verify if the method returns the expected output based on the input specification.

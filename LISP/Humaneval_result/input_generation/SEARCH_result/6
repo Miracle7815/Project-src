@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SEARCHTest {
+
+    @Test
+    public void testSearch_WithDuplicateValues() {
+        int[] lst = {3, 5, 2, 5, 4, 3};
+        int result = SEARCH.search(lst);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testSearch_WithAllSameValues() {
+        int[] lst = {7, 7, 7, 7, 7};
+        int result = SEARCH.search(lst);
+        assertEquals(7, result);
+    }
+
+    @Test
+    public void testSearch_WithMixedValues() {
+        int[] lst = {2, 1, 4, 2, 3, 5, 4};
+        int result = SEARCH.search(lst);
+        assertEquals(4, result);
+    }
+}
+```
+
+These test cases cover scenarios with duplicate values, all same values, and mixed values in the input array `lst`.

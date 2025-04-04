@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `values` which contain only integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TEST_FILTER_INTEGERS {
+    
+    @Test
+    public void testFilterIntegers_1() {
+        List<Object> values = new ArrayList<>();
+        values.add(5);
+        values.add(10);
+        values.add(15);
+        
+        List<Integer> result = FILTER_INTEGERS.filter_integers(values);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(10);
+        expected.add(15);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFilterIntegers_2() {
+        List<Object> values = new ArrayList<>();
+        values.add(3);
+        values.add(6);
+        values.add(9);
+        
+        List<Integer> result = FILTER_INTEGERS.filter_integers(values);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(6);
+        expected.add(9);
+        
+        assertEquals(expected, result);
+    }
+}
+```

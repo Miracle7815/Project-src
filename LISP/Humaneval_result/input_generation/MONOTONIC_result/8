@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the array `l` with strictly increasing sequences and sorted. Here is an example of how we can write test cases for the `monotonic` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MONOTONICTest {
+
+    @Test
+    public void testMonotonicSorted() {
+        int[] l = {1, 2, 3, 4, 5};
+        assertTrue(MONOTONIC.monotonic(l));
+    }
+
+    @Test
+    public void testMonotonicReverseSorted() {
+        int[] l = {5, 4, 3, 2, 1};
+        assertTrue(MONOTONIC.monotonic(l));
+    }
+
+    @Test
+    public void testMonotonicNotMonotonic() {
+        int[] l = {1, 3, 2, 4, 5};
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+}
+```
+
+In the above test cases, we are testing the `monotonic` method with a sorted array, a reverse-sorted array, and a non-monotonic array to cover different scenarios.

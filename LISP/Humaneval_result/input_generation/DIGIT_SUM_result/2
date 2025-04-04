@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGIT_SUM {
+    
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `digit_sum` method with an empty string as input, as specified in the input specification. The expected result is 0 since there are no characters in an empty string.

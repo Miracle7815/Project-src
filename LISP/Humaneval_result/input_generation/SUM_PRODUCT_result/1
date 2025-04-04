@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_SUM_PRODUCT {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        Integer[] expected = {0, 1};
+        Integer[] result = SUM_PRODUCT.sum_product(numbers);
+        assertArrayEquals(expected, result);
+    }
+}
+```

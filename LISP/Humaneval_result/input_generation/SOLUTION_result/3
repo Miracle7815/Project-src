@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class TestSOLUTION {
+    
+    @Test
+    public void testSolution_WithEvenNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(2);
+        lst.add(4);
+        lst.add(6);
+        lst.add(8);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testSolution_WithMixedNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(2);
+        lst.add(3);
+        lst.add(4);
+        lst.add(5);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where the input list `lst` contains only even numbers and where it contains a mix of even and odd numbers.

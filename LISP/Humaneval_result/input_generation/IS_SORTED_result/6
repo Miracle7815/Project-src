@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `is_sorted` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void testSortedArray() {
+        int[] sortedArray = {1, 2, 3, 4, 5};
+        assertTrue(IS_SORTED.is_sorted(sortedArray));
+    }
+
+    @Test
+    public void testUnsortedArray() {
+        int[] unsortedArray = {5, 3, 7, 1, 4};
+        assertFalse(IS_SORTED.is_sorted(unsortedArray));
+    }
+
+    @Test
+    public void testDuplicateElements() {
+        int[] duplicateArray = {1, 2, 2, 3, 4};
+        assertFalse(IS_SORTED.is_sorted(duplicateArray));
+    }
+
+    @Test
+    public void testEmptyArray() {
+        int[] emptyArray = {};
+        assertTrue(IS_SORTED.is_sorted(emptyArray));
+    }
+}
+``` 
+
+In the above code, we have written test cases to cover scenarios where the input array is sorted, unsorted, contains duplicate elements, and is empty. The `assertTrue` and `assertFalse` methods are used to assert the expected outcome of the `is_sorted` method for each test case.

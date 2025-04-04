@@ -1,0 +1,44 @@
+Based on the provided API method and input specification, we can write test cases to cover different scenarios. Here is an example of how we can write JUnit test cases for the `histogram` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import java.util.HashMap;
+
+public class TestHistogram {
+
+    @Test
+    public void testHistogramWithEmptyString() {
+        String s = "";
+        HashMap<Character, Integer> expected = new HashMap<>();
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testHistogramWithSingleCharacter() {
+        String s = "a";
+        HashMap<Character, Integer> expected = new HashMap<>();
+        expected.put('a', 1);
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testHistogramWithMultipleCharacters() {
+        String s = "hello world";
+        HashMap<Character, Integer> expected = new HashMap<>();
+        expected.put('l', 3);
+        expected.put('o', 2);
+        expected.put('h', 1);
+        expected.put('e', 1);
+        expected.put('w', 1);
+        expected.put('r', 1);
+        expected.put('d', 1);
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are covering scenarios with an empty string, a single character, and multiple characters with varying frequencies. You can add more test cases based on different input scenarios to ensure the correctness of the `histogram` method.

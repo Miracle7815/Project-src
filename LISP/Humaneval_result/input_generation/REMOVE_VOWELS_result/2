@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty string as input for the `remove_vowels` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REMOVE_VOWELS {
+    
+    @Test
+    public void testEmptyString() {
+        String input = "";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals("", result);
+    }
+}
+```

@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestROLLING_MAX {
+
+    @Test
+    public void testRollingMax_AllSameNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+
+        List<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(5);
+        expected.add(5);
+        expected.add(5);
+
+        List<Integer> result = ROLLING_MAX.rolling_max(numbers);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `rolling_max` method with a list of numbers where all elements are the same. The expected result is a list with the same elements as the input list.

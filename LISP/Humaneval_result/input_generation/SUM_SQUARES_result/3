@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARES {
+
+    @Test
+    public void test_sum_squares() {
+        int[] lst = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(1*1 + 5*5 + 9*9, result);
+    }
+
+    @Test
+    public void test_sum_squares_emptyList() {
+        int[] lst = {};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void test_sum_squares_singleElement() {
+        int[] lst = {16};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(16, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input list `lst` contains elements at indices that are multiples of 4, an empty list, and a list with a single element.

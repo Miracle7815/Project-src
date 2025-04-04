@@ -1,0 +1,20 @@
+Based on the provided method and input specification, we can write test cases using JUnit. We need to create an empty array as the input for the `add_even_at_odd` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ADD_EVEN_AT_ODD {
+    
+    @Test
+    public void testEmptyArray() {
+        int[] lst = new int[0];
+        int result = ADD_EVEN_AT_ODD.add_even_at_odd(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are creating an empty array `lst` and passing it to the `add_even_at_odd` method. The expected result is 0 since there are no elements in the array to sum.

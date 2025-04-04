@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFRUIT_DISTRIBUTION {
+
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        int n = 10;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(n, result);
+    }
+
+    @Test
+    public void testNegativeInteger() {
+        String s = "5 -3 2";
+        int n = 10;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testNonIntegerString() {
+        String s = "apple 5 banana";
+        int n = 15;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(10, result);
+    }
+}
+``` 
+
+These test cases cover the scenarios where the input string is empty, contains negative integers, and contains non-integer strings.

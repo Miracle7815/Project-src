@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DOUBLE_THE_DIFFERENCE {
+
+    @Test
+    public void test_double_the_difference_1() {
+        double[] lst = {-2.0, -3.0, -4.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(29, result);
+    }
+
+    @Test
+    public void test_double_the_difference_2() {
+        double[] lst = {-1.0, -5.0, -7.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(50, result);
+    }
+
+    @Test
+    public void test_double_the_difference_3() {
+        double[] lst = {-10.0, -8.0, -6.0};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input array `lst` contains only negative integer double values, as specified in the input specification.

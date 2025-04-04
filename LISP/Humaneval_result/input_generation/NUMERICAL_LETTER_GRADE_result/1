@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_NUMERICAL_LETTER_GRADE {
+
+    @Test
+    public void testEmptyArray() {
+        double[] grades = new double[]{};
+        String[] expected = new String[]{};
+        String[] result = NUMERICAL_LETTER_GRADE.numerical_letter_grade(grades);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array `grades` is empty. The expected output is also an empty array. The `assertArrayEquals` method is used to compare the expected and actual results.

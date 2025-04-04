@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases for the `skjkasdkd` method in the `SKJKASDKD` class. We need to create instances of the `lst` array containing a mix of prime and non-prime numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSKJKASDKD {
+    
+    @Test
+    public void testSKJKASDKD_1() {
+        int[] lst = {2, 4, 7, 10, 13};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(5, result);
+    }
+    
+    @Test
+    public void testSKJKASDKD_2() {
+        int[] lst = {3, 6, 8, 11, 15};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(4, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `skjkasdkd` method with arrays containing a mix of prime and non-prime numbers. The expected results are based on the logic implemented in the method.

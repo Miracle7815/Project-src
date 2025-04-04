@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class EXCHANGE_Test {
+
+    @Test
+    public void testExchange_WhenLst1IsNull() {
+        ArrayList<Integer> lst1 = null;
+        ArrayList<Integer> lst2 = new ArrayList<>();
+        lst2.add(2);
+        lst2.add(4);
+        lst2.add(6);
+        
+        String result = EXCHANGE.exchange(lst1, lst2);
+        
+        assertEquals("NO", result);
+    }
+
+    @Test
+    public void testExchange_WhenLst2HasMoreEvenNumbers() {
+        ArrayList<Integer> lst1 = new ArrayList<>();
+        lst1.add(1);
+        lst1.add(3);
+        lst1.add(5);
+        
+        ArrayList<Integer> lst2 = new ArrayList<>();
+        lst2.add(2);
+        lst2.add(4);
+        lst2.add(6);
+        
+        String result = EXCHANGE.exchange(lst1, lst2);
+        
+        assertEquals("YES", result);
+    }
+}
+```
+
+In the above test cases, we have covered the scenario where `lst1` is null and where `lst2` has more even numbers than odd numbers.

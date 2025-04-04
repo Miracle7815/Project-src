@@ -1,0 +1,45 @@
+Based on the method signature and body, the instances of `accurate` and `approximate` should be generated to test the API method, which represents whether two double values are equal while ignoring missing fraction digits. To achieve high code coverage, diverse instances should be generated to reach different branches in the method body. Therefore, we can partition the following equivalence classes for `accurate` and `approximate`:
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` (absolute difference) is greater than or equal to 1.
+  
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` (derived from the exponent of `delta`) is such that `p+1 < POW10.length` and `POW10[p+1] <= delta`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is such that `p+1 < POW10.length` but `POW10[p+1] > delta`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is such that `p+1 >= POW10.length`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is such that `p < 0` or `p >= POW10.length`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is valid, but `Math.abs(approximate - diffInFractions) > Math.ulp(diffInFractions)`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is valid, and `Math.abs(approximate - diffInFractions) <= Math.ulp(diffInFractions)`, but `Math.abs(approximate - accurate) > 0.5`.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: any double value where `delta` is less than 1, and `p` is valid, and `Math.abs(approximate - diffInFractions) <= Math.ulp(diffInFractions)`, and `Math.abs(approximate - accurate) <= 0.5`.
+
+- **class**:
+  1. `accurate`: NaN; 2. `approximate`: any double value.
+
+- **class**:
+  1. `accurate`: any double value; 2. `approximate`: NaN.
+
+- **class**:
+  1. `accurate`: positive infinity; 2. `approximate`: positive infinity.
+
+- **class**:
+  1. `accurate`: negative infinity; 2. `approximate`: negative infinity.
+
+- **class**:
+  1. `accurate`: positive infinity; 2. `approximate`: negative infinity.
+
+- **class**:
+  1. `accurate`: negative infinity; 2. `approximate`: positive infinity.
+
+These classes ensure that all branches and edge cases in the method are covered, including handling of NaN, infinity, and various ranges of `delta`.

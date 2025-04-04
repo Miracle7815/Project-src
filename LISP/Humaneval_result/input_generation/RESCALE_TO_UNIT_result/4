@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` array with distinct values and test the `rescale_to_unit` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class RESCALE_TO_UNITTest {
+
+    @Test
+    public void testRescaleToUnit_WithDistinctValues() {
+        double[] numbers = {3.5, 7.2, 1.0, 5.9, 2.3};
+        double[] expected = {0.5, 1.0, 0.0, 0.75, 0.25};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.001);
+    }
+
+    @Test
+    public void testRescaleToUnit_WithNegativeValues() {
+        double[] numbers = {-2.0, 0.0, -5.5, -1.5};
+        double[] expected = {0.6, 1.0, 0.0, 0.8};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.001);
+    }
+}
+```
+
+In the above code, we have two test cases - one with distinct positive values and another with negative values. The `assertArrayEquals` method is used to compare the expected output with the result of the `rescale_to_unit` method.

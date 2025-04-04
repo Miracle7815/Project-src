@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SOLVE_Test {
+
+    @Test
+    public void testSolve_LargestIntegerValue() {
+        int N = Integer.MAX_VALUE;
+        String expected = "1111111111111111111111111111111"; // Binary representation of the sum of digits of Integer.MAX_VALUE
+        String result = SOLVE.solve(N);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `solve` method with the largest allowed integer value `Integer.MAX_VALUE` as input. The expected output is the binary representation of the sum of digits of `Integer.MAX_VALUE`.

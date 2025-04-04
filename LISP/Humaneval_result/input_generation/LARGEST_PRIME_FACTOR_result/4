@@ -1,0 +1,25 @@
+Based on the provided API method, we need to test the `largest_prime_factor` method with a composite number having multiple prime factors as input. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestLARGEST_PRIME_FACTOR {
+
+    @Test
+    public void testLargestPrimeFactor() {
+        int n = 56; // Composite number with prime factors 2, 2, 2, 7
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(7, result);
+    }
+
+    @Test
+    public void testLargestPrimeFactor2() {
+        int n = 90; // Composite number with prime factors 2, 3, 3, 5
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(5, result);
+    }
+}
+```

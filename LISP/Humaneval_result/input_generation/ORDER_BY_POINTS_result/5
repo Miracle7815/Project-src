@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `order_by_points` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class ORDER_BY_POINTS_Test {
+
+    @Test
+    public void testOrder_by_points_1() {
+        Integer[] nums = {5, -12, 3, -7, 10};
+        Integer[] expected = {-12, 3, -7, 5, 10};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrder_by_points_2() {
+        Integer[] nums = {100, -50, 25, -75};
+        Integer[] expected = {-50, 100, -75, 25};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrder_by_points_3() {
+        Integer[] nums = {0, 0, 0, 0};
+        Integer[] expected = {0, 0, 0, 0};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `order_by_points` method with different input scenarios containing a mix of positive and negative integers. The `assertArrayEquals` method is used to compare the expected output with the actual output of the method.

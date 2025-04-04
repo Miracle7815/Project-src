@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `ISCUBE` class method `iscube` with the input value of zero.
+
+Here is the JUnit test case code snippet along with the required import statements:
+
+```java
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+
+public class Test_ISCUBE {
+    
+    @Test
+    public void testIsCubeWithZero() {
+        assertTrue(ISCUBE.iscube(0));
+    }
+}
+```
+
+In this test case, we are importing necessary classes for JUnit testing and then testing the `iscube` method of the `ISCUBE` class with the input value of zero. The test asserts that the method should return `true` when the input value is zero, as the cube of zero is zero.

@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `lst` and `x` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_GET_ROW {
+    
+    @Test
+    public void test_get_row_1() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        lst.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
+        lst.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        
+        int x = 10;
+        
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        
+        assertTrue(result.isEmpty());
+    }
+    
+    @Test
+    public void test_get_row_2() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        lst.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
+        lst.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        
+        int x = 5;
+        
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        
+        assertTrue(result.size() == 1);
+        assertEquals(result.get(0).x, 1);
+        assertEquals(result.get(0).y, 1);
+    }
+}
+```
+
+In the above code:
+- We have imported the necessary classes.
+- We have created two test cases to cover the scenarios where `x` is not present in any inner list and where `x` is present in an inner list.
+- The test cases instantiate `lst` and `x` as per the input specification and then call the `get_row` method to test its functionality.

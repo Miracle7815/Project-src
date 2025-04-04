@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of non-integer values for `x`, `y`, and `z` to test the `any_int` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_ANY_INT {
+
+    @Test
+    public void testAnyInt1() {
+        assertFalse(ANY_INT.any_int(1.5, 2.5, 3.5));
+    }
+
+    @Test
+    public void testAnyInt2() {
+        assertTrue(ANY_INT.any_int(0.1, 0.2, 0.3));
+    }
+
+    @Test
+    public void testAnyInt3() {
+        assertFalse(ANY_INT.any_int(2.7, 3.8, 6.5));
+    }
+}
+```
+
+In the above test cases, we are testing the `any_int` method with different sets of non-integer values for `x`, `y`, and `z`. The assertions are made based on the expected behavior of the method as described in the input specification.

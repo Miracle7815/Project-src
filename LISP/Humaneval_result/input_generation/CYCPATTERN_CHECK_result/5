@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `cycpattern_check` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CYCPATTERN_CHECKTest {
+
+    @Test
+    public void testCycpattern_check_1() {
+        String a = "abcdefgh";
+        String b = "xyz";
+        boolean result = CYCPATTERN_CHECK.cycpattern_check(a, b);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testCycpattern_check_2() {
+        String a = "hellohello";
+        String b = "lohe";
+        boolean result = CYCPATTERN_CHECK.cycpattern_check(a, b);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testCycpattern_check_3() {
+        String a = "abcabcabc";
+        String b = "abc";
+        boolean result = CYCPATTERN_CHECK.cycpattern_check(a, b);
+        assertTrue(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `cycpattern_check` method with different input scenarios to cover the functionality of the method.

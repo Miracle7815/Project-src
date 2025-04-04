@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `x`, `y`, and `z` where one parameter is an integer and the other two parameters are non-integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+
+public class Test_ANY_INT {
+    
+    @Test
+    public void testAnyIntCase1() {
+        double x = 5; // integer
+        double y = 3.5; // non-integer
+        double z = 1.5; // non-integer
+        boolean result = ANY_INT.any_int(x, y, z);
+        org.junit.Assert.assertTrue(result);
+    }
+    
+    @Test
+    public void testAnyIntCase2() {
+        double x = 10.0; // non-integer
+        double y = 2; // integer
+        double z = 8.0; // non-integer
+        boolean result = ANY_INT.any_int(x, y, z);
+        org.junit.Assert.assertTrue(result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where one parameter is an integer and the other two parameters are non-integers.

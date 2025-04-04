@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` and `x` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_GET_ROW {
+    
+    @Test
+    public void test_get_row_1() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        lst.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
+        lst.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        int x = 5;
+        
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        
+        ArrayList<GET_ROW.Tuple> expected = new ArrayList<>();
+        expected.add(new GET_ROW().new Tuple(1, 1));
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void test_get_row_2() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(2, 2, 2)));
+        lst.add(new ArrayList<>(Arrays.asList(3, 4, 5)));
+        lst.add(new ArrayList<>(Arrays.asList(6, 7, 8)));
+        int x = 2;
+        
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        
+        ArrayList<GET_ROW.Tuple> expected = new ArrayList<>();
+        expected.add(new GET_ROW().new Tuple(0, 2));
+        expected.add(new GET_ROW().new Tuple(1, 0));
+        expected.add(new GET_ROW().new Tuple(2, 0));
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `get_row` method with different inputs. The test cases instantiate the `lst` and `x` variables as per the input specification and then compare the expected output with the actual output of the method.

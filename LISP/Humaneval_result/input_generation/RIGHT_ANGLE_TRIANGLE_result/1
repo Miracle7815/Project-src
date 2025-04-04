@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+public class Test_RIGHT_ANGLE_TRIANGLE {
+
+    @Test
+    public void testRightAngleTriangle1() {
+        int a = 3;
+        int b = 4;
+        int c = 5;
+        assertTrue(RIGHT_ANGLE_TRIANGLE.right_angle_triangle(a, b, c));
+    }
+
+    @Test
+    public void testRightAngleTriangle2() {
+        int a = 5;
+        int b = 12;
+        int c = 13;
+        assertTrue(RIGHT_ANGLE_TRIANGLE.right_angle_triangle(a, b, c));
+    }
+
+    @Test
+    public void testRightAngleTriangle3() {
+        int a = 8;
+        int b = 15;
+        int c = 17;
+        assertTrue(RIGHT_ANGLE_TRIANGLE.right_angle_triangle(a, b, c));
+    }
+}
+```

@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_MIN_SUBARRAY_SUM {
+
+    @Test
+    public void test_min_subarray_sum_1() {
+        ArrayList<Long> nums = new ArrayList<>();
+        nums.add(-5L);
+        nums.add(-3L);
+        nums.add(-7L);
+        long result = MIN_SUBARRAY_SUM.min_subarray_sum(nums);
+        assertEquals(-15L, result);
+    }
+
+    @Test
+    public void test_min_subarray_sum_2() {
+        ArrayList<Long> nums = new ArrayList<>();
+        nums.add(-10L);
+        nums.add(-2L);
+        nums.add(-8L);
+        nums.add(-5L);
+        long result = MIN_SUBARRAY_SUM.min_subarray_sum(nums);
+        assertEquals(-25L, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `min_subarray_sum` method with different input scenarios where `nums` contains multiple elements with only negative values. The expected results are calculated based on the provided logic in the `MIN_SUBARRAY_SUM` class.

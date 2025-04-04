@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DO_ALGEBRA {
+
+    @Test
+    public void test_do_algebra_emptyOperand() {
+        String[] operator = {"+", "-", "*", "/"};
+        int[] operand = {};
+        try {
+            double result = DO_ALGEBRA.do_algebra(operator, operand);
+            // As the operand is empty, the result should be the first operand which is 0
+            assertEquals(0.0, result, 0.0001);
+        } catch (NumberFormatException | ScriptException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In this test case, we are testing the `do_algebra` method with an empty operand array. The expected result is 0 because when the operand array is empty, the method should return the first operand which is 0.

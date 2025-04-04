@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_ADD_ELEMENTS {
+    
+    @Test
+    public void testAddElements() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(10);
+        arr.add(5);
+        arr.add(100);
+        arr.add(3);
+        
+        int k = -3;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(15, result);
+    }
+    
+    @Test
+    public void testAddElementsEmptyArray() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        
+        int k = -5;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `add_elements` method with an array list containing elements with a length less than or equal to 2 and a negative value of `k`. The expected results are asserted based on the input specification.

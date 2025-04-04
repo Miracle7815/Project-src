@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_MOVE_ONE_BALL {
+
+    @Test
+    public void testEmptyList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        assertTrue(MOVE_ONE_BALL.move_one_ball(arr));
+    }
+}
+```
+
+In this test case, we are testing the `move_one_ball` method with an empty list as input. The expected behavior is that the method should return `true` since an empty list should satisfy the conditions specified in the method.

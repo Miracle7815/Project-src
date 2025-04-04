@@ -1,0 +1,15 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestGREATEST_COMMON_DIVISOR {
+
+    @Test
+    public void testGreatestCommonDivisor() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(12, -6);
+        assertEquals(6, result);
+    }
+}
+```

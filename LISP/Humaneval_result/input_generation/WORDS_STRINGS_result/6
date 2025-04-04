@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains alphanumeric characters and test the functionality of the `words_strings` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class Test_WORDS_STRINGS {
+    
+    @Test
+    public void testWordsStrings_1() {
+        String s = "hello,world,test";
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("hello");
+        expected.add("world");
+        expected.add("test");
+        
+        ArrayList<String> result = WORDS_STRINGS.words_strings(s);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testWordsStrings_2() {
+        String s = "apple,orange,banana";
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("apple");
+        expected.add("orange");
+        expected.add("banana");
+        
+        ArrayList<String> result = WORDS_STRINGS.words_strings(s);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `words_strings` method with different input strings containing alphanumeric characters. The test cases compare the expected output with the actual output of the method.

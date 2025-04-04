@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `closest_integer` method with a `null` value input. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_CLOSEST_INTEGER {
+    
+    @Test
+    public void testClosestIntegerWithNullValue() {
+        String value = null;
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(0, result);
+    }
+}
+```

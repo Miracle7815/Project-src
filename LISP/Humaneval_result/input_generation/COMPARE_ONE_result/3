@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COMPARE_ONE {
+
+    @Test
+    public void testCompareOneWithDoubleAndInteger() {
+        Object a = 5.0;
+        Object b = 3;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(a, result);
+    }
+
+    @Test
+    public void testCompareOneWithStringAndDouble() {
+        Object a = "7.5";
+        Object b = 8.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(b, result);
+    }
+
+    @Test
+    public void testCompareOneWithIntegerAndString() {
+        Object a = 10;
+        Object b = "5.0";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(a, result);
+    }
+
+    @Test
+    public void testCompareOneWithEqualDoubles() {
+        Object a = 3.5;
+        Object b = 3.5;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(null, result);
+    }
+}
+```
+
+In the above test cases, we are covering scenarios where `a` is a Double value and `b` is an Integer, `a` is a String and `b` is a Double, `a` is an Integer and `b` is a String, and when `a` and `b` are equal Double values.

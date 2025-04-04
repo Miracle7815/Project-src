@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example test case:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FILE_NAME_CHECKTest {
+
+    @Test
+    public void testEmptyFileName() {
+        String file_name = "";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+}
+```
+
+In this test case, we are testing the `file_name_check` method with an empty string as the `file_name` input. The expected result is "No" according to the input specification.

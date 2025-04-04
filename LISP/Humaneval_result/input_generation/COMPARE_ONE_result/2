@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases to cover different scenarios. We need to ensure that the method `compare_one` works correctly for various input types and values.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_COMPARE_ONE {
+
+    @Test
+    public void testStringAndInteger() {
+        Object a = "3.14";
+        Object b = 2;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(a, result);
+    }
+
+    @Test
+    public void testDoubleAndString() {
+        Object a = 5.5;
+        Object b = "7,2";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(b, result);
+    }
+
+    @Test
+    public void testIntegerAndDouble() {
+        Object a = 10;
+        Object b = 10.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertNull(result);
+    }
+
+    @Test
+    public void testEqualValues() {
+        Object a = 3.0;
+        Object b = "3,0";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertNull(result);
+    }
+}
+```
+
+In these test cases, we cover scenarios where `a` and `b` are of different types (String, Integer, Double) and have different values. The assertions verify that the `compare_one` method returns the expected result based on the comparison logic.

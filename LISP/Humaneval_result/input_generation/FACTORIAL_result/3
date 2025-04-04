@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of positive integer values for the input parameter `n` and verify the output of the `factorial` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFACTORIAL {
+    
+    @Test
+    public void testFactorialWithEvenNumber() {
+        int n = 4; // Even number
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(1); // factorial of 1
+        expected.add(2); // factorial of 2
+        expected.add(6); // factorial of 3
+        expected.add(24); // factorial of 4
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorialWithOddNumber() {
+        int n = 5; // Odd number
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(1); // factorial of 1
+        expected.add(3); // sum of numbers from 1 to 2
+        expected.add(6); // factorial of 3
+        expected.add(24); // factorial of 4
+        expected.add(120); // factorial of 5
+        
+        ArrayList<Integer> result = FACTORIAL.factorial(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `factorial` method with even and odd numbers. We compare the expected output with the actual output returned by the method using JUnit's `assertEquals` method.

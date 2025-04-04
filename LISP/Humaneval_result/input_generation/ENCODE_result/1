@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCODETest {
+
+    @Test
+    public void testEncode_NullMessage() {
+        String message = null;
+        String result = ENCODE.encode(message);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `encode` method of the `ENCODE` class with a `null` message input. The expected result is an empty string since the method handles `null` input by returning an empty string.

@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `txt` that meet the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TEST_SPLIT_WORDS {
+    
+    @Test
+    public void testSplitWords_noSpaceOrComma_evenIndices() {
+        String txt = "abcdef";
+        String[] expected = {"2"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+    
+    @Test
+    public void testSplitWords_noSpaceOrComma_oddIndices() {
+        String txt = "abcde";
+        String[] expected = {"0"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `split_words` method with input strings that meet the input specification provided. The expected output is compared with the actual output to ensure the correctness of the method.

@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestCAN_ARRANGE {
+
+    @Test
+    public void testCanArrange_1() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int result = CAN_ARRANGE.can_arrange(arr);
+        assertEquals(-1, result);
+    }
+
+    @Test
+    public void testCanArrange_2() {
+        int[] arr = {10, 20, 30, 15, 40};
+        int result = CAN_ARRANGE.can_arrange(arr);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testCanArrange_3() {
+        int[] arr = {5, 10, 15, 20, 25, 30};
+        int result = CAN_ARRANGE.can_arrange(arr);
+        assertEquals(-1, result);
+    }
+}
+```

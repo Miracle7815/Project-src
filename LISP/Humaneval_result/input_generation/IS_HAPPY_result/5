@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_HAPPY {
+
+    @Test
+    public void testIsHappy_ValidHappyString() {
+        String happyString = "abcde";
+        boolean result = IS_HAPPY.is_happy(happyString);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsHappy_InvalidHappyString() {
+        String unhappyString = "abcaa";
+        boolean result = IS_HAPPY.is_happy(unhappyString);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsHappy_BorderCase() {
+        String borderString = "aaa";
+        boolean result = IS_HAPPY.is_happy(borderString);
+        assertFalse(result);
+    }
+}
+```

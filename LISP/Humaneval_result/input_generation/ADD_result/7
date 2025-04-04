@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class ADDTest {
+
+    @Test
+    public void testAdd() {
+        int x = 0;
+        int y = 0;
+        int result = ADD.add(x, y);
+        assertEquals(0, result);
+    }
+}
+```

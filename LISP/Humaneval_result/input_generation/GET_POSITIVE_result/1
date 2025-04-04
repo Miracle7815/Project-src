@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class GET_POSITIVE_Test {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        assertTrue(result.isEmpty());
+    }
+}
+```

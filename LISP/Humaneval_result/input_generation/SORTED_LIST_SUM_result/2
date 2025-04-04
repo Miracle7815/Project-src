@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list as input for the `sorted_list_sum` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORTED_LIST_SUM {
+
+    @Test
+    public void testEmptyList() {
+        ArrayList<String> emptyList = new ArrayList<>();
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(emptyList);
+        assertEquals(0, result.size());
+    }
+}
+```
+
+In this test case, we create an empty list and pass it to the `sorted_list_sum` method. We then check if the size of the returned list is 0, as expected for an empty input list.

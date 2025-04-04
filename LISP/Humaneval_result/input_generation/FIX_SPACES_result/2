@@ -1,0 +1,20 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario where the input `text` contains only spaces. We will need to create instances of `text` containing only spaces and verify the output of the `fix_spaces` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FIX_SPACES {
+    
+    @Test
+    public void testFixSpaces_OnlySpaces() {
+        String text = "    ";
+        String result = FIX_SPACES.fix_spaces(text);
+        assertEquals("____", result);
+    }
+}
+```
+
+In this test case, we are passing a string `text` containing only spaces to the `fix_spaces` method and asserting that the output should be a string with underscores replacing the spaces.

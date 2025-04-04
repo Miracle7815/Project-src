@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class TestFACTORIZE {
+    
+    @Test
+    public void testFactorize_1() {
+        int n = 10;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(5);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorize_2() {
+        int n = 21;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(7);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorize_3() {
+        int n = 17;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(17);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created test cases to test the `factorize` method of the `FACTORIZE` class. Each test case provides a different input value for `n` and asserts the expected output list of factors.

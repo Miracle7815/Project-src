@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write the JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestCAN_ARRANGE {
+    
+    @Test
+    public void test_can_arrange() {
+        int[] arr1 = {1, 2, 3, 5, 4, 6};
+        assertEquals(4, CAN_ARRANGE.can_arrange(arr1));
+        
+        int[] arr2 = {10, 20, 30, 5, 40, 50};
+        assertEquals(3, CAN_ARRANGE.can_arrange(arr2));
+        
+        int[] arr3 = {1, 2, 3, 4, 5, 6, 8, 7, 9};
+        assertEquals(7, CAN_ARRANGE.can_arrange(arr3));
+    }
+}
+```
+
+In this test case, we are testing the `can_arrange` method with different arrays where only one element is out of order. The expected output is the index of the element that is out of order.

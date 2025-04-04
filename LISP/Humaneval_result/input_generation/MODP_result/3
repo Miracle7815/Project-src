@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write the JUnit test case as follows:
+
+```java
+import org.junit.Test;
+
+public class MODPTest {
+
+    @Test
+    public void testModp() {
+        int n = 0;
+        int p = 5;
+        int result = MODP.modp(n, p);
+        org.junit.Assert.assertEquals(1, result);
+    }
+}
+```

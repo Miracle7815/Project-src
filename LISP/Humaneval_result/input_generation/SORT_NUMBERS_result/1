@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `sort_numbers` method. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_NUMBERS {
+    
+    @Test
+    public void testSortNumbers_NullInput() {
+        String numbers = null;
+        String result = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("", result);
+    }
+}
+```

@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the input array `l` which has a mix of even and odd numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVEN_Test {
+
+    @Test
+    public void testSortEven_1() {
+        int[] inputArray = {3, 6, 2, 9, 4, 7};
+        int[] expectedOutput = {2, 7, 4, 9, 6, 3};
+        assertArrayEquals(expectedOutput, SORT_EVEN.sort_even(inputArray));
+    }
+
+    @Test
+    public void testSortEven_2() {
+        int[] inputArray = {10, 5, 8, 3, 6, 1, 4};
+        int[] expectedOutput = {4, 5, 6, 3, 8, 1, 10};
+        assertArrayEquals(expectedOutput, SORT_EVEN.sort_even(inputArray));
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different input arrays containing a mix of even and odd numbers.
+- We define the expected output arrays after sorting the even numbers in ascending order.
+- We use `assertArrayEquals` to compare the expected output with the result of calling the `sort_even` method on the input array.

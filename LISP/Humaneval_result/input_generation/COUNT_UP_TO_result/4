@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n` which is a non-prime number greater than 2.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_COUNT_UP_TO {
+    
+    @Test
+    public void testCountUpTo() {
+        int n = 10;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(3);
+        expected.add(5);
+        expected.add(7);
+        
+        List<Integer> result = COUNT_UP_TO.count_up_to(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```

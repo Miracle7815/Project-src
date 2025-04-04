@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Test_NEXT_SMALLEST {
+    
+    @Test
+    public void testNextSmallest_singleElement() {
+        int[] lst = {5};
+        Integer result = NEXT_SMALLEST.next_smallest(lst);
+        assertEquals(null, result);
+    }
+}
+```
+
+In this test case, we are testing the `next_smallest` method with an input array `lst` containing only one element. The expected result is `null` as per the input specification.

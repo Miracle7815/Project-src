@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write the JUnit test cases as follows:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestGREATEST_COMMON_DIVISOR {
+
+    @Test
+    public void testGreatestCommonDivisor_1() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(-12, 18);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testGreatestCommonDivisor_2() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(-24, 36);
+        assertEquals(12, result);
+    }
+
+    @Test
+    public void testGreatestCommonDivisor_3() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(-7, 21);
+        assertEquals(7, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `greatest_common_divisor` method of the `GREATEST_COMMON_DIVISOR` class with different input values as per the input specification provided.

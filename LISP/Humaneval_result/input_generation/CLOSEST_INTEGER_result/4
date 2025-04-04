@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `closest_integer` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CLOSEST_INTEGERTest {
+
+    @Test
+    public void testClosestIntegerWithDecimalPointFive() {
+        String value = "10.5";
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(11, result);
+    }
+
+    @Test
+    public void testClosestIntegerWithNegativeDecimalPointFive() {
+        String value = "-7.5";
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(-8, result);
+    }
+
+    @Test
+    public void testClosestIntegerWithZeroPointFive() {
+        String value = "0.5";
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testClosestIntegerWithNonDecimalValue() {
+        String value = "3";
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `closest_integer` method with different input values that contain a decimal number ending with '.5'. The test cases cover scenarios with positive, negative, zero, and non-decimal values to ensure the correctness of the method.

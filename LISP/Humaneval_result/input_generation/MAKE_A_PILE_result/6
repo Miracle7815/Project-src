@@ -1,0 +1,55 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class MAKE_A_PILE_Test {
+    
+    @Test
+    public void testMakeAPileWithPositiveInteger() {
+        int n = 5;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(5);
+        expected.add(7);
+        expected.add(9);
+        expected.add(11);
+        expected.add(13);
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testMakeAPileWithZero() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>();
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testMakeAPileWithLargeNumber() {
+        int n = 10;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        expected.add(12);
+        expected.add(14);
+        expected.add(16);
+        expected.add(18);
+        expected.add(20);
+        expected.add(22);
+        expected.add(24);
+        expected.add(26);
+        expected.add(28);
+        
+        ArrayList<Integer> result = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expected, result);
+    }
+}
+``` 
+
+In the above code, we have written test cases to test the `make_a_pile` method with different inputs as per the input specification.

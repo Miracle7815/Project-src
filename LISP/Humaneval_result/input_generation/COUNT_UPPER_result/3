@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_UPPER {
+    
+    @Test
+    public void testCount_upper_1() {
+        String s = "aeiou";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(5, result);
+    }
+    
+    @Test
+    public void testCount_upper_2() {
+        String s = "aeiouaeiou";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(10, result);
+    }
+    
+    @Test
+    public void testCount_upper_3() {
+        String s = "aeiouaeiouaeiou";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(15, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `count_upper` method with different inputs that contain only lowercase vowels as specified in the input specification.

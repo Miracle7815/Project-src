@@ -1,0 +1,21 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario where the `numbers` array contains two elements. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_FIND_CLOSEST_ELEMENTS {
+
+    @Test
+    public void testFindClosestElements_TwoElements() {
+        double[] numbers = {3.5, 1.2};
+        double[] expected = {1.2, 3.5};
+        double[] result = FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+}
+```
+
+In this test case, we are testing the `find_closest_elements` method with an input array `numbers` containing two elements. The expected result is an array with the two elements sorted in ascending order.

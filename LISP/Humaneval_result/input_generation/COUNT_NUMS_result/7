@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `ArrayList<Integer>` with a mix of positive, negative, and zero numbers to test the `count_nums` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestCOUNT_NUMS {
+    
+    @Test
+    public void testCountNums_1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(-456);
+        arr.add(0);
+        arr.add(-789);
+        
+        int result = COUNT_NUMS.count_nums(arr);
+        
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testCountNums_2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(987);
+        arr.add(-654);
+        arr.add(0);
+        
+        int result = COUNT_NUMS.count_nums(arr);
+        
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `count_nums` method with different `ArrayList` instances containing a mix of positive, negative, and zero numbers. The expected result is based on the logic inside the `count_nums` method.

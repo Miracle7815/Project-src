@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class Test_ADD_ELEMENTS {
+    
+    @Test
+    public void testAddElements_case1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1234);
+        arr.add(56);
+        arr.add(789);
+        int k = 3;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(845, result);
+    }
+    
+    @Test
+    public void testAddElements_case2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1000);
+        arr.add(200);
+        arr.add(300);
+        int k = 3;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(500, result);
+    }
+}

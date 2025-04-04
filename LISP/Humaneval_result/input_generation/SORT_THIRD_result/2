@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class SORT_THIRD_Test {
+
+    @Test
+    public void testSortThird_emptyList() {
+        List<Integer> l = new ArrayList<>();
+        List<Integer> expected = new ArrayList<>();
+        
+        List<Integer> result = SORT_THIRD.sort_third(l);
+        
+        assertEquals(expected, result);
+    }
+}
+``` 
+
+In this test case, we are testing the `sort_third` method with an empty list as input. The expected result is also an empty list.

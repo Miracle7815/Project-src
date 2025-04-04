@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `anti_shuffle` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ANTI_SHUFFLE {
+    
+    @Test
+    public void testAntiShuffle_1() {
+        String input = "hello world";
+        String expectedOutput = "ehllo dlorw";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testAntiShuffle_2() {
+        String input = "java is fun";
+        String expectedOutput = "aajv is fnu";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testAntiShuffle_3() {
+        String input = "testing shuffle";
+        String expectedOutput = "eginstt flfehsu";
+        String result = ANTI_SHUFFLE.anti_shuffle(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary JUnit classes and written test cases for the `anti_shuffle` method. Each test case provides an input string, the expected output after applying the `anti_shuffle` method, and then compares the actual result with the expected output using JUnit's `assertEquals` method.

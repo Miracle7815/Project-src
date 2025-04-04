@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+
+    @Test
+    public void testEmptyArray() {
+        int[] lst = {};
+        int[] expected = {0, 0};
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        assertArrayEquals(expected, result);
+    }
+}
+```

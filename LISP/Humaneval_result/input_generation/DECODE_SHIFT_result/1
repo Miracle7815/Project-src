@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to import the necessary classes and write test cases to cover the scenarios mentioned in the input specification.
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift_NullString() {
+        String result = DECODE_SHIFT.encode_shift(null);
+        assertEquals("", result);
+    }
+
+    @Test
+    public void testDecodeShift_NullString() {
+        String result = DECODE_SHIFT.decode_shift(null);
+        assertEquals("", result);
+    }
+}
+```

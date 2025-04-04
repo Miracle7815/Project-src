@@ -1,0 +1,44 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `exchange` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestEXCHANGE {
+
+    @Test
+    public void testExchangeYes() {
+        ArrayList<Integer> lst1 = new ArrayList<>();
+        lst1.add(2);
+        lst1.add(4);
+        lst1.add(6);
+
+        ArrayList<Integer> lst2 = new ArrayList<>();
+        lst2.add(1);
+        lst2.add(3);
+        lst2.add(5);
+
+        String result = EXCHANGE.exchange(lst1, lst2);
+        assertEquals("YES", result);
+    }
+
+    @Test
+    public void testExchangeNo() {
+        ArrayList<Integer> lst1 = new ArrayList<>();
+        lst1.add(2);
+        lst1.add(4);
+        lst1.add(6);
+
+        ArrayList<Integer> lst2 = new ArrayList<>();
+        lst2.add(1);
+        lst2.add(3);
+        lst2.add(6);
+
+        String result = EXCHANGE.exchange(lst1, lst2);
+        assertEquals("NO", result);
+    }
+}
+```
+
+In the above code, we have two test cases. The first test case checks if the method returns "YES" when `lst1` contains only even numbers and `lst2` contains only odd numbers. The second test case checks if the method returns "NO" when `lst1` contains only even numbers but `lst2` contains at least one even number.

@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_GET_MAX_TRIPLES {
+
+    @Test
+    public void test_get_max_triples_with_zero() {
+        int n = 0;
+        int result = GET_MAX_TRIPLES.get_max_triples(n);
+        assertEquals(0, result);
+    }
+}
+```

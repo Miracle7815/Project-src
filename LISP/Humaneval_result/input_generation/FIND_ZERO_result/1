@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where the input list `xs` is empty. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FIND_ZERO {
+    
+    @Test
+    public void testFindZeroWithEmptyList() {
+        List<Double> xs = new ArrayList<>();
+        double result = FIND_ZERO.find_zero(xs);
+        assertEquals(Double.NaN, result, 0.0001);
+    }
+}
+```
+
+In this test case, we create an empty list `xs` and pass it to the `find_zero` method. The expected result is `Double.NaN` as the function should not be able to find a zero in an empty list.

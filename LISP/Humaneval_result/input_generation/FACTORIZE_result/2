@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of composite numbers for the input `n` and verify that the `factorize` method returns the correct list of factors.
+
+Here is an example of how we can write test cases for the `factorize` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import org.junit.Test;
+
+public class TestFACTORIZE {
+
+    @Test
+    public void testFactorize_1() {
+        int n = 12;
+        List<Integer> expectedFactors = List.of(2, 2, 3);
+        List<Integer> actualFactors = FACTORIZE.factorize(n);
+        assertEquals(expectedFactors, actualFactors);
+    }
+
+    @Test
+    public void testFactorize_2() {
+        int n = 30;
+        List<Integer> expectedFactors = List.of(2, 3, 5);
+        List<Integer> actualFactors = FACTORIZE.factorize(n);
+        assertEquals(expectedFactors, actualFactors);
+    }
+
+    @Test
+    public void testFactorize_3() {
+        int n = 56;
+        List<Integer> expectedFactors = List.of(2, 2, 2, 7);
+        List<Integer> actualFactors = FACTORIZE.factorize(n);
+        assertEquals(expectedFactors, actualFactors);
+    }
+}
+```
+
+In the above test cases, we are testing the `factorize` method with different composite numbers (`12`, `30`, `56`) and verifying that the method returns the expected list of factors.

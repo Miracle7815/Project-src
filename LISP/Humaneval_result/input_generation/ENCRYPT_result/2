@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCRYPTTest {
+
+    @Test
+    public void testEncrypt_emptyString() {
+        String s = "";
+        String result = ENCRYPT.encrypt(s);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `encrypt` method of the `ENCRYPT` class with an empty string as input. The expected output is also an empty string.

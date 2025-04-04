@@ -1,0 +1,51 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain multiple elements with duplicates.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_REMOVE_DUPLICATES {
+    
+    @Test
+    public void testRemoveDuplicates_1() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(4);
+        numbers.add(1);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(4);
+        
+        List<Integer> result = REMOVE_DUPLICATES.remove_duplicates(numbers);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testRemoveDuplicates_2() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(8);
+        numbers.add(8);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(6);
+        expected.add(7);
+        
+        List<Integer> result = REMOVE_DUPLICATES.remove_duplicates(numbers);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `remove_duplicates` method with different sets of input `numbers` containing duplicates. The expected output after removing duplicates is compared with the actual output obtained from the method.

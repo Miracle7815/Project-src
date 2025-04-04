@@ -1,0 +1,34 @@
+Based on the provided API method, we need to test the `largest_prime_factor` method with a composite number that has only one prime factor. We will need to create test cases to cover different scenarios.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestLARGEST_PRIME_FACTOR {
+
+    @Test
+    public void testLargestPrimeFactor_1() {
+        int n = 15; // Composite number with only one prime factor (3)
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testLargestPrimeFactor_2() {
+        int n = 28; // Composite number with only one prime factor (2)
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testLargestPrimeFactor_3() {
+        int n = 39; // Composite number with only one prime factor (13)
+        int result = LARGEST_PRIME_FACTOR.largest_prime_factor(n);
+        assertEquals(13, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `largest_prime_factor` method with different composite numbers that have only one prime factor. The test cases cover scenarios where the prime factor is the smallest, largest, and somewhere in between the factors of the composite number.

@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` as a list of negative integers and `delimiter` as any integer.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestINTERSPERSE {
+    
+    @Test
+    public void testIntersperse_WithNegativeNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(-5);
+        numbers.add(-10);
+        numbers.add(-15);
+        
+        int delimiter = 0;
+        
+        List<Integer> result = INTERSPERSE.intersperse(numbers, delimiter);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(-5);
+        expected.add(0);
+        expected.add(-10);
+        expected.add(0);
+        expected.add(-15);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testIntersperse_WithEmptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        int delimiter = 7;
+        
+        List<Integer> result = INTERSPERSE.intersperse(numbers, delimiter);
+        
+        List<Integer> expected = new ArrayList<>();
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have two test cases. The first test case tests the `intersperse` method with a list of negative numbers and a delimiter. The second test case tests the method with an empty list.

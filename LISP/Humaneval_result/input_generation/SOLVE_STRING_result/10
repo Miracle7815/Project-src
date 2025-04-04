@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSOLVE_STRING {
+
+    @Test
+    public void testSolveString1() {
+        String input = "Hello World!";
+        String expectedOutput = "hELLO wORLD!";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testSolveString2() {
+        String input = "12345";
+        String expectedOutput = "54321";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+
+    @Test
+    public void testSolveString3() {
+        String input = "AbCdEfG";
+        String expectedOutput = "aBcDeFg";
+        String result = SOLVE_STRING.solve_string(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```

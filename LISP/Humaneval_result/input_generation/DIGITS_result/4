@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of negative integers for the input `n` and verify the output of the `digits` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGITS {
+    
+    @Test
+    public void testDigits_NegativeInteger() {
+        int n = -12345;
+        int result = DIGITS.digits(n);
+        assertEquals(15, result);
+    }
+    
+    @Test
+    public void testDigits_NegativeInteger_NoOddDigits() {
+        int n = -2468;
+        int result = DIGITS.digits(n);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases: one with a negative integer containing odd digits and one with a negative integer containing no odd digits.
+- We call the `digits` method with the negative integers as input and verify the output using `assertEquals`.
+
+Make sure to have the `DIGITS` class available in the test environment for these test cases to run successfully.

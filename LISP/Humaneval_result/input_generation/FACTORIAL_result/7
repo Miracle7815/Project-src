@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios of null or invalid input types for the `factorial` method. We will need to import the necessary classes and write JUnit test cases to validate the behavior of the method.
+
+Here is the code for the test cases:
+
+```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import org.junit.Test;
+import java.util.ArrayList;
+
+public class TestFACTORIAL {
+
+    @Test
+    public void testNullInput() {
+        assertNull("Null input should return null", FACTORIAL.factorial(null));
+    }
+
+    @Test
+    public void testInvalidInput() {
+        ArrayList<Integer> result = FACTORIAL.factorial("invalid");
+        assertEquals("Invalid input should return an empty list", 0, result.size());
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes for testing.
+- We have two test cases: one for testing null input and another for testing invalid input.
+- The `testNullInput` method checks if passing a null input to the `factorial` method returns null.
+- The `testInvalidInput` method checks if passing an invalid input (non-integer) to the `factorial` method returns an empty list.
+
+These test cases cover the scenarios specified in the input specification for the `factorial` method.

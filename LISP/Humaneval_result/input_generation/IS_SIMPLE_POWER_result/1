@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SIMPLE_POWER {
+    
+    @Test
+    public void testIsSimplePower_x1_n2() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(1, 2);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void testIsSimplePower_x1_n3() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(1, 3);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void testIsSimplePower_x1_n4() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(1, 4);
+        assertTrue(result);
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary JUnit classes and written test cases for the `is_simple_power` method with different values of `n` while keeping `x` as 1, as per the input specification. Each test case asserts that the result returned by the method is `true`.

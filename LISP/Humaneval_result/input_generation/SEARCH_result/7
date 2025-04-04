@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `search` method in the `SEARCH` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SEARCHTest {
+
+    @Test
+    public void testSearch_UniqueValues() {
+        int[] lst = {3, 1, 4, 2, 5};
+        int result = SEARCH.search(lst);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void testSearch_EmptyArray() {
+        int[] lst = {};
+        int result = SEARCH.search(lst);
+        assertEquals(-1, result);
+    }
+
+    @Test
+    public void testSearch_AllNegativeValues() {
+        int[] lst = {-5, -3, -2, -4, -1};
+        int result = SEARCH.search(lst);
+        assertEquals(-1, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to cover scenarios such as unique values in the array, an empty array, and all negative values in the array.
+- Each test case instantiates the `lst` array with the specified values and calls the `search` method from the `SEARCH` class.
+- We use `assertEquals` to verify that the expected result matches the actual result returned by the `search` method.

@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases to cover different scenarios. We need to test the `compare_one` method with different combinations of input values for `a` and `b`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class COMPARE_ONETest {
+
+    @Test
+    public void testCompare_one_StringDouble() {
+        Object a = "3.5";
+        Object b = 2.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(a, result);
+    }
+
+    @Test
+    public void testCompare_one_IntegerString() {
+        Object a = 5;
+        Object b = "7,5";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertEquals(b, result);
+    }
+
+    @Test
+    public void testCompare_one_DoubleDouble() {
+        Object a = 10.0;
+        Object b = 10.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertNull(result);
+    }
+
+    @Test
+    public void testCompare_one_IntegerDouble() {
+        Object a = 3;
+        Object b = 3.0;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        assertNull(result);
+    }
+}
+```
+
+In the above test cases, we cover scenarios where `a` and `b` are of different types (String, Integer, Double) as per the input specification.

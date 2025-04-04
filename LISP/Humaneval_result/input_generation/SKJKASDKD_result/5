@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases for the `skjkasdkd` method in the `SKJKASDKD` class. The input `lst` contains only prime numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestSKJKASDKD {
+    
+    @Test
+    public void testSKJKASDKD_1() {
+        int[] lst = {2, 3, 5, 7, 11};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(28, result);
+    }
+    
+    @Test
+    public void testSKJKASDKD_2() {
+        int[] lst = {17, 19, 23, 29, 31};
+        int result = SKJKASDKD.skjkasdkd(lst);
+        assertEquals(22, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `skjkasdkd` method with arrays containing prime numbers as input. The expected results are calculated based on the logic inside the method.

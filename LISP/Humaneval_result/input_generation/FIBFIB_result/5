@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `fibfib` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FIBFIBTest {
+
+    @Test
+    public void testFibfib_n3() {
+        int result = FIBFIB.fibfib(3);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testFibfib_n5() {
+        int result = FIBFIB.fibfib(5);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testFibfib_n8() {
+        int result = FIBFIB.fibfib(8);
+        assertEquals(13, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `fibfib` method with different values of `n` greater than 2 and asserting that the returned results are correct.

@@ -1,0 +1,20 @@
+Based on the provided method and input specification, we can write test cases using JUnit. We need to create an instance of the `FIX_SPACES` class and test the `fix_spaces` method with an empty string as input.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FIX_SPACES {
+    
+    @Test
+    public void testFixSpacesWithEmptyString() {
+        FIX_SPACES fixer = new FIX_SPACES();
+        String result = fixer.fix_spaces("");
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `fix_spaces` method of the `FIX_SPACES` class with an empty string as input. The expected output is also an empty string.

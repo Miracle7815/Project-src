@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where the input integer `n` has no odd digits. We will test the `digits` method with such inputs to ensure it returns 0 as expected.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGITS {
+    
+    @Test
+    public void testNoOddDigits() {
+        int n = 24680;
+        int result = DIGITS.digits(n);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are passing the integer `24680` to the `digits` method, which does not contain any odd digits. The expected result is `0`, as mentioned in the input specification.

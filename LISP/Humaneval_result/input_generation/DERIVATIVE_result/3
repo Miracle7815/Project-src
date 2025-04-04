@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DERIVATIVE_Test {
+    
+    @Test
+    public void testDerivative_WithPositiveNumbers() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(2);
+        xs.add(3);
+        xs.add(4);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0);  // 1*2 = 2
+        expected.add(3);  // 2*3 = 6
+        expected.add(8);  // 3*4 = 12
+        
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testDerivative_WithNegativeNumbers() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(-2);
+        xs.add(-3);
+        xs.add(-4);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0);   // 1*(-2) = -2
+        expected.add(-3);  // 2*(-3) = -6
+        expected.add(-8);  // 3*(-4) = -12
+        
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        
+        assertEquals(expected, result);
+    }
+}
+```

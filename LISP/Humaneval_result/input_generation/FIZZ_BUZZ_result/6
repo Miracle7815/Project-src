@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where `n` is not a multiple of 11 or 13 but contains the digit 7. We will need to create instances of `n` meeting this criteria.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzz() {
+        int n = 17; // Not a multiple of 11 or 13 but contains the digit 7
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(1, result);
+    }
+}
+```

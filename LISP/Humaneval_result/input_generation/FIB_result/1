@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases for the `fib` method in the `FIB` class. Since the input specification mentions negative values for `n`, we need to test the behavior of the method when negative values are provided.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestFIB {
+    
+    @Test
+    public void testFib_NegativeValue() {
+        int result = FIB.fib(-5);
+        assertEquals(5, result); // Expected result for fib(-5) is 5
+    }
+    
+    @Test
+    public void testFib_Zero() {
+        int result = FIB.fib(0);
+        assertEquals(0, result); // Expected result for fib(0) is 0
+    }
+    
+    @Test
+    public void testFib_One() {
+        int result = FIB.fib(1);
+        assertEquals(1, result); // Expected result for fib(1) is 1
+    }
+}
+```
+
+In the above test cases, we are testing the `fib` method with negative values, 0, and 1 to cover the scenarios mentioned in the input specification.

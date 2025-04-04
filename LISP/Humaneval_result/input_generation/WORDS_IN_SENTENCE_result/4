@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `sentence` which contains words with a length of 1.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_WORDS_IN_SENTENCE {
+    
+    @Test
+    public void testWordsInSentence() {
+        String sentence = "a b c d e";
+        String expectedResult = "a b c d e";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testWordsInSentenceEmpty() {
+        String sentence = "";
+        String expectedResult = "";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals(expectedResult, result);
+    }
+}
+``` 
+
+In the above code, we have two test cases. The first test case checks if the method correctly handles a sentence with words of length 1. The second test case checks if the method handles an empty sentence correctly.

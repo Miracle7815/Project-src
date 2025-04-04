@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_THIRD {
+    
+    @Test
+    public void testSortThird_NullList() {
+        List<Integer> l = null;
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> result = SORT_THIRD.sort_third(l);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `sort_third` method with a null list as input, as specified in the input specification. The expected result is an empty list.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases to test the `GET_POSITIVE` class. We need to create instances of `numbers` containing only negative numbers and test if the `get_positive` method correctly filters out positive numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_GET_POSITIVE {
+    
+    @Test
+    public void testGetPositive_OnlyNegativeNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(-5);
+        numbers.add(-10);
+        numbers.add(-3);
+        
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        
+        assertTrue(result.isEmpty());
+    }
+}
+```
+
+In this test case, we are creating a list of numbers containing only negative numbers and then calling the `get_positive` method to filter out positive numbers. The test asserts that the result list should be empty since there are no positive numbers in the input list.

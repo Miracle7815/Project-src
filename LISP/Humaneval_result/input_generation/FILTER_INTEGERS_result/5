@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `values` as a null list.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TEST_FILTER_INTEGERS {
+    
+    @Test
+    public void testFilterIntegersWithNullList() {
+        List<Object> values = null;
+        List<Integer> result = FILTER_INTEGERS.filter_integers(values);
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+    }
+}
+```

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `rescale_to_unit` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class RESCALE_TO_UNITTest {
+
+    @Test
+    public void testRescaleToUnit_PositiveNumbers() {
+        double[] numbers = {3.0, 6.0, 9.0, 12.0};
+        double[] expected = {0.0, 0.3333333333333333, 0.6666666666666666, 1.0};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+
+    @Test
+    public void testRescaleToUnit_MixedNumbers() {
+        double[] numbers = {-5.0, 0.0, 5.0};
+        double[] expected = {0.0, 0.5, 1.0};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+
+    @Test
+    public void testRescaleToUnit_NegativeNumbers() {
+        double[] numbers = {-10.0, -5.0, 0.0, 5.0};
+        double[] expected = {0.0, 0.25, 0.5, 0.75};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+}
+```
+
+In the above test cases, we are testing the `rescale_to_unit` method with different input scenarios - positive numbers, mixed numbers, and negative numbers. The `assertArrayEquals` method is used to compare the expected output with the actual output from the method.

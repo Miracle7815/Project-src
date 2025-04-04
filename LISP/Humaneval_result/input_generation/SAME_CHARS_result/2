@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class SAME_CHARSTest {
+
+    @Test
+    public void testSame_chars_emptyString() {
+        String s0 = "";
+        String s1 = "hello";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSame_chars_sameString() {
+        String s0 = "abc";
+        String s1 = "cab";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testSame_chars_differentString() {
+        String s0 = "hello";
+        String s1 = "world";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+}
+``` 
+
+These test cases cover scenarios where `s0` is an empty string and where `s0` and `s1` have the same and different characters.

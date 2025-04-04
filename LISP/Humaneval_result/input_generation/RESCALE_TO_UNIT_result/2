@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class RESCALE_TO_UNITTest {
+
+    @Test
+    public void testRescaleToUnit_singleElement() {
+        double[] numbers = {5.0};
+        double[] expected = {0.0};
+        double[] result = RESCALE_TO_UNIT.rescale_to_unit(numbers);
+        assertArrayEquals(expected, result, 0.0001);
+    }
+}
+```
+
+In this test case, we are testing the `rescale_to_unit` method with a single element in the `numbers` array. The expected result is an array with a single element `0.0`, as per the rescaling logic defined in the method.

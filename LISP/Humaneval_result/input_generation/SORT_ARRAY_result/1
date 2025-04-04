@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_ARRAYTest {
+
+    @Test
+    public void testSortArray_emptyArray() {
+        int[] array = {};
+        int[] expected = {};
+        int[] result = SORT_ARRAY.sort_array(array);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `sort_array` method with an empty array as input. The expected result is also an empty array.

@@ -1,0 +1,29 @@
+Anwser: Let's do this step by step. 
+According to the signature of the code, we can know that we should write instances of `accurate` and `approximate`.
+In the input specification, `accurate` is any double value, and `approximate` is any double value where `delta` is less than 1, and `p` is such that `p < 0` or `p >= POW10.length`.
+Based on the method signature, body, we can write instances of `accurate` and `approximate` and required import statements based on and the input specification:
+
+Example 1: 
+    Part 1. The objects initialized:
+        ```java
+        double accurate = 123.456789;
+        double approximate = 123.456788;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        ```
+
+Example 2:
+    Part 1. The objects initialized:
+        ```java
+        double accurate = 987.654321;
+        double approximate = 987.654320;
+        ```
+
+    Part 2. According to the code above, the following import statement must be required:
+        ```java
+        import java.lang.Double;
+        ```
+    

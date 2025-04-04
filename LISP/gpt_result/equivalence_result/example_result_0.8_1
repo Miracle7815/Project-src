@@ -1,0 +1,14 @@
+Based on the method signature and body, the instances of `accurate` and `approximate` should be generated to test the API method, which checks if two double values are equal when ignoring minor differences in the fractional part.
+To achieve high code coverage, diverse instances should be generated to reach different branches in the Method Body.
+Therefore, we can partition the following equivalence classes for `accurate` and `approximate`:
+- class:
+    1. `accurate`: 0; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: can be a positive or negative double value that is close to 0; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: can be a positive or negative double value that is not close to 0; 2. `approximate`: can be any double value
+- class:
+    1. `accurate`: is equal to `approximate`
+- class:
+    1. `accurate`: is not equal to `approximate`
+

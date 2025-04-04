@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `l` array with non-monotonic sequences.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_MONOTONIC {
+    
+    @Test
+    public void testNonMonotonicArray1() {
+        int[] l = {3, 1, 5, 2, 4};
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+    
+    @Test
+    public void testNonMonotonicArray2() {
+        int[] l = {10, 20, 15, 30, 25};
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+    
+    @Test
+    public void testNonMonotonicArray3() {
+        int[] l = {5, 5, 3, 2, 1};
+        assertFalse(MONOTONIC.monotonic(l));
+    }
+}
+```
+
+In the above test cases, we are testing the `monotonic` method with different non-monotonic arrays to ensure that it correctly identifies non-monotonic sequences.

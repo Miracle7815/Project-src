@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class TestISCUBE {
+
+    @Test
+    public void testIsCube_1() {
+        int a = 8;
+        assertTrue(ISCUBE.iscube(a));
+    }
+
+    @Test
+    public void testIsCube_2() {
+        int a = 27;
+        assertTrue(ISCUBE.iscube(a));
+    }
+
+    @Test
+    public void testIsCube_3() {
+        int a = 64;
+        assertTrue(ISCUBE.iscube(a));
+    }
+}
+```

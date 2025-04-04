@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_INCR_LIST {
+    
+    @Test
+    public void test_incr_list_withZeroValues() {
+        List<Integer> inputList = new ArrayList<>();
+        inputList.add(0);
+        inputList.add(0);
+        inputList.add(0);
+        
+        List<Integer> expectedList = new ArrayList<>();
+        expectedList.add(1);
+        expectedList.add(1);
+        expectedList.add(1);
+        
+        List<Integer> result = INCR_LIST.incr_list(inputList);
+        
+        assertEquals(expectedList, result);
+    }
+}
+```

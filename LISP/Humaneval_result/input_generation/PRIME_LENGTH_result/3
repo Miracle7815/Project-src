@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class PRIME_LENGTHTest {
+
+    @Test
+    public void testPrimeLength_ValidPrimeString() {
+        String string = "abcde";
+        assertTrue(PRIME_LENGTH.prime_length(string));
+    }
+
+    @Test
+    public void testPrimeLength_InvalidNonPrimeString() {
+        String string = "abcdef";
+        assertFalse(PRIME_LENGTH.prime_length(string));
+    }
+
+    @Test
+    public void testPrimeLength_InvalidShortString() {
+        String string = "a";
+        assertFalse(PRIME_LENGTH.prime_length(string));
+    }
+}
+```
+
+In the above test cases:
+1. `testPrimeLength_ValidPrimeString`: Tests the method with a valid prime length string.
+2. `testPrimeLength_InvalidNonPrimeString`: Tests the method with a non-prime length string.
+3. `testPrimeLength_InvalidShortString`: Tests the method with a string of length less than 2.

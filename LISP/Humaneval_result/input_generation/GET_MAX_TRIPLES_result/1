@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_GET_MAX_TRIPLES {
+
+    @Test
+    public void testNegativeInput() {
+        int result = GET_MAX_TRIPLES.get_max_triples(-5);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testZeroInput() {
+        int result = GET_MAX_TRIPLES.get_max_triples(0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testPositiveInput() {
+        int result = GET_MAX_TRIPLES.get_max_triples(5);
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `GET_MAX_TRIPLES` method with negative input, zero input, and positive input values to cover different scenarios.

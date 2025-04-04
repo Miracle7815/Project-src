@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases to cover different scenarios. We need to create instances of `date` with invalid formats to test the `valid_date` method.
+
+Here is an example of JUnit test cases with required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_VALID_DATE {
+
+    @Test
+    public void testInvalidDateFormat() {
+        assertFalse(VALID_DATE.valid_date("20220101")); // Date without "-"
+        assertFalse(VALID_DATE.valid_date("01/01/2022")); // Date separated by "/"
+        assertFalse(VALID_DATE.valid_date("2022-01-01-01")); // Date with more than 3 parts
+    }
+
+    @Test
+    public void testValidDateFormat() {
+        assertTrue(VALID_DATE.valid_date("01-01-2022")); // Valid date format
+        assertTrue(VALID_DATE.valid_date("12-31-2022")); // Valid date format
+    }
+}
+```
+
+In the above test cases, we are testing the `valid_date` method with invalid date formats (not separated by "-") and valid date formats.

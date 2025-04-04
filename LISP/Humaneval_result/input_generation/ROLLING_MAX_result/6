@@ -1,0 +1,55 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain multiple elements with alternating increasing and decreasing values.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestROLLING_MAX {
+    
+    @Test
+    public void testRollingMax_1() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(4);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(3);
+        expected.add(3);
+        expected.add(5);
+        expected.add(5);
+        
+        List<Integer> result = ROLLING_MAX.rolling_max(numbers);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testRollingMax_2() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(8);
+        numbers.add(9);
+        numbers.add(6);
+        numbers.add(7);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        expected.add(10);
+        expected.add(10);
+        expected.add(10);
+        expected.add(10);
+        
+        List<Integer> result = ROLLING_MAX.rolling_max(numbers);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `rolling_max` method with different input scenarios. The test cases include instances of `numbers` with alternating increasing and decreasing values, and the expected output after applying the `rolling_max` method.

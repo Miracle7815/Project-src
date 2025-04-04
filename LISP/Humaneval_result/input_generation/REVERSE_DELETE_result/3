@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` and `c` and test the `reverse_delete` method with these inputs.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REVERSE_DELETE {
+
+    @Test
+    public void testReverseDelete_1() {
+        String s = "hello";
+        String c = "helo";
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        assertEquals("lo", result.get(0));
+        assertEquals(true, result.get(1));
+    }
+
+    @Test
+    public void testReverseDelete_2() {
+        String s = "world";
+        String c = "wrd";
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        assertEquals("o", result.get(0));
+        assertEquals(false, result.get(1));
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes for testing.
+- We create two test cases with different inputs for `s` and `c`.
+- We call the `reverse_delete` method with the test inputs.
+- We use `assertEquals` to verify the expected output against the actual output for both parts of the result array.
+
+These test cases cover scenarios where the input strings `s` and `c` meet the input specifications provided.

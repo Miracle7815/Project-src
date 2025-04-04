@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `operator` and `operand` arrays with valid and invalid values to test the `do_algebra` method.
+
+Here is the JUnit test code with required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DO_ALGEBRA {
+
+    @Test
+    public void testValidInput() throws NumberFormatException, ScriptException {
+        String[] operator = {"+", "*", "-"};
+        int[] operand = {5, 3, 2, 4};
+        double result = DO_ALGEBRA.do_algebra(operator, operand);
+        assertEquals(11.0, result, 0.001);
+    }
+
+    @Test
+    public void testInvalidInput() throws NumberFormatException, ScriptException {
+        String[] operator = {"+", "*", "-"};
+        int[] operand = {5, 3, 2, 4, 6}; // Invalid input with extra operand
+        double result = DO_ALGEBRA.do_algebra(operator, operand);
+        assertEquals(Double.NaN, result, 0.001);
+    }
+}
+```
+
+In the above test code, we have included two test cases - one with valid input and one with invalid input to cover different scenarios.

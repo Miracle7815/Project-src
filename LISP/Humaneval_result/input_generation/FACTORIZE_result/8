@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n` which is the minimum integer value.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class TestFACTORIZE {
+    
+    @Test
+    public void testFactorize_1() {
+        int n = 10;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(5);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorize_2() {
+        int n = 21;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(7);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `factorize` method with different input values of `n`. The expected results are defined based on the factorization of the input `n`.

@@ -1,0 +1,16 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRLEN {
+
+    @Test
+    public void testEmptyString() {
+        String string = "";
+        int result = STRLEN.strlen(string);
+        assertEquals(0, result);
+    }
+}
+```

@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list `x` and pass it to the `unique_digits` method to test its functionality.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
+
+public class Test_UNIQUE_DIGITS {
+    
+    @Test
+    public void testEmptyList() {
+        ArrayList<Integer> x = new ArrayList<>();
+        ArrayList<Integer> result = UNIQUE_DIGITS.unique_digits(x);
+        ArrayList<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we create an empty list `x`, pass it to the `unique_digits` method, and then compare the expected empty list with the result obtained from the method.

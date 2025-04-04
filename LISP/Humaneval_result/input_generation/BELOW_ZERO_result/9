@@ -1,0 +1,34 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create a list of negative integers to test the `below_zero` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_BELOW_ZERO {
+
+    @Test
+    public void testBelowZero_1() {
+        List<Integer> operations = Arrays.asList(-5, -3, -2, -1);
+        assertTrue(BELOW_ZERO.below_zero(operations));
+    }
+
+    @Test
+    public void testBelowZero_2() {
+        List<Integer> operations = Arrays.asList(-10, -7, -4, -2);
+        assertTrue(BELOW_ZERO.below_zero(operations));
+    }
+
+    @Test
+    public void testBelowZero_3() {
+        List<Integer> operations = Arrays.asList(-1, -2, -3, -4);
+        assertTrue(BELOW_ZERO.below_zero(operations));
+    }
+}
+```
+
+In the above code, we have created three test cases with lists of negative integers to test the `below_zero` method. Each test case asserts that the method should return `true` for lists containing only negative integers.

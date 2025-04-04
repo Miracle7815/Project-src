@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+
+    @Test
+    public void testAllZeroIntegers() {
+        int[] lst = {0, 0, 0, 0, 0};
+        int[] expected = {0, 0};
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testMixedIntegersWithZeros() {
+        int[] lst = {0, 5, 0, -3, 0, 8};
+        int[] expected = {0, 5};
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testNegativeIntegersOnly() {
+        int[] lst = {-2, -5, -1, -3, -8};
+        int[] expected = {-1, 0};
+        int[] result = LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `largest_smallest_integers` method with different scenarios of input arrays containing only zero integers, mixed integers with zeros, and negative integers only.

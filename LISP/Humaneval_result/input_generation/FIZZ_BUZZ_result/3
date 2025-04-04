@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of positive integers for the input parameter `n`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzz_1() {
+        int n = 20;
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testFizzBuzz_2() {
+        int n = 50;
+        int result = FIZZ_BUZZ.fizz_buzz(n);
+        assertEquals(1, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different positive integer values for `n`.
+- We call the `fizz_buzz` method from the `FIZZ_BUZZ` class with the specified input values.
+- We use `assertEquals` to verify the expected result against the actual result returned by the method.

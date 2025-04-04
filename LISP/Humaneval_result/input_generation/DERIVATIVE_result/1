@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DERIVATIVE_Test {
+
+    @Test
+    public void testDerivative_emptyList() {
+        List<Integer> xs = new ArrayList<>();
+        List<Integer> result = DERIVATIVE.derivative(xs);
+        assertTrue(result.isEmpty());
+    }
+}
+```
+
+In this test case, we are testing the `derivative` method with an empty list as input. The expected behavior is that the method should return an empty list.

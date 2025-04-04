@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `special_filter` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SPECIAL_FILTERTest {
+
+    @Test
+    public void testSpecialFilter_singleElementGreaterThan10() {
+        int[] nums = {15};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testSpecialFilter_singleElementLessThan10() {
+        int[] nums = {5};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSpecialFilter_singleElementEqualTo10() {
+        int[] nums = {10};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to cover scenarios where the input array `nums` contains a single element that is greater than, less than, or equal to 10.
+- We use the `assertEquals` method to verify the expected output of the `special_filter` method based on the input `nums`.
+
+These test cases will help ensure that the `special_filter` method behaves as expected for the given input specification.

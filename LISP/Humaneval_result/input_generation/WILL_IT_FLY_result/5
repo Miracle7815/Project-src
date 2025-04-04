@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `q` and `w` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestWILL_IT_FLY {
+
+    @Test
+    public void testWillItFly_1() {
+        int[] q = {1, 2, 3, 4};
+        int w = 10;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testWillItFly_2() {
+        int[] q = {5, 5, 5};
+        int w = 15;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testWillItFly_3() {
+        int[] q = {2, 3, 4};
+        int w = 10;
+        boolean result = WILL_IT_FLY.will_it_fly(q, w);
+        assertFalse(result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create three test cases with different values of `q` and `w`.
+- We call the `will_it_fly` method from the `WILL_IT_FLY` class with the test inputs.
+- We use `assertTrue` and `assertFalse` to validate the results of the method.

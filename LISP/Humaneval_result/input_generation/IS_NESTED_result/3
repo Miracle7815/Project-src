@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_NESTED {
+
+    @Test
+    public void testIsNested_WithNoOpeningBrackets() {
+        String brackets = "]]]]";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsNested_WithMultipleOpeningBrackets() {
+        String brackets = "[]][[]]";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsNested_WithSingleOpeningBracket() {
+        String brackets = "]]][";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+}
+```
+
+These test cases cover scenarios where the input `brackets` contains only closing brackets ']' with no opening brackets '[' as specified in the input specification.

@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n` which are less than 2.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_PRIME_FIB {
+    
+    @Test
+    public void testIsPrime() {
+        boolean result1 = PRIME_FIB.is_prime(2);
+        boolean result2 = PRIME_FIB.is_prime(1);
+        
+        assertEquals(true, result1);
+        assertEquals(false, result2);
+    }
+    
+    @Test
+    public void testPrimeFib() {
+        int result = PRIME_FIB.prime_fib(0);
+        assertEquals(2, result);
+    }
+}
+``` 
+
+In the above test code, we have two test methods. The `testIsPrime` method tests the `is_prime` method with inputs 2 and 1. The `testPrimeFib` method tests the `prime_fib` method with input 0.

@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. 
+
+First, we need to create an empty list `lst` and an integer `x` for testing the `get_row` method. We also need to import the required classes.
+
+Here is the JUnit test code:
+
+```java
+import java.util.ArrayList;
+
+public class Test_GET_ROW {
+    
+    @Test
+    public void testEmptyList() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        int x = 5;
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        assertTrue(result.isEmpty());
+    }
+    
+    @Test
+    public void testNonEmptyList() {
+        ArrayList<ArrayList<Integer>> lst = new ArrayList<>();
+        lst.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        lst.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
+        lst.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        int x = 5;
+        ArrayList<GET_ROW.Tuple> result = GET_ROW.get_row(lst, x);
+        GET_ROW.Tuple expectedTuple = new GET_ROW().new Tuple(1, 1);
+        assertTrue(result.size() == 1 && result.get(0).equals(expectedTuple));
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes.
+- We create two test cases: one for an empty list and one for a non-empty list.
+- In the non-empty list test case, we populate the list with some values and check if the `get_row` method returns the expected result.
+
+You can add more test cases based on different scenarios to ensure the correctness of the `get_row` method.

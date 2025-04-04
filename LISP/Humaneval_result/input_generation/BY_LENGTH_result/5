@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `by_length` method in the `BY_LENGTH` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class BY_LENGTHTest {
+
+    @Test
+    public void testByLengthWithDuplicates() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(3);
+        input.add(2);
+        input.add(3);
+        input.add(1);
+        input.add(2);
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Three");
+        expected.add("Two");
+        expected.add("One");
+        
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `by_length` method with an input list containing duplicate integers. The expected output is a list of strings representing the corresponding digit names in descending order.

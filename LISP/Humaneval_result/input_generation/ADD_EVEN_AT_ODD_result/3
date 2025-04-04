@@ -1,0 +1,20 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario where the input array `lst` contains only odd numbers. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ADD_EVEN_AT_ODD {
+    
+    @Test
+    public void testAddEvenAtOdd_OnlyOddNumbers() {
+        int[] lst = {1, 3, 5, 7, 9};
+        int result = ADD_EVEN_AT_ODD.add_even_at_odd(lst);
+        assertEquals(0, result);
+    }
+}
+``` 
+
+In this test case, we are passing an array `lst` containing only odd numbers to the `add_even_at_odd` method and asserting that the result should be 0 since there are no even numbers in the input array.

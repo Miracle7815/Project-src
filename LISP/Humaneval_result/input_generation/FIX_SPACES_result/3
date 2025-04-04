@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FIX_SPACES_Test {
+
+    @Test
+    public void testFixSpaces_singleCharacter() {
+        String text = "a";
+        String result = FIX_SPACES.fix_spaces(text);
+        assertEquals("_", result);
+    }
+}
+```
+
+In this test case, we are testing the `fix_spaces` method with a single character input "a". The expected output is "_", as per the provided logic in the method.

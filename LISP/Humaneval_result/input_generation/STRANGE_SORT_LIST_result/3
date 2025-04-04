@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains multiple elements in ascending order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRANGE_SORT_LIST {
+
+    @Test
+    public void testStrangeSortList() {
+        List<Integer> lst = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        List<Integer> expected = Arrays.asList(1, 5, 2, 4, 3);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testStrangeSortListEmptyList() {
+        List<Integer> lst = new ArrayList<>();
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```

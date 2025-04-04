@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write the JUnit test cases as follows:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TOTAL_MATCHTest {
+
+    @Test
+    public void testTotalMatchEmptyList() {
+        List<String> lst1 = new ArrayList<>();
+        List<String> lst2 = new ArrayList<>();
+        lst2.add("apple");
+        lst2.add("banana");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst2, result);
+    }
+
+    @Test
+    public void testTotalMatchNonEmptyList() {
+        List<String> lst1 = new ArrayList<>();
+        lst1.add("cat");
+        lst1.add("dog");
+        
+        List<String> lst2 = new ArrayList<>();
+        lst2.add("elephant");
+        lst2.add("giraffe");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst2, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where `lst1` is an empty list and `lst2` is a non-empty list, and vice versa.

@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write the following JUnit test case:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_CAN_ARRANGE {
+    
+    @Test
+    public void testEmptyArray() {
+        int[] arr = new int[]{};
+        int result = CAN_ARRANGE.can_arrange(arr);
+        assertEquals(-1, result);
+    }
+}
+```
+
+This test case covers the scenario where an empty array is passed to the `can_arrange` method, as specified in the input specification.

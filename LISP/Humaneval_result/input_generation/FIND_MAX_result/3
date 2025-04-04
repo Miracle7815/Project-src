@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `find_max` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FIND_MAX {
+
+    @Test
+    public void testFindMax_1() {
+        String[] words = {"hello"};
+        String result = FIND_MAX.find_max(words);
+        assertEquals("hello", result);
+    }
+
+    @Test
+    public void testFindMax_2() {
+        String[] words = {"world"};
+        String result = FIND_MAX.find_max(words);
+        assertEquals("world", result);
+    }
+
+    @Test
+    public void testFindMax_3() {
+        String[] words = {"testing"};
+        String result = FIND_MAX.find_max(words);
+        assertEquals("testing", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to test the `find_max` method with different input words containing unique characters.
+- Each test case asserts that the result returned by the `find_max` method matches the expected output.

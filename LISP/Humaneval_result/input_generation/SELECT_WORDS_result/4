@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases to cover different scenarios. We need to create instances of `s` and `n` to test the `select_words` method. Here are some JUnit test cases with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class Test_SELECT_WORDS {
+    
+    @Test
+    public void testSelectWordsWithNConsonants() {
+        String s = "apple banana orange kiwi";
+        int n = 3;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("banana");
+        expected.add("orange");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSelectWordsWithNoConsonants() {
+        String s = "elephant igloo umbrella octopus";
+        int n = 0;
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("igloo");
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSelectWordsWithAllConsonants() {
+        String s = "sky fly try cry";
+        int n = 3;
+        ArrayList<String> expected = new ArrayList<>();
+        
+        ArrayList<String> result = SELECT_WORDS.select_words(s, n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+These test cases cover scenarios where words have the specified number of consonants, no consonants, and all consonants.

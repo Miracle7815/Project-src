@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TRIPLES_SUM_TO_ZERO_Test {
+
+    @Test
+    public void testEmptyArray() {
+        int[] numbers = new int[]{};
+        assertFalse(TRIPLES_SUM_TO_ZERO.triples_sum_to_zero(numbers));
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array is empty. The expected behavior is that the method should return `false` since there are no elements in the array to form a triple that sums to zero.

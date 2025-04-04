@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of strings that contain only non-alphabetic characters for testing the `encrypt` method.
+
+Here is an example of how we can write JUnit test cases for the `encrypt` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCRYPTTest {
+
+    @Test
+    public void testEncryptWithNonAlphabeticCharacters() {
+        String input = "123!@#456";
+        String expectedOutput = "123!@#456";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testEncryptWithSpecialCharacters() {
+        String input = "!@#$%^&*()";
+        String expectedOutput = "!@#$%^&*()";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+```
+
+In the above test cases, we are testing the `encrypt` method with strings containing only non-alphabetic characters and special characters. The expected output for these test cases is the same as the input string since the method does not modify non-alphabetic characters.

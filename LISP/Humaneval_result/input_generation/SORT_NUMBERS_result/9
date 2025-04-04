@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain multiple words representing numbers with all valid and unique words.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_NUMBERS {
+    
+    @Test
+    public void testSortNumbers_1() {
+        String numbers = "one three five seven nine";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("one three five seven nine", sortedNumbers);
+    }
+    
+    @Test
+    public void testSortNumbers_2() {
+        String numbers = "nine eight seven six five four three two one";
+        String sortedNumbers = SORT_NUMBERS.sort_numbers(numbers);
+        assertEquals("one two three four five six seven eight nine", sortedNumbers);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `sort_numbers` method of the `SORT_NUMBERS` class. The test cases provide input `numbers` containing multiple words representing numbers and assert that the sorted output matches the expected result.

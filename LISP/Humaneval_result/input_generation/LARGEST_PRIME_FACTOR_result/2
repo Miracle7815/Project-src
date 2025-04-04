@@ -1,0 +1,28 @@
+Based on the provided API method, we need to test the `largest_prime_factor` method with an input `n` that is greater than or equal to 2. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestLARGEST_PRIME_FACTOR {
+
+    @Test
+    public void testLargestPrimeFactor() {
+        assertEquals(5, LARGEST_PRIME_FACTOR.largest_prime_factor(10));
+    }
+
+    @Test
+    public void testLargestPrimeFactor2() {
+        assertEquals(29, LARGEST_PRIME_FACTOR.largest_prime_factor(131));
+    }
+
+    @Test
+    public void testLargestPrimeFactor3() {
+        assertEquals(17, LARGEST_PRIME_FACTOR.largest_prime_factor(289));
+    }
+}
+```
+
+In this test code, we are testing the `largest_prime_factor` method with different input values of `n` that are greater than or equal to 2. The `assertEquals` method is used to verify the expected output against the actual output of the method.

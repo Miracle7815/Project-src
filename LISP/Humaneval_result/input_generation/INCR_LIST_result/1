@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_INCR_LIST {
+    
+    @Test
+    public void test_incr_list_emptyList() {
+        List<Integer> emptyList = new ArrayList<>();
+        List<Integer> result = INCR_LIST.incr_list(emptyList);
+        assertEquals(0, result.size());
+    }
+}
+```
+
+In this test case, we are testing the `incr_list` method with an empty list as input. The expected behavior is that the method should return an empty list as well.

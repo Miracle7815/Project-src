@@ -1,0 +1,27 @@
+Based on the provided method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVENTest {
+
+    @Test
+    public void testSort_even_1() {
+        int[] input = {1, 2, 3, 4, 5, 6};
+        int[] expected = {2, 1, 4, 3, 6, 5};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSort_even_2() {
+        int[] input = {2, 4, 6, 8, 10};
+        int[] expected = {4, 2, 8, 6, 10};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sort_even` method with different input arrays that are in ascending order. The expected output arrays are based on the logic of the `sort_even` method provided. The `assertArrayEquals` method is used to compare the expected and actual output arrays.

@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `lst` array with one element and test the `match_parens` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+    
+    @Test
+    public void testMatchParens_WithValidInput_ReturnsYes() {
+        String[] lst = {"(())"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+    
+    @Test
+    public void testMatchParens_WithInvalidInput_ReturnsNo() {
+        String[] lst = {")("};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```
+
+In the above test code:
+- The first test case provides a valid input where the parentheses are matched, and the expected result is "Yes".
+- The second test case provides an invalid input where the parentheses are not matched, and the expected result is "No".
+
+These test cases cover the scenarios mentioned in the input specification for the `match_parens` method.

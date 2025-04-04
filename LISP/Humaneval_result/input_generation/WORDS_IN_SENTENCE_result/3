@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `sentence` which contains only one-word strings.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_WORDS_IN_SENTENCE {
+
+    @Test
+    public void testWordsInSentence_1() {
+        String sentence = "hello";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("hello", result);
+    }
+
+    @Test
+    public void testWordsInSentence_2() {
+        String sentence = "world";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("world", result);
+    }
+
+    @Test
+    public void testWordsInSentence_3() {
+        String sentence = "testing";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("testing", result);
+    }
+}
+```

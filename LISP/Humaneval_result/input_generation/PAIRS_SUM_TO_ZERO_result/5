@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class Test_PAIRS_SUM_TO_ZERO {
+
+    @Test
+    public void testPairsSumToZero_1() {
+        List<Integer> l = Arrays.asList(1, 2);
+        boolean result = PAIRS_SUM_TO_ZERO.pairs_sum_to_zero(l);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testPairsSumToZero_2() {
+        List<Integer> l = Arrays.asList(-3, 3);
+        boolean result = PAIRS_SUM_TO_ZERO.pairs_sum_to_zero(l);
+        assertTrue(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `pairs_sum_to_zero` method with lists that contain two elements that do not sum up to zero and lists that contain two elements that sum up to zero.

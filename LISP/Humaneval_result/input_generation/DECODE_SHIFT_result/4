@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of strings containing uppercase alphabetic characters only to test the `encode_shift` and `decode_shift` methods.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift() {
+        String inputString = "HELLO";
+        String expectedEncodedString = "MJQQT";
+        String actualEncodedString = DECODE_SHIFT.encode_shift(inputString);
+        assertEquals(expectedEncodedString, actualEncodedString);
+    }
+
+    @Test
+    public void testDecodeShift() {
+        String inputString = "MJQQT";
+        String expectedDecodedString = "HELLO";
+        String actualDecodedString = DECODE_SHIFT.decode_shift(inputString);
+        assertEquals(expectedDecodedString, actualDecodedString);
+    }
+}
+```
+
+In the above test code, we are testing the `encode_shift` and `decode_shift` methods of the `DECODE_SHIFT` class with specific input strings and their expected output.

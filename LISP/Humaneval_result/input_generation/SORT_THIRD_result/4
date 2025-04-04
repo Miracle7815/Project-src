@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `l` which contains elements where the size is a multiple of 3.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Test_SORT_THIRD {
+    
+    @Test
+    public void testSortThird_1() {
+        List<Integer> l = new ArrayList<>(Arrays.asList(9, 3, 6, 1, 4, 7));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(3, 1, 6, 4, 9, 7));
+        List<Integer> result = SORT_THIRD.sort_third(l);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSortThird_2() {
+        List<Integer> l = new ArrayList<>(Arrays.asList(12, 15, 3, 9, 6, 18, 21, 24));
+        List<Integer> expected = new ArrayList<>(Arrays.asList(3, 15, 6, 9, 12, 18, 21, 24));
+        List<Integer> result = SORT_THIRD.sort_third(l);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `sort_third` method of the `SORT_THIRD` class. The input lists `l` contain elements where the size is a multiple of 3. The expected results are also provided for comparison.

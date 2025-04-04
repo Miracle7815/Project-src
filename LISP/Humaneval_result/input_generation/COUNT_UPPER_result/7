@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains special characters or numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_UPPER {
+    
+    @Test
+    public void testCount_upper_WithSpecialCharacters() {
+        String s = "H@llo W0rld!";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testCount_upper_WithNumbers() {
+        String s = "12345";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, one with special characters and one with numbers in the input string `s`.
+- We call the `count_upper` method from the `COUNT_UPPER` class with the test input `s`.
+- We use `assertEquals` to verify that the actual result matches the expected result for each test case.

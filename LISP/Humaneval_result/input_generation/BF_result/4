@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `bf` method in the `BF` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestBF {
+    
+    @Test
+    public void testValidPlanets() {
+        String planet1 = "Earth";
+        String planet2 = "";
+        ArrayList<String> expected = new ArrayList<>(Arrays.asList("Mars", "Jupiter", "Saturn", "Uranus"));
+        ArrayList<String> result = BF.bf(planet1, planet2);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testInvalidPlanets() {
+        String planet1 = "Pluto";
+        String planet2 = "";
+        ArrayList<String> expected = new ArrayList<>();
+        ArrayList<String> result = BF.bf(planet1, planet2);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes for testing.
+- We define two test cases: one with valid planets and one with invalid planets.
+- We compare the expected result with the actual result obtained from calling the `bf` method with the given input.

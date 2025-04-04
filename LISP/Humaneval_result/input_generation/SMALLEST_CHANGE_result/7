@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SMALLEST_CHANGE {
+
+    @Test
+    public void testSmallestChange_1() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testSmallestChange_2() {
+        int[] arr = {1, 2, 2, 1};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSmallestChange_3() {
+        int[] arr = {5, 3, 7, 3, 5};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `smallest_change` method with different input arrays to ensure that it calculates the smallest number of changes required to make the array symmetric correctly.

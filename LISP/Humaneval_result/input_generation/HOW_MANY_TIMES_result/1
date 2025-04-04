@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `string` and `substring` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestHOW_MANY_TIMES {
+
+    @Test
+    public void testHowManyTimes_WhenStringIsNull() {
+        String string = null;
+        String substring = "test";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testHowManyTimes_WhenSubstringIsPresentInString() {
+        String string = "hello world hello";
+        String substring = "hello";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testHowManyTimes_WhenSubstringIsNotPresentInString() {
+        String string = "abcde";
+        String substring = "xyz";
+        int result = HOW_MANY_TIMES.how_many_times(string, substring);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above code:
+- The first test case checks the scenario when the `string` is null.
+- The second test case checks the scenario when the `substring` is present multiple times in the `string`.
+- The third test case checks the scenario when the `substring` is not present in the `string`.

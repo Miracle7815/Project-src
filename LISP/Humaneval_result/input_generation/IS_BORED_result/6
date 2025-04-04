@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_bored` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class IS_BOREDTest {
+
+    @Test
+    public void testIsBored_WithSentencesStartingWithI() {
+        String S = "I am bored. I need a break. I want to relax.";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void testIsBored_WithSentencesNotStartingWithI() {
+        String S = "The weather is nice. Going for a walk.";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testIsBored_WithMixedSentences() {
+        String S = "I am tired. The day is long. I need a break.";
+        int result = IS_BORED.is_bored(S);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `is_bored` method with different types of input strings to cover the scenarios where some sentences start with "I " and some do not.

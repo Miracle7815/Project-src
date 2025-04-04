@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CHECK_IF_LAST_CHAR_IS_A_LETTER_Test {
+
+    @Test
+    public void testNonLetterCharacter() {
+        String txt = "123";
+        boolean result = CHECK_IF_LAST_CHAR_IS_A_LETTER.check_if_last_char_is_a_letter(txt);
+        assertFalse(result);
+    }
+}
+``` 
+
+In this test case, we are testing the scenario where the input `txt` contains only one character which is not a letter. The expected result is `false`.

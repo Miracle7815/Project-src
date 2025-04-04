@@ -1,0 +1,17 @@
+Based on the provided method and input specification, we can write test cases to cover the scenario when the input `string` is `null`. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FLIP_CASE {
+    
+    @Test
+    public void testFlipCase_NullString() {
+        String result = FLIP_CASE.flip_case(null);
+        assertEquals(null, result);
+    }
+}
+```

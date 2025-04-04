@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import org.junit.Test;
+
+public class TestLARGEST_DIVISOR {
+    
+    @Test
+    public void testLargestDivisor() {
+        int n = 1;
+        int result = LARGEST_DIVISOR.largest_divisor(n);
+        org.junit.Assert.assertEquals(1, result);
+    }
+}
+```
+
+This test case will verify that the `largest_divisor` method returns 1 when the input `n` is 1.

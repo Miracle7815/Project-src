@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `game` and `guess` arrays with negative values and test the `compare` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class COMPARETest {
+
+    @Test
+    public void testCompare() {
+        int[] game = {-5, -3, -1, -7};
+        int[] guess = {-2, -6, -3, -5};
+        int[] expected = {3, 3, 2, 2};
+        
+        int[] result = COMPARE.compare(game, guess);
+        
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we create `game` and `guess` arrays with negative values and compare the result with the expected output array. The `assertArrayEquals` method is used to compare the arrays element by element.

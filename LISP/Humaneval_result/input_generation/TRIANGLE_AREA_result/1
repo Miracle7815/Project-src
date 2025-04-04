@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_TRIANGLE_AREA {
+
+    @Test
+    public void testTriangleArea_1() {
+        double a = 5.0;
+        double h = 10.0;
+        double expectedArea = 25.0;
+        double actualArea = TRIANGLE_AREA.triangle_area(a, h);
+        assertEquals(expectedArea, actualArea, 0.0001);
+    }
+
+    @Test
+    public void testTriangleArea_2() {
+        double a = 3.5;
+        double h = 7.0;
+        double expectedArea = 12.25;
+        double actualArea = TRIANGLE_AREA.triangle_area(a, h);
+        assertEquals(expectedArea, actualArea, 0.0001);
+    }
+}
+``` 
+
+In the above code, we have imported the necessary JUnit classes for writing test cases. We have created two test cases to test the `triangle_area` method of the `TRIANGLE_AREA` class with different input values for `a` and `h`. The expected area values are calculated manually based on the input values. The `assertEquals` method is used to compare the expected area with the actual area calculated by the method.

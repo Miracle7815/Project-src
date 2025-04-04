@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create instances of `ArrayList<Integer>` containing only negative integers to test the `by_length` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestBY_LENGTH {
+    
+    @Test
+    public void testByLength() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(-5);
+        input.add(-2);
+        input.add(-8);
+        input.add(-3);
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Eight");
+        expected.add("Five");
+        expected.add("Three");
+        expected.add("Two");
+        
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `by_length` method with an `ArrayList<Integer>` containing negative integers. The expected output is an `ArrayList<String>` with the corresponding words for the negative integers in descending order.

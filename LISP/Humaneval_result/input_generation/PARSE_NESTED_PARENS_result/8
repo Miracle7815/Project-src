@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `paren_string` and test the `parse_nested_parens` method with different inputs.
+
+Here is an example of how we can write JUnit test cases for the `parse_nested_parens` method:
+
+```java
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_PARSE_NESTED_PARENS {
+
+    @Test
+    public void testParseNestedParens_1() {
+        String paren_string = "((())) (()(()))";
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        assertEquals(3, result.get(0).intValue());
+        assertEquals(2, result.get(1).intValue());
+    }
+
+    @Test
+    public void testParseNestedParens_2() {
+        String paren_string = "((())(())) ()";
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        assertEquals(4, result.get(0).intValue());
+        assertEquals(1, result.get(1).intValue());
+    }
+}
+```
+
+In the above code snippet, we import the necessary classes and write two test cases to test the `parse_nested_parens` method with different inputs. The test cases verify if the method returns the correct maximum depth for each group of parentheses in the `paren_string`.

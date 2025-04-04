@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+public class STRING_TO_MD5Test {
+
+    @Test
+    public void testStringToMD5_nonEmptyString() throws NoSuchAlgorithmException {
+        String text = "Hello, World!";
+        String expectedMD5 = "ED076287532E86365E841E92BFC50D8C";
+        String result = STRING_TO_MD5.string_to_md5(text);
+        assertNotNull(result);
+        assertEquals(expectedMD5, result);
+    }
+
+    @Test
+    public void testStringToMD5_emptyString() throws NoSuchAlgorithmException {
+        String text = "";
+        String result = STRING_TO_MD5.string_to_md5(text);
+        assertEquals(null, result);
+    }
+}
+``` 
+
+In the above code, we have written two test cases - one for a non-empty string and one for an empty string as per the input specification. The test cases validate the functionality of the `string_to_md5` method in the `STRING_TO_MD5` class.

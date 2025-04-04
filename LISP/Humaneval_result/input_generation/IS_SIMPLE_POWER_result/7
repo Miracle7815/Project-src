@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SIMPLE_POWER {
+    
+    @Test
+    public void testIsSimplePower_1() {
+        assertFalse(IS_SIMPLE_POWER.is_simple_power(8, 2)); // 8 is not a simple power of 2
+    }
+    
+    @Test
+    public void testIsSimplePower_2() {
+        assertFalse(IS_SIMPLE_POWER.is_simple_power(27, 3)); // 27 is not a simple power of 3
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases to check the `is_simple_power` method with inputs that satisfy the input specification.
+- The first test case checks if 8 is not a simple power of 2.
+- The second test case checks if 27 is not a simple power of 3.

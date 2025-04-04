@@ -1,0 +1,47 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `strings` and `prefix` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FILTER_BY_PREFIX {
+
+    @Test
+    public void testFilterByPrefix_NullStrings() {
+        List<String> strings = null;
+        String prefix = "test";
+        List<String> result = FILTER_BY_PREFIX.filter_by_prefix(strings, prefix);
+        assertNotNull(result);
+        assertEquals(0, result.size());
+    }
+
+    @Test
+    public void testFilterByPrefix_EmptyStrings() {
+        List<String> strings = new ArrayList<>();
+        String prefix = "prefix";
+        List<String> result = FILTER_BY_PREFIX.filter_by_prefix(strings, prefix);
+        assertNotNull(result);
+        assertEquals(0, result.size());
+    }
+
+    @Test
+    public void testFilterByPrefix_MatchingPrefix() {
+        List<String> strings = new ArrayList<>();
+        strings.add("prefix123");
+        strings.add("prefix456");
+        strings.add("notprefix789");
+        String prefix = "prefix";
+        List<String> result = FILTER_BY_PREFIX.filter_by_prefix(strings, prefix);
+        assertNotNull(result);
+        assertEquals(2, result.size());
+        assertTrue(result.contains("prefix123"));
+        assertTrue(result.contains("prefix456"));
+    }
+}
+```
+
+In the above code:
+- We have created test cases to cover scenarios where `strings` is null, empty, and contains elements with a matching prefix.
+- The test cases use JUnit assertions to validate the results of the `filter_by_prefix` method.

@@ -1,0 +1,16 @@
+Based on the provided method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CHECK_IF_LAST_CHAR_IS_A_LETTER_Test {
+
+    @Test
+    public void testEmptyString() {
+        assertTrue(CHECK_IF_LAST_CHAR_IS_A_LETTER.check_if_last_char_is_a_letter(""));
+    }
+}
+```
+
+In this test case, we are testing the method `check_if_last_char_is_a_letter` with an empty string as input, and we expect the method to return `true` since the last character of an empty string is considered a letter based on the implementation.

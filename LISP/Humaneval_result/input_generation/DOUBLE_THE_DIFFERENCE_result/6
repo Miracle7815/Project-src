@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains a mix of integer and non-integer double values.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DOUBLE_THE_DIFFERENCE {
+
+    @Test
+    public void test_double_the_difference_1() {
+        double[] lst = {1.5, 2.0, 3.3, 4.0, 5.5};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(10, result);
+    }
+
+    @Test
+    public void test_double_the_difference_2() {
+        double[] lst = {2.5, 3.0, 4.2, 5.0, 6.5};
+        int result = DOUBLE_THE_DIFFERENCE.double_the_difference(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `double_the_difference` method with different input arrays containing a mix of integer and non-integer double values.

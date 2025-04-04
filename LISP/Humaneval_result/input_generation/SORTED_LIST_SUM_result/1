@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SORTED_LIST_SUMTest {
+
+    @Test
+    public void testSorted_list_sum_nullList() {
+        ArrayList<String> lst = null;
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+        assertEquals(0, result.size());
+    }
+}
+```
+
+In this test case, we are testing the `sorted_list_sum` method with a `null` input list as specified in the input specification. The expected behavior is that the method should return an empty list when the input list is `null`.

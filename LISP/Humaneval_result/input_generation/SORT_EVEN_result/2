@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of an array `l` with an even number of elements.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVENTest {
+
+    @Test
+    public void testSort_even() {
+        int[] inputArray = {4, 2, 7, 1, 6, 3};
+        int[] expectedOutput = {2, 1, 4, 3, 6, 7};
+        
+        int[] result = SORT_EVEN.sort_even(inputArray);
+        
+        assertArrayEquals(expectedOutput, result);
+    }
+}
+```
+
+In this test case, we are testing the `sort_even` method with an input array `{4, 2, 7, 1, 6, 3}` which has an even number of elements. The expected output after sorting the even elements in ascending order is `{2, 1, 4, 3, 6, 7}`.

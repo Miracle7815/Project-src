@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_WORDS_IN_SENTENCE {
+
+    @Test
+    public void testEmptyString() {
+        String sentence = "";
+        String result = WORDS_IN_SENTENCE.words_in_sentence(sentence);
+        assertEquals("", result);
+    }
+}
+```
+
+This test case covers the scenario where an empty string is provided as input to the `words_in_sentence` method.

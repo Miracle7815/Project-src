@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_prime` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_PRIME {
+
+    @Test
+    public void testIsPrime_NonPrimeNumber() {
+        assertFalse(IS_PRIME.is_prime(4));
+    }
+
+    @Test
+    public void testIsPrime_PrimeNumber() {
+        assertTrue(IS_PRIME.is_prime(7));
+    }
+}
+```
+
+In the above code snippet, we import the necessary JUnit classes and then write two test cases. The first test case checks if the method returns `false` for a non-prime number (4 in this case), and the second test case checks if the method returns `true` for a prime number (7 in this case).

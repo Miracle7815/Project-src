@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAXIMUM_K {
+    
+    @Test
+    public void testMaximumK_emptyArrayList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int k = 3;
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        assertEquals(0, result.size());
+    }
+    
+    @Test
+    public void testMaximumK_kGreaterThanArrayListSize() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        arr.add(2);
+        arr.add(8);
+        int k = 5;
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        assertEquals(3, result.size());
+        assertEquals(8, (int) result.get(0));
+        assertEquals(5, (int) result.get(1));
+        assertEquals(2, (int) result.get(2));
+    }
+    
+    @Test
+    public void testMaximumK_kSmallerThanArrayListSize() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(10);
+        arr.add(3);
+        arr.add(7);
+        arr.add(1);
+        int k = 2;
+        ArrayList<Integer> result = MAXIMUM_K.maximum_k(arr, k);
+        assertEquals(2, result.size());
+        assertEquals(7, (int) result.get(0));
+        assertEquals(10, (int) result.get(1));
+    }
+}
+```

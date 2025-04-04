@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFRUIT_DISTRIBUTION {
+
+    @Test
+    public void testFruitDistribution_1() {
+        String s = "10 20 30";
+        int n = 100;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(40, result);
+    }
+
+    @Test
+    public void testFruitDistribution_2() {
+        String s = "50 60 70";
+        int n = 200;
+        int result = FRUIT_DISTRIBUTION.fruit_distribution(s, n);
+        assertEquals(20, result);
+    }
+
+    @Test
+    public void testFruitDistribution_3() {
+        String s = "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

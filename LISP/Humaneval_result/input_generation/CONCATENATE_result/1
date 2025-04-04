@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CONCATENATE_Test {
+
+    @Test
+    public void testConcatenate_NullInput() {
+        String[] strings = null;
+        String result = CONCATENATE.concatenate(strings);
+        assertEquals("", result);
+    }
+}
+```
+
+This test case covers the scenario where the input `strings` is null, and the expected result is an empty string.

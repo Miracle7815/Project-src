@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases for the `DECODE_SHIFT` class. We need to test the `encode_shift` and `decode_shift` methods with a `null` input string.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DECODE_SHIFT {
+    
+    @Test
+    public void testEncodeShiftWithNullString() {
+        String result = DECODE_SHIFT.encode_shift(null);
+        assertEquals(result, "");
+    }
+    
+    @Test
+    public void testDecodeShiftWithNullString() {
+        String result = DECODE_SHIFT.decode_shift(null);
+        assertEquals(result, "");
+    }
+}
+```
+
+These test cases will verify that the `encode_shift` and `decode_shift` methods return an empty string when provided with a `null` input string.

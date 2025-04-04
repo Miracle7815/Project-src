@@ -1,0 +1,34 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `str` that contain only vowels and may end with 'y' or 'Y'.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestVowelsCount {
+
+    @Test
+    public void testVowelsCount1() {
+        String str = "aeiouy";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testVowelsCount2() {
+        String str = "AEIOUY";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testVowelsCount3() {
+        String str = "aeiouY";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `vowels_count` method with different strings that contain only vowels and may end with 'y' or 'Y'. The expected result for each test case is the total count of vowels in the string.

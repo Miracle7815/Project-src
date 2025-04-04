@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we need to create test cases for the `sort_array_binary` method in the `SORT_ARRAY_BINARY` class. The input `arr` is an `ArrayList` containing multiple elements with varying numbers of ones in their binary representation.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_ARRAY_BINARY {
+
+    @Test
+    public void testSortArrayBinary() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);  // Binary representation: 101 (2 ones)
+        arr.add(3);  // Binary representation: 011 (2 ones)
+        arr.add(6);  // Binary representation: 110 (2 ones)
+        arr.add(2);  // Binary representation: 010 (1 one)
+        
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        
+        ArrayList<Integer> expectedArr = new ArrayList<>();
+        expectedArr.add(2);
+        expectedArr.add(3);
+        expectedArr.add(5);
+        expectedArr.add(6);
+        
+        assertEquals(expectedArr, sortedArr);
+    }
+}
+```
+
+In this test case, we are testing the `sort_array_binary` method with an `ArrayList` containing elements with varying numbers of ones in their binary representation. The expected output is the sorted `ArrayList` based on the number of ones in the binary representation of the elements.

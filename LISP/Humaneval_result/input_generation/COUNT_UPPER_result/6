@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_UPPER {
+
+    @Test
+    public void testCountUpper_1() {
+        String s = "BCDFGHJKLMNPQRSTVWXYZ";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testCountUpper_2() {
+        String s = "QWRTYPSDFGHJKLZXCVBNM";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testCountUpper_3() {
+        String s = "1234567890!@#$%^&*()";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input string `s` contains no vowels, as specified in the input specification.

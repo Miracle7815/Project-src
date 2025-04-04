@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestEVEN_ODD_COUNT {
+
+    @Test
+    public void testEvenOddCount_1() {
+        int num = 12345;
+        int[] expected = {2, 3};
+        int[] result = EVEN_ODD_COUNT.even_odd_count(num);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testEvenOddCount_2() {
+        int num = 246810;
+        int[] expected = {5, 0};
+        int[] result = EVEN_ODD_COUNT.even_odd_count(num);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testEvenOddCount_3() {
+        int num = 13579;
+        int[] expected = {0, 5};
+        int[] result = EVEN_ODD_COUNT.even_odd_count(num);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+These test cases cover scenarios where the input `num` is a positive integer with both even and odd digits.

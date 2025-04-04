@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_prime` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_IS_PRIME {
+
+    @Test
+    public void testIsPrimeWithNegativeNumber() {
+        boolean result = IS_PRIME.is_prime(-1);
+        assertEquals(false, result);
+    }
+
+    @Test
+    public void testIsPrimeWithZero() {
+        boolean result = IS_PRIME.is_prime(0);
+        assertEquals(false, result);
+    }
+
+    @Test
+    public void testIsPrimeWithOne() {
+        boolean result = IS_PRIME.is_prime(1);
+        assertEquals(false, result);
+    }
+
+}
+```
+
+In the above test cases, we are testing the `is_prime` method with negative numbers, zero, and one as inputs, which are less than 2 as per the input specification.

@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `n` which is a prime number and test the `factorize` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFACTORIZE {
+    
+    @Test
+    public void testFactorize_1() {
+        int n = 17; // Prime number
+        List<Integer> expected = new ArrayList<>();
+        expected.add(17);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testFactorize_2() {
+        int n = 13; // Prime number
+        List<Integer> expected = new ArrayList<>();
+        expected.add(13);
+        
+        List<Integer> result = FACTORIZE.factorize(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `factorize` method with prime numbers 17 and 13. The expected output is a list containing the prime number itself.

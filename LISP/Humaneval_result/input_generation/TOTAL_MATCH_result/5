@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class TOTAL_MATCHTest {
+
+    @Test
+    public void testTotalMatch_lst1Shorter() {
+        List<String> lst1 = Arrays.asList("abc", "def");
+        List<String> lst2 = Arrays.asList("ghi", "jkl");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst1, result);
+    }
+
+    @Test
+    public void testTotalMatch_lst2Shorter() {
+        List<String> lst1 = Arrays.asList("apple", "banana");
+        List<String> lst2 = Arrays.asList("carrot", "date");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst2, result);
+    }
+
+    @Test
+    public void testTotalMatch_equalLength() {
+        List<String> lst1 = Arrays.asList("hello", "world");
+        List<String> lst2 = Arrays.asList("java", "code");
+        
+        List<String> result = TOTAL_MATCH.total_match(lst1, lst2);
+        
+        assertEquals(lst1, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `total_match` method with different scenarios where `lst1` and `lst2` have varying lengths and the total length of `lst1` is equal to the total length of `lst2`.

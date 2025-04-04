@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_palindrome` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_PALINDROME {
+
+    @Test
+    public void testNonPalindromeString() {
+        String text = "hello";
+        boolean result = IS_PALINDROME.is_palindrome(text);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testNonPalindromeString2() {
+        String text = "world";
+        boolean result = IS_PALINDROME.is_palindrome(text);
+        assertFalse(result);
+    }
+}
+```
+
+In the above code snippet, we import the necessary JUnit classes and define two test cases. The first test case checks the method with the input "hello" which is a non-palindrome string, and the second test case checks the method with the input "world" which is also a non-palindrome string. The `assertFalse` method is used to assert that the result should be false for non-palindrome strings.

@@ -1,0 +1,49 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `ArrayList<Integer>` containing both even and odd numbers to test the `solution` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestSOLUTION {
+    
+    @Test
+    public void testSolution_WithEvenAndOddNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(2);
+        lst.add(5);
+        lst.add(8);
+        lst.add(3);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(8 + 3, result);
+    }
+    
+    @Test
+    public void testSolution_WithOnlyEvenNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(2);
+        lst.add(4);
+        lst.add(6);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testSolution_WithOnlyOddNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(1);
+        lst.add(3);
+        lst.add(5);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above code, we have created three test cases to cover scenarios where the input list contains both even and odd numbers, only even numbers, and only odd numbers.

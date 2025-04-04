@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test inputs for the `encode` method in the `ENCODE` class. The test inputs should include a mix of uppercase and lowercase letters in the `message`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestENCODE {
+
+    @Test
+    public void testEncode1() {
+        String message = "Hello World";
+        String result = ENCODE.encode(message);
+        assertEquals("jGnnq Yqrlf", result);
+    }
+
+    @Test
+    public void testEncode2() {
+        String message = "Testing Encode Method";
+        String result = ENCODE.encode(message);
+        assertEquals("uVuvpkp GpNkfg Ogepkr", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different input messages containing a mix of uppercase and lowercase letters.
+- We call the `encode` method with the input message and assert that the output matches the expected result.

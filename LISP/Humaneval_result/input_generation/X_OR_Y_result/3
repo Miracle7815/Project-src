@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `x_or_y` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class X_OR_YTest {
+
+    @Test
+    public void testCompositeNumber() {
+        int n = 6;
+        int x = 2;
+        int y = 3;
+        assertEquals(3, X_OR_Y.x_or_y(n, x, y));
+    }
+
+    @Test
+    public void testPrimeNumber() {
+        int n = 7;
+        int x = 2;
+        int y = 3;
+        assertEquals(2, X_OR_Y.x_or_y(n, x, y));
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        int n = 10;
+        int x = -5;
+        int y = -10;
+        assertEquals(-10, X_OR_Y.x_or_y(n, x, y));
+    }
+}
+```
+
+In the above test cases, we are testing the `x_or_y` method with different scenarios such as a composite number, a prime number, and negative numbers for `x` and `y`.

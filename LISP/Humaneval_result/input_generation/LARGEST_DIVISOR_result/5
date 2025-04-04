@@ -1,0 +1,26 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestLARGEST_DIVISOR {
+
+    @Test
+    public void testLargestDivisor_NegativeInput() {
+        int result = LARGEST_DIVISOR.largest_divisor(-12);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void testLargestDivisor_NegativeInput2() {
+        int result = LARGEST_DIVISOR.largest_divisor(-30);
+        assertEquals(15, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test methods to test the `largest_divisor` method with negative input values.
+- We use the `assertEquals` method to verify that the actual result matches the expected result for each test case.

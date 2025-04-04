@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestBF {
+    
+    @Test
+    public void testValidPlanets() {
+        String planet1 = "Earth";
+        String planet2 = null;
+        ArrayList<String> expected = new ArrayList<>(Arrays.asList("Mars", "Jupiter", "Saturn", "Uranus"));
+        ArrayList<String> result = BF.bf(planet1, planet2);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testInvalidPlanet() {
+        String planet1 = "Pluto";
+        String planet2 = null;
+        ArrayList<String> expected = new ArrayList<>();
+        ArrayList<String> result = BF.bf(planet1, planet2);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `bf` method of the `BF` class with valid and invalid planet names according to the input specification. The first test case checks for a valid planet name "Earth" and asserts that the returned list of planets matches the expected list. The second test case checks for an invalid planet name "Pluto" and asserts that the returned list is empty.

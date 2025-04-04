@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class PRIME_LENGTHTest {
+
+    @Test
+    public void testPrimeLengthWithEmptyString() {
+        assertFalse(PRIME_LENGTH.prime_length(""));
+    }
+
+    @Test
+    public void testPrimeLengthWithSingleCharacterString() {
+        assertFalse(PRIME_LENGTH.prime_length("a"));
+    }
+
+    @Test
+    public void testPrimeLengthWithTwoCharacterString() {
+        assertTrue(PRIME_LENGTH.prime_length("ab"));
+    }
+
+    @Test
+    public void testPrimeLengthWithThreeCharacterString() {
+        assertTrue(PRIME_LENGTH.prime_length("abc"));
+    }
+}
+``` 
+
+In the above code, we have written test cases to cover the input specification where the `string` has a length less than or equal to 1. The test cases include scenarios with an empty string, a single character string, a two-character string, and a three-character string.

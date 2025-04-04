@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain a mix of positive, negative, and zero numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_GET_POSITIVE {
+    
+    @Test
+    public void testGetPositive_WithMixNumbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(-5);
+        numbers.add(0);
+        numbers.add(10);
+        numbers.add(-2);
+        numbers.add(7);
+        
+        List<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(10);
+        expectedResult.add(7);
+        
+        List<Integer> result = GET_POSITIVE.get_positive(numbers);
+        
+        assertEquals(expectedResult, result);
+    }
+}
+```

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestSAME_CHARS {
+
+    @Test
+    public void testSameChars_1() {
+        String s0 = "abcde";
+        String s1 = "fghij";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSameChars_2() {
+        String s0 = "hello";
+        String s1 = "world";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSameChars_3() {
+        String s0 = "java";
+        String s1 = "python";
+        boolean result = SAME_CHARS.same_chars(s0, s1);
+        assertFalse(result);
+    }
+}
+``` 
+
+These test cases cover scenarios where `s0` and `s1` have different unique characters, as specified in the input specification.

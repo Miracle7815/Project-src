@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `values` which contain a mix of integers and non-integer objects.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TEST_FILTER_INTEGERS {
+    
+    @Test
+    public void testFilterIntegers_WithMixOfValues() {
+        List<Object> values = new ArrayList<>();
+        values.add(10);
+        values.add("hello");
+        values.add(20);
+        values.add(30.5);
+        
+        List<Integer> result = FILTER_INTEGERS.filter_integers(values);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        expected.add(20);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `filter_integers` method with a mix of values containing integers and non-integer objects. The expected result is a list of integers extracted from the input list.

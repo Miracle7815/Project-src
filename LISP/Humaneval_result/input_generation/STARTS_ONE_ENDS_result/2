@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write the JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STARTS_ONE_ENDS {
+    
+    @Test
+    public void testStartsOneEnds() {
+        assertEquals(1, STARTS_ONE_ENDS.starts_one_ends(1));
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testStartsOneEndsInvalidInput() {
+        STARTS_ONE_ENDS.starts_one_ends(0);
+    }
+}
+```
+
+In this test case:
+- The first test method `testStartsOneEnds` checks if the method returns 1 when `n` is 1.
+- The second test method `testStartsOneEndsInvalidInput` checks if an `IllegalArgumentException` is thrown when `n` is less than 1.

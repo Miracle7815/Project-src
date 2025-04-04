@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test inputs for the `histogram` method in the `HISTOGRAM` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.HashMap;
+
+public class HISTOGRAMTest {
+
+    @Test
+    public void testHistogram_UniqueFrequencies() {
+        String s = "hello world";
+        HashMap<Character, Integer> expected = new HashMap<>();
+        expected.put('h', 1);
+        expected.put('e', 1);
+        expected.put('o', 2);
+        expected.put('l', 3);
+        expected.put('w', 1);
+        expected.put('r', 1);
+        expected.put('d', 1);
+
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testHistogram_EmptyString() {
+        String s = "";
+        HashMap<Character, Integer> expected = new HashMap<>();
+
+        HashMap<Character, Integer> result = HISTOGRAM.histogram(s);
+
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code snippet, we have created two test cases. The first test case checks if the method correctly calculates the histogram for a string with unique frequencies. The second test case checks if the method returns an empty histogram for an empty string.

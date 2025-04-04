@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class SORT_EVEN_Test {
+
+    @Test
+    public void testSortEven_WithOddNumbers() {
+        int[] input = {1, 3, 5, 7, 9};
+        int[] expected = {1, 3, 5, 7, 9};
+        int[] result = SORT_EVEN.sort_even(input);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `sort_even` method with an input array containing all odd numbers. The expected output is the same as the input array since the method should not change the order of elements when all elements are odd numbers.

@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MULTIPLY {
+    
+    @Test
+    public void testMultiplyWithZeroAndNonZero() {
+        int result = MULTIPLY.multiply(0, 5);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testMultiplyWithZeroAndNegativeNonZero() {
+        int result = MULTIPLY.multiply(0, -7);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testMultiplyWithZeroAndPositiveNonZero() {
+        int result = MULTIPLY.multiply(0, 9);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover the scenario where the first input `a` is zero and the second input `b` is a non-zero number, including both positive and negative non-zero numbers.

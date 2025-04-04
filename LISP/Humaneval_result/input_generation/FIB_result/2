@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FIBTest {
+
+    @Test
+    public void testFibWithZero() {
+        int result = FIB.fib(0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testFibWithOne() {
+        int result = FIB.fib(1);
+        assertEquals(1, result);
+    }
+}
+```

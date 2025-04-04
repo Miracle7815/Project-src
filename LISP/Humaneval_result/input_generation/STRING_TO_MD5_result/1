@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `string_to_md5` method when the input `text` is an empty string. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import org.junit.Test;
+import java.security.NoSuchAlgorithmException;
+
+public class Test_STRING_TO_MD5 {
+    
+    @Test
+    public void testStringToMD5WithEmptyString() {
+        try {
+            String text = "";
+            String expectedResult = null;
+            String result = STRING_TO_MD5.string_to_md5(text);
+            assertNull(result);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+This test case will verify that the `string_to_md5` method returns `null` when the input `text` is an empty string.

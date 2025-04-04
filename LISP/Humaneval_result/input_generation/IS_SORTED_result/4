@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains two elements in ascending order.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void testIsSortedAscendingOrder() {
+        int[] lst = {1, 2};
+        assertTrue(IS_SORTED.is_sorted(lst));
+    }
+
+    @Test
+    public void testIsSortedDescendingOrder() {
+        int[] lst = {3, 1};
+        assertFalse(IS_SORTED.is_sorted(lst));
+    }
+
+    @Test
+    public void testIsSortedEqualElements() {
+        int[] lst = {4, 4};
+        assertFalse(IS_SORTED.is_sorted(lst));
+    }
+}
+```
+
+In the above code:
+- The `testIsSortedAscendingOrder` method tests the scenario where the input array `lst` contains two elements in ascending order.
+- The `testIsSortedDescendingOrder` method tests the scenario where the input array `lst` contains two elements in descending order.
+- The `testIsSortedEqualElements` method tests the scenario where the input array `lst` contains two equal elements.
+
+You can add more test cases based on different scenarios to ensure the correctness of the `is_sorted` method.

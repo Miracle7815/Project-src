@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_COUNT_UPPER {
+    
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        int result = COUNT_UPPER.count_upper(s);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `count_upper` method with an empty string as input, as specified in the input specification. The expected result is 0, as there are no uppercase vowels in an empty string.

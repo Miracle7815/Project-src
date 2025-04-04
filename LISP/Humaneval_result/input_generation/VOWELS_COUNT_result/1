@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestVowelsCount {
+
+    @Test
+    public void testEmptyString() {
+        String str = "";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `vowels_count` method with an empty string as input, and we expect the result to be 0 since there are no vowels in an empty string.

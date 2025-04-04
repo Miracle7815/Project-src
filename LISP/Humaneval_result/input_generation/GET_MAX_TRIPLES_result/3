@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `GET_MAX_TRIPLES` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_GET_MAX_TRIPLES {
+
+    @Test
+    public void test_get_max_triples_1() {
+        int n = 5;
+        int result = GET_MAX_TRIPLES.get_max_triples(n);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void test_get_max_triples_2() {
+        int n = 7;
+        int result = GET_MAX_TRIPLES.get_max_triples(n);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void test_get_max_triples_3() {
+        int n = 10;
+        int result = GET_MAX_TRIPLES.get_max_triples(n);
+        assertEquals(10, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `GET_MAX_TRIPLES` method with different positive values of `n` and asserting the expected results.

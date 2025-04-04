@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestBELOW_THRESHOLD {
+
+    @Test
+    public void testBelowThreshold_emptyArray() {
+        int[] l = new int[]{};
+        int t = 5;
+        boolean result = BELOW_THRESHOLD.below_threshold(l, t);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testBelowThreshold_nonEmptyArray() {
+        int[] l = new int[]{3, 7, 2, 9};
+        int t = 5;
+        boolean result = BELOW_THRESHOLD.below_threshold(l, t);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testBelowThreshold_allAboveThreshold() {
+        int[] l = new int[]{8, 10, 12};
+        int t = 5;
+        boolean result = BELOW_THRESHOLD.below_threshold(l, t);
+        assertFalse(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `below_threshold` method of the `BELOW_THRESHOLD` class with different scenarios - an empty array, a non-empty array with values below the threshold, and an array with all values above the threshold.

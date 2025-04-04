@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class COUNT_DISTINCT_CHARACTERS_Test {
+
+    @Test
+    public void testCountDistinctCharacters_1() {
+        String input = "hello";
+        int expected = 4; // 'h', 'e', 'l', 'o'
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(input);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testCountDistinctCharacters_2() {
+        String input = "world";
+        int expected = 5; // 'w', 'o', 'r', 'l', 'd'
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(input);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testCountDistinctCharacters_3() {
+        String input = "testing";
+        int expected = 7; // 't', 'e', 's', 'i', 'n', 'g'
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(input);
+        assertEquals(expected, result);
+    }
+}
+```

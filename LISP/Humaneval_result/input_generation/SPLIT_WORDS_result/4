@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `txt` that contain a comma character for testing the `split_words` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SPLIT_WORDS {
+    
+    @Test
+    public void testSplitWordsWithSpace() {
+        String txt = "hello world";
+        String[] expected = {"hello", "world"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+    
+    @Test
+    public void testSplitWordsWithComma() {
+        String txt = "apple,banana,orange";
+        String[] expected = {"apple", "banana", "orange"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+    
+    @Test
+    public void testSplitWordsWithLowerCaseOddCharacters() {
+        String txt = "abcde";
+        String[] expected = {"2"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create three test cases: one with a space-separated string, one with a comma-separated string, and one with a string containing lowercase odd characters.
+- We compare the expected output with the actual output of the `split_words` method using `assertArrayEquals`.
+
+These test cases cover the scenarios mentioned in the input specification.

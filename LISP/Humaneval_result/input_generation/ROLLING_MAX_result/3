@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `numbers` which contain multiple elements with increasing values.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestROLLING_MAX {
+    
+    @Test
+    public void testRollingMax_WithIncreasingValues() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(3);
+        numbers.add(5);
+        numbers.add(7);
+        
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(3);
+        expected.add(5);
+        expected.add(7);
+        
+        List<Integer> result = ROLLING_MAX.rolling_max(numbers);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `rolling_max` method with a list of numbers containing increasing values. The expected result is a list with the same increasing values.

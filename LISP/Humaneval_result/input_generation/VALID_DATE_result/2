@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `date` parameter as an empty string.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_VALID_DATE {
+    
+    @Test
+    public void testEmptyDate() {
+        assertTrue(VALID_DATE.valid_date(""));
+    }
+}
+```
+
+In this test case, we are checking if the `valid_date` method returns `true` when an empty string is passed as the `date` parameter.

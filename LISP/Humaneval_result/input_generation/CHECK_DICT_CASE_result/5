@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `HashMap<Object, Object>` with keys that are all of type String and are in a mixed case (both uppercase and lowercase).
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.HashMap;
+import org.junit.Test;
+
+public class Test_CHECK_DICT_CASE {
+
+    @Test
+    public void testMixedCase() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put("Key1", "Value1");
+        dict.put("kEy2", "Value2");
+        dict.put("KEY3", "Value3");
+        
+        boolean result = CHECK_DICT_CASE.check_dict_case(dict);
+        
+        org.junit.Assert.assertTrue(result);
+    }
+}
+```
+
+In this test case, we create a `HashMap` with keys in mixed cases (uppercase and lowercase) and then call the `check_dict_case` method from the `CHECK_DICT_CASE` class. The test asserts that the result should be `true` for the mixed case scenario.

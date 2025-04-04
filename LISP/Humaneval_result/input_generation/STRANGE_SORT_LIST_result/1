@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list as input for the `strange_sort_list` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRANGE_SORT_LIST {
+
+    @Test
+    public void testEmptyList() {
+        List<Integer> lst = new ArrayList<>();
+        List<Integer> result = STRANGE_SORT_LIST.strange_sort_list(lst);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we create an empty list `lst`, pass it to the `strange_sort_list` method, and then compare the result with an expected empty list.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `lst` which contains a mix of elements where the index is or is not a multiple of 3 and 4.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARES {
+    
+    @Test
+    public void test_sum_squares_1() {
+        int[] lst = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        assertEquals(1*1 + 2*2 + 3 + 4*4 + 5 + 6*6 + 7 + 8*8 + 9, SUM_SQUARES.sum_squares(lst));
+    }
+    
+    @Test
+    public void test_sum_squares_2() {
+        int[] lst = {2, 3, 4, 5, 6, 7, 8, 9, 10};
+        assertEquals(2 + 3*3 + 4*4*4 + 5 + 6*6 + 7 + 8*8 + 9 + 10, SUM_SQUARES.sum_squares(lst));
+    }
+}
+```
+
+In the above code, we have created two test cases with different input arrays `lst` to cover scenarios where the index is or is not a multiple of 3 and 4.

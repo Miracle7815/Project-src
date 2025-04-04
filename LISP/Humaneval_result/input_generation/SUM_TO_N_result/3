@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_SUM_TO_N {
+    
+    @Test
+    public void testSumToNWithZero() {
+        int n = 0;
+        int expectedResult = 0;
+        int result = SUM_TO_N.sum_to_n(n);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+This test case verifies that the `sum_to_n` method returns 0 when the input `n` is 0.

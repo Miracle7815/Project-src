@@ -1,0 +1,45 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `strings` and `substring` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FILTER_BY_SUBSTRING {
+    
+    @Test
+    public void testFilterBySubstring_1() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("orange");
+        
+        String substring = "grape";
+        
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        
+        assertTrue(result.isEmpty());
+    }
+    
+    @Test
+    public void testFilterBySubstring_2() {
+        List<String> strings = new ArrayList<>();
+        strings.add("hello");
+        strings.add("world");
+        strings.add("java");
+        
+        String substring = "python";
+        
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        
+        assertTrue(result.isEmpty());
+    }
+}
+```
+
+In the above code:
+- We import the necessary classes.
+- We create two test cases to test the `filter_by_substring` method with different inputs as per the input specification.
+- In the first test case, we provide a `substring` that is not present in any of the strings in the `strings` list.
+- In the second test case, we provide a different `substring` that is also not present in any of the strings in the `strings` list.

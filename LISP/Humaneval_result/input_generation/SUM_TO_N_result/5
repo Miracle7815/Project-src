@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases to cover the overflow scenario for large negative integers. We can use JUnit to write the test cases. Here is an example:
+
+```java
+import org.junit.Test;
+
+public class Test_SUM_TO_N {
+
+    @Test
+    public void testOverflowScenario() {
+        int n = Integer.MIN_VALUE; // Large negative integer to test for overflow
+        int result = SUM_TO_N.sum_to_n(n);
+        // Expected result is 0 since the calculation overflows for large negative integers
+        org.junit.Assert.assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `sum_to_n` method with a large negative integer (`Integer.MIN_VALUE`) to check for overflow scenarios. The expected result is 0 because the calculation overflows for large negative integers.

@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIZZ_BUZZ {
+    
+    @Test
+    public void testFizzBuzzWithZero() {
+        int result = FIZZ_BUZZ.fizz_buzz(0);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `fizz_buzz` method of the `FIZZ_BUZZ` class with input `n` as 0. The expected result is 0.

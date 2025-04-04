@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `str` that have a length that is a multiple of 3.
+
+Here is an example of how we can write test cases for the `DECODE_CYCLIC` class:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DECODE_CYCLIC {
+
+    @Test
+    public void testDecodeCyclic_1() {
+        String str = "abcdefgh";
+        String expectedResult = "defghabc";
+        String result = DECODE_CYCLIC.decode_cyclic(str);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testDecodeCyclic_2() {
+        String str = "xyz123456";
+        String expectedResult = "234xyz561";
+        String result = DECODE_CYCLIC.decode_cyclic(str);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `decode_cyclic` method with input strings `"abcdefgh"` and `"xyz123456"`, which have lengths that are multiples of 3. The expected results are provided based on the logic of the `decode_cyclic` method.

@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_REVERSE_DELETE {
+    
+    @Test
+    public void testReverseDelete_1() {
+        String s = "hello";
+        String c = "";
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        String expectedNewS = "hello";
+        String expectedReverseS = "olleh";
+        boolean expectedComparison = false;
+        
+        assertEquals(expectedNewS, result.get(0));
+        assertEquals(expectedReverseS, result.get(1));
+        assertEquals(expectedComparison, result.get(1).equals(result.get(0)));
+    }
+    
+    @Test
+    public void testReverseDelete_2() {
+        String s = "world";
+        String c = "";
+        ArrayList<Object> result = REVERSE_DELETE.reverse_delete(s, c);
+        
+        String expectedNewS = "world";
+        String expectedReverseS = "dlrow";
+        boolean expectedComparison = false;
+        
+        assertEquals(expectedNewS, result.get(0));
+        assertEquals(expectedReverseS, result.get(1));
+        assertEquals(expectedComparison, result.get(1).equals(result.get(0)));
+    }
+}
+```
+
+In the above code snippet, we have written two test cases for the `reverse_delete` method from the `REVERSE_DELETE` class. The test cases cover scenarios with different input strings `s` and an empty string `c`. The test cases verify the correctness of the output by comparing the expected values with the actual values returned by the method.

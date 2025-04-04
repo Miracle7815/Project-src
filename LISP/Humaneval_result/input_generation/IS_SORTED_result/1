@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SORTED {
+
+    @Test
+    public void test_is_sorted_null() {
+        int[] lst = null;
+        assertFalse(IS_SORTED.is_sorted(lst));
+    }
+}
+```
+
+In this test case, we are testing the `is_sorted` method with a `null` input array `lst`. The expected behavior is that the method should return `false` when the input array is `null`.

@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `message` which contain non-alphabetic characters.
+
+Here is an example of a JUnit test class with test cases for the `encode` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestENCODE {
+
+    @Test
+    public void testEncodeWithNonAlphabeticCharacters() {
+        String message = "Hello123!";
+        String result = ENCODE.encode(message);
+        assertEquals("jGNNQ123!", result);
+    }
+
+    @Test
+    public void testEncodeWithSpecialCharacters() {
+        String message = "Testing@123";
+        String result = ENCODE.encode(message);
+        assertEquals("uVUVKPI@123", result);
+    }
+}
+```
+
+In the above test class, we have two test cases that cover scenarios where the `message` contains non-alphabetic characters and special characters. The expected results are based on the encoding logic provided in the `encode` method.

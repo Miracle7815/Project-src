@@ -1,0 +1,34 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of strings containing only vowels to test the `remove_vowels` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REMOVE_VOWELS {
+
+    @Test
+    public void testRemoveVowels_1() {
+        String input = "aeiou";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals("", result);
+    }
+
+    @Test
+    public void testRemoveVowels_2() {
+        String input = "AEIOU";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals("", result);
+    }
+
+    @Test
+    public void testRemoveVowels_3() {
+        String input = "aAeEiIoOuU";
+        String result = REMOVE_VOWELS.remove_vowels(input);
+        assertEquals("", result);
+    }
+}
+```
+
+In the test cases above, we are testing the `remove_vowels` method with strings that contain only vowels. The expected output for these test cases is an empty string since all vowels should be removed.

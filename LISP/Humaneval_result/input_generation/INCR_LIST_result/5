@@ -1,0 +1,60 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_INCR_LIST {
+    
+    @Test
+    public void test_incr_list_positiveValues() {
+        List<Integer> inputList = new ArrayList<>();
+        inputList.add(1);
+        inputList.add(5);
+        inputList.add(10);
+        
+        List<Integer> expectedList = new ArrayList<>();
+        expectedList.add(2);
+        expectedList.add(6);
+        expectedList.add(11);
+        
+        List<Integer> result = INCR_LIST.incr_list(inputList);
+        
+        assertEquals(expectedList, result);
+    }
+    
+    @Test
+    public void test_incr_list_negativeValues() {
+        List<Integer> inputList = new ArrayList<>();
+        inputList.add(-3);
+        inputList.add(-7);
+        inputList.add(-2);
+        
+        List<Integer> expectedList = new ArrayList<>();
+        expectedList.add(-2);
+        expectedList.add(-6);
+        expectedList.add(-1);
+        
+        List<Integer> result = INCR_LIST.incr_list(inputList);
+        
+        assertEquals(expectedList, result);
+    }
+    
+    @Test
+    public void test_incr_list_mixedValues() {
+        List<Integer> inputList = new ArrayList<>();
+        inputList.add(-4);
+        inputList.add(0);
+        inputList.add(3);
+        
+        List<Integer> expectedList = new ArrayList<>();
+        expectedList.add(-3);
+        expectedList.add(1);
+        expectedList.add(4);
+        
+        List<Integer> result = INCR_LIST.incr_list(inputList);
+        
+        assertEquals(expectedList, result);
+    }
+}
+```

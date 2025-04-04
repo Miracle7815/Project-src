@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class STARTS_ONE_ENDS_Test {
+
+    @Test
+    public void testStartsOneEnds() {
+        int n = 1;
+        int result = STARTS_ONE_ENDS.starts_one_ends(n);
+        assertEquals(1, result);
+    }
+}
+```
+
+This test case imports the necessary classes and tests the `starts_one_ends` method with the input `n = 1`, asserting that the result should be 1.

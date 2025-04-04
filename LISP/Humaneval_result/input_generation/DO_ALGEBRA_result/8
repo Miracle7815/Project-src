@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenario where both `operator` and `operand` arrays are empty. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DO_ALGEBRA {
+    
+    @Test
+    public void testEmptyArrays() {
+        String[] operator = new String[0];
+        int[] operand = new int[0];
+        
+        try {
+            double result = DO_ALGEBRA.do_algebra(operator, operand);
+            assertEquals(0.0, result, 0.0001); // Assuming the expected result is 0.0
+        } catch (NumberFormatException | ScriptException e) {
+            // Handle exceptions if needed
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+This test case covers the scenario where both `operator` and `operand` arrays are empty, as specified in the input specification.

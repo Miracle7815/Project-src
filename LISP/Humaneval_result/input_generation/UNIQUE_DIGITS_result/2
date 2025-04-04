@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an ArrayList with one element that has all odd digits to test the `unique_digits` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import org.junit.Test;
+
+public class Test_UNIQUE_DIGITS {
+    
+    @Test
+    public void testUniqueDigits() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(13579); // Contains only one element with all odd digits
+        
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(13579);
+        
+        ArrayList<Integer> result = UNIQUE_DIGITS.unique_digits(input);
+        
+        assertEquals(expected, result);
+    }
+}
+```

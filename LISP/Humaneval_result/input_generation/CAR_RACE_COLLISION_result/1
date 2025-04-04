@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write the test case as follows:
+
+```java
+import org.junit.Test;
+
+public class TestCAR_RACE_COLLISION {
+    
+    @Test
+    public void testCarRaceCollision() {
+        int n = -5;
+        int result = CAR_RACE_COLLISION.car_race_collision(n);
+        org.junit.Assert.assertEquals(result, 25);
+    }
+}
+```
+
+This test case covers the scenario where the input `n` is a negative integer.

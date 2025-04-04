@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format. We need to create an empty string as input for the `str` parameter.
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DECODE_CYCLIC {
+    
+    @Test
+    public void testEmptyString() {
+        String str = "";
+        String result = DECODE_CYCLIC.decode_cyclic(str);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are testing the `DECODE_CYCLIC` method with an empty string as input. The expected result is also an empty string.

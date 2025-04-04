@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here are the required import statements and test cases for the `DECODE_SHIFT` class:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShift_emptyString() {
+        String result = DECODE_SHIFT.encode_shift("");
+        assertEquals("", result);
+    }
+
+    @Test
+    public void testDecodeShift_emptyString() {
+        String result = DECODE_SHIFT.decode_shift("");
+        assertEquals("", result);
+    }
+}
+```
+
+These test cases cover the scenario where an empty string is passed to the `encode_shift` and `decode_shift` methods.

@@ -1,0 +1,43 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_COUNT_UP_TO {
+    
+    @Test
+    public void testCountUpTo_PrimeNumberGreaterThan2() {
+        int n = 10;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(3);
+        expected.add(5);
+        expected.add(7);
+        
+        List<Integer> result = COUNT_UP_TO.count_up_to(n);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testCountUpTo_PrimeNumberGreaterThan2_AnotherExample() {
+        int n = 20;
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(3);
+        expected.add(5);
+        expected.add(7);
+        expected.add(11);
+        expected.add(13);
+        expected.add(17);
+        expected.add(19);
+        
+        List<Integer> result = COUNT_UP_TO.count_up_to(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code snippet, we have written two test cases to test the `count_up_to` method of the `COUNT_UP_TO` class. The test cases cover scenarios where `n` is a prime number greater than 2. The expected output is a list of prime numbers up to `n`.

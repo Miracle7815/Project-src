@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SORTED_LIST_SUMTest {
+
+    @Test
+    public void testSorted_list_sum_1() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("apple");
+        lst.add("banana");
+        lst.add("orange");
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("apple");
+        expected.add("banana");
+        expected.add("orange");
+        
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSorted_list_sum_2() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("dog");
+        lst.add("cat");
+        lst.add("bird");
+        
+        ArrayList<String> expected = new ArrayList<>();
+        
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sorted_list_sum` method with different input scenarios where the input list `lst` contains strings with even lengths only. The expected results are defined based on the input specification.

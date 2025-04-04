@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_NESTED {
+
+    @Test
+    public void testNonNestedBrackets() {
+        String brackets = "][[]][";
+        assertFalse(IS_NESTED.is_nested(brackets));
+    }
+
+    @Test
+    public void testNonNestedBrackets2() {
+        String brackets = "[][]";
+        assertFalse(IS_NESTED.is_nested(brackets));
+    }
+
+    @Test
+    public void testNestedBrackets() {
+        String brackets = "[[[]]]";
+        assertTrue(IS_NESTED.is_nested(brackets));
+    }
+
+    @Test
+    public void testNestedBrackets2() {
+        String brackets = "[[[][]]]";
+        assertTrue(IS_NESTED.is_nested(brackets));
+    }
+}
+```
+
+These test cases cover scenarios with non-nested brackets and nested brackets in random order, as specified in the input specification.

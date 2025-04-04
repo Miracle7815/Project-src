@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SEARCHTest {
+
+    @Test
+    public void testSearchSingleElement() {
+        int[] lst = {5};
+        int result = SEARCH.search(lst);
+        assertEquals(5, result);
+    }
+}
+```
+
+In this test case, we are testing the `SEARCH` class's `search` method with a single element array containing the value `5`. The expected result is `5`.

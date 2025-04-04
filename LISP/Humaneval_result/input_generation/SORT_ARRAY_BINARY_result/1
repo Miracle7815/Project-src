@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty ArrayList as input for the `sort_array_binary` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_ARRAY_BINARY {
+    
+    @Test
+    public void testSortArrayBinary_emptyList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        assertEquals(0, sortedArr.size());
+    }
+}
+```
+
+In this test case, we are creating an empty ArrayList and passing it to the `sort_array_binary` method. The test asserts that the size of the sorted ArrayList should be 0 when the input ArrayList is empty.

@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `any_int` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_ANY_INT {
+
+    @Test
+    public void testAnyInt1() {
+        boolean result = ANY_INT.any_int(1.5, 2, 3);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testAnyInt2() {
+        boolean result = ANY_INT.any_int(3, 4.2, 7);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testAnyInt3() {
+        boolean result = ANY_INT.any_int(2, 3, 5);
+        assertTrue(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `any_int` method with different combinations of parameters as per the input specification. The `assertTrue` and `assertFalse` methods are used to verify the expected output of the method for each test case.

@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class EATTest {
+
+    @Test
+    public void testEatWhenNeedIsLessThanOrEqualToRemaining() {
+        int number = 5;
+        int need = 3;
+        int remaining = 4;
+        int[] result = EAT.eat(number, need, remaining);
+        assertArrayEquals(new int[]{number + need, remaining - need}, result);
+    }
+
+    @Test
+    public void testEatWhenNeedIsGreaterThanRemaining() {
+        int number = 10;
+        int need = 8;
+        int remaining = 3;
+        int[] result = EAT.eat(number, need, remaining);
+        assertArrayEquals(new int[]{number + remaining, 0}, result);
+    }
+}
+```

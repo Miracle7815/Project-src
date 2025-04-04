@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `List<Double>` containing both positive and negative values to test the `mean_absolute_deviation` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEAN_ABSOLUTE_DEVIATION {
+
+    @Test
+    public void testMeanAbsoluteDeviation() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(10.5);
+        numbers.add(-3.2);
+        numbers.add(7.8);
+        numbers.add(-5.6);
+
+        double result = MEAN_ABSOLUTE_DEVIATION.mean_absolute_deviation(numbers);
+        assertEquals(6.525, result, 0.001);
+    }
+}
+```
+
+In this test case, we create a list of `Double` values with both positive and negative numbers and then call the `mean_absolute_deviation` method with this list. Finally, we assert that the result matches the expected mean absolute deviation value.

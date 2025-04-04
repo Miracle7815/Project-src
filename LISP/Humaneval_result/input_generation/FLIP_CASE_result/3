@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of strings containing only lowercase characters to test the `flip_case` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_FLIP_CASE {
+    
+    @Test
+    public void testFlipCase_1() {
+        String input = "hello";
+        String expectedOutput = "HELLO";
+        String result = FLIP_CASE.flip_case(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testFlipCase_2() {
+        String input = "world";
+        String expectedOutput = "WORLD";
+        String result = FLIP_CASE.flip_case(input);
+        assertEquals(expectedOutput, result);
+    }
+    
+    @Test
+    public void testFlipCase_3() {
+        String input = "testing";
+        String expectedOutput = "TESTING";
+        String result = FLIP_CASE.flip_case(input);
+        assertEquals(expectedOutput, result);
+    }
+}
+```
+
+In the above code, we have created three test cases with different input strings containing only lowercase characters. The expected output is the uppercase version of the input string. The `assertEquals` method is used to compare the expected output with the actual result of calling the `flip_case` method on the input string.

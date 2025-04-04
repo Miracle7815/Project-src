@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_CHOOSE_NUM {
+
+    @Test
+    public void testChooseNum1() {
+        int result = CHOOSE_NUM.choose_num(3, 7);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testChooseNum2() {
+        int result = CHOOSE_NUM.choose_num(2, 9);
+        assertEquals(8, result);
+    }
+
+    @Test
+    public void testChooseNum3() {
+        int result = CHOOSE_NUM.choose_num(5, 11);
+        assertEquals(10, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `choose_num` method with different input values that satisfy the input specification provided.

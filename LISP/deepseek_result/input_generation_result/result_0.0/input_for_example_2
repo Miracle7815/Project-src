@@ -1,0 +1,44 @@
+According to the signature of the code, we can know that we should write instances of `accurate` and `approximate`.  
+In the input specification, `accurate` and `approximate` are double values where the absolute difference (`delta`) between them is less than 1. Additionally, `p` (derived from the exponent of `delta`) must satisfy the condition `p+1 < POW10.length` and `POW10[p+1] <= delta`.  
+
+Based on the method signature, body, and input specification, we can write instances of `accurate` and `approximate` and required import statements:
+
+---
+
+### Example 1:  
+**Part 1. The objects initialized:**  
+```java
+double accurate = 123.456789;  
+double approximate = 123.456788;  
+```
+
+**Part 2. According to the code above, the following import statement must be required:**  
+```java
+import java.lang.Math;  
+```
+
+---
+
+### Example 2:  
+**Part 1. The objects initialized:**  
+```java
+double accurate = 0.000123456;  
+double approximate = 0.000123455;  
+```
+
+**Part 2. According to the code above, the following import statement must be required:**  
+```java
+import java.lang.Math;  
+```
+
+---
+
+### Explanation:  
+1. **`accurate` and `approximate`:**  
+   - Both values are doubles, and their difference (`delta`) is less than 1.  
+   - The values are chosen such that the conditions for `p` (derived from the exponent of `delta`) are satisfied.  
+
+2. **Imports:**  
+   - The `Math` class is required for operations like `Math.abs`, `Math.rint`, and `Math.ulp`.  
+
+These test inputs ensure that the method is tested with valid inputs that meet the specified conditions.

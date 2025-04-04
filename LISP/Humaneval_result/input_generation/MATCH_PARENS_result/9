@@ -1,0 +1,34 @@
+Based on the provided API method, we need to create test inputs for the `match_parens` method in the `MATCH_PARENS` class. The input specification mentions that `S1` and `S2` should be balanced strings.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+    
+    @Test
+    public void testMatchParens_1() {
+        String[] lst = {"(())", "()"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+    
+    @Test
+    public void testMatchParens_2() {
+        String[] lst = {"()", "()"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+    
+    @Test
+    public void testMatchParens_3() {
+        String[] lst = {"(()))", "()"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```
+
+In the above test code, we have created three test cases to cover different scenarios where `S1` and `S2` are balanced and unbalanced strings. The `assertEquals` method is used to verify the expected output against the actual output of the `match_parens` method.

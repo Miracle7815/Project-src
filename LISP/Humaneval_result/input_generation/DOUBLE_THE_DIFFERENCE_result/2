@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DOUBLE_THE_DIFFERENCE {
+
+    @Test
+    public void testDoubleTheDifference_1() {
+        double[] lst = {1.5, 2.3, 3.7, 4.0};
+        assertEquals(0, DOUBLE_THE_DIFFERENCE.double_the_difference(lst));
+    }
+
+    @Test
+    public void testDoubleTheDifference_2() {
+        double[] lst = {2.5, 3.0, 4.2, 5.5};
+        assertEquals(30, DOUBLE_THE_DIFFERENCE.double_the_difference(lst));
+    }
+
+    @Test
+    public void testDoubleTheDifference_3() {
+        double[] lst = {1.1, 2.2, 3.3, 4.4};
+        assertEquals(30, DOUBLE_THE_DIFFERENCE.double_the_difference(lst));
+    }
+}
+```
+
+These test cases cover scenarios where the input array `lst` contains non-integer double values as specified in the input specification.

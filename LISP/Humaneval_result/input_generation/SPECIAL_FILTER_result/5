@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `special_filter` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class SPECIAL_FILTERTest {
+
+    @Test
+    public void testSpecialFilter_WithValidInput() {
+        int[] nums = {12, 35, 78, 9, 101};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testSpecialFilter_WithNoValidInput() {
+        int[] nums = {2, 4, 6, 8};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSpecialFilter_WithMixedInput() {
+        int[] nums = {15, 22, 37, 49, 101};
+        int result = SPECIAL_FILTER.special_filter(nums);
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `special_filter` method with different scenarios - valid input, no valid input, and mixed input. The `assertEquals` method is used to verify that the actual result matches the expected result for each test case.

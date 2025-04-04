@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `s` which contains a mix of alphabetic and non-alphabetic characters.
+
+Here is an example of how we can write test cases for the `encrypt` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCRYPTTest {
+
+    @Test
+    public void testEncryptWithAlphabeticCharacters() {
+        String input = "hello123";
+        String expectedOutput = "jgnnq123";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testEncryptWithNonAlphabeticCharacters() {
+        String input = "123!@#";
+        String expectedOutput = "123!@#";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testEncryptWithMixedCharacters() {
+        String input = "abc123!@#";
+        String expectedOutput = "cde123!@#";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+```
+
+In the above test cases, we are testing the `encrypt` method with different inputs containing alphabetic and non-alphabetic characters as per the input specification.

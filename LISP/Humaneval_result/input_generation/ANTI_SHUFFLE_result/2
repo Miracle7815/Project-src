@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `anti_shuffle` method when the input string `s` is an empty string. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_ANTI_SHUFFLE {
+    
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        String result = ANTI_SHUFFLE.anti_shuffle(s);
+        assertEquals("", result);
+    }
+}
+```

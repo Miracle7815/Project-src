@@ -1,0 +1,49 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `paren_string` and verify the output list of separated groups.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test_SEPARATE_PAREN_GROUPS {
+    
+    @Test
+    public void testSeparateParenGroups_1() {
+        String paren_string = "((()))";
+        List<String> expected = new ArrayList<>();
+        expected.add("((()))");
+        
+        List<String> result = SEPARATE_PAREN_GROUPS.separate_paren_groups(paren_string);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSeparateParenGroups_2() {
+        String paren_string = "()()()";
+        List<String> expected = new ArrayList<>();
+        expected.add("()");
+        expected.add("()");
+        expected.add("()");
+        
+        List<String> result = SEPARATE_PAREN_GROUPS.separate_paren_groups(paren_string);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testSeparateParenGroups_3() {
+        String paren_string = "((()()))(()())";
+        List<String> expected = new ArrayList<>();
+        expected.add("((()()))");
+        expected.add("(()())");
+        
+        List<String> result = SEPARATE_PAREN_GROUPS.separate_paren_groups(paren_string);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created three test cases to cover different scenarios of the `separate_paren_groups` method. Each test case provides a `paren_string` input and an expected output list of separated groups. The `assertEquals` method is used to compare the expected output with the actual result obtained from the method.

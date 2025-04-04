@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list of integers as input to the `rolling_max` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestROLLING_MAX {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> result = ROLLING_MAX.rolling_max(numbers);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we create an empty list of integers and pass it to the `rolling_max` method. We then compare the result with an expected empty list to ensure that the method behaves correctly for the given input specification.

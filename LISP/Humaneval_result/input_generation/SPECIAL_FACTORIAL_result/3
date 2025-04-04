@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SPECIAL_FACTORIAL {
+    
+    @Test
+    public void testSpecialFactorial() {
+        long n = 1;
+        long result = SPECIAL_FACTORIAL.special_factorial(n);
+        assertEquals(1, result);
+    }
+}
+```
+
+This test case will verify the `special_factorial` method of the `SPECIAL_FACTORIAL` class when `n` is 1.

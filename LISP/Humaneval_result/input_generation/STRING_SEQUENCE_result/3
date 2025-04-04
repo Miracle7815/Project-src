@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_STRING_SEQUENCE {
+    
+    @Test
+    public void testStringSequence_1() {
+        int n = 5;
+        String expected = "0 1 2 3 4 5";
+        String result = STRING_SEQUENCE.string_sequence(n);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testStringSequence_2() {
+        int n = 10;
+        String expected = "0 1 2 3 4 5 6 7 8 9 10";
+        String result = STRING_SEQUENCE.string_sequence(n);
+        assertEquals(expected, result);
+    }
+}
+```

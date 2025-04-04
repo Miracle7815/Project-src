@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of strings containing only lowercase alphabetic characters to test the `encrypt` method.
+
+Here is an example of how we can write JUnit test cases for the `encrypt` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCRYPTTest {
+
+    @Test
+    public void testEncrypt_1() {
+        String input = "abc";
+        String expectedOutput = "cde";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testEncrypt_2() {
+        String input = "xyz";
+        String expectedOutput = "zab";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testEncrypt_3() {
+        String input = "hello";
+        String expectedOutput = "jgnnq";
+        String actualOutput = ENCRYPT.encrypt(input);
+        assertEquals(expectedOutput, actualOutput);
+    }
+}
+```
+
+In the above test cases, we are testing the `encrypt` method with different input strings containing only lowercase alphabetic characters and asserting that the output matches the expected encrypted string.

@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the object and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFLIP_CASE {
+
+    @Test
+    public void testEmptyString() {
+        String input = "";
+        String result = FLIP_CASE.flip_case(input);
+        assertEquals("", result);
+    }
+}
+``` 
+
+In this test case, we are testing the `flip_case` method with an empty string as input. The expected result is also an empty string.

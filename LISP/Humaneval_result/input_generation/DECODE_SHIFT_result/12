@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases for the `encode_shift` and `decode_shift` methods. We need to provide input strings containing non-alphabetic characters to test the functionality of the methods.
+
+Here are the required import statements and test cases in JUnit format:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class DECODE_SHIFTTest {
+
+    @Test
+    public void testEncodeShiftWithNonAlphabeticCharacters() {
+        String input = "abc123!@#";
+        String expected = "fgh123!@#";
+        String result = DECODE_SHIFT.encode_shift(input);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testDecodeShiftWithNonAlphabeticCharacters() {
+        String input = "xyz456!@#";
+        String expected = "stu456!@#";
+        String result = DECODE_SHIFT.decode_shift(input);
+        assertEquals(expected, result);
+    }
+}
+```
+
+These test cases will help verify that the `encode_shift` and `decode_shift` methods handle non-alphabetic characters correctly.

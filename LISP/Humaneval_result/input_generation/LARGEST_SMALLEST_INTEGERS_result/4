@@ -1,0 +1,32 @@
+Based on the provided method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+
+    @Test
+    public void testLargestSmallestIntegers_1() {
+        int[] lst = {3, 7, 2, 9, 5};
+        int[] expected = {0, 2};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+
+    @Test
+    public void testLargestSmallestIntegers_2() {
+        int[] lst = {10, 15, 8, 20};
+        int[] expected = {0, 8};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+
+    @Test
+    public void testLargestSmallestIntegers_3() {
+        int[] lst = {1, 2, 3, 4, 5};
+        int[] expected = {0, 1};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+}
+```
+
+In the above test cases, we are testing the `largest_smallest_integers` method of the `LARGEST_SMALLEST_INTEGERS` class with different input arrays containing only positive integers. The expected results are provided based on the logic of the method.

@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we need to test the `decode_cyclic` method with a `null` input for the `str` parameter. 
+
+Here is the JUnit test code to test the `decode_cyclic` method with a `null` input:
+
+```java
+import org.junit.Test;
+
+public class Test_DECODE_CYCLIC {
+    
+    @Test(timeout = 4000)
+    public void testDecodeCyclicWithNullInput() {
+        String result = DECODE_CYCLIC.decode_cyclic(null);
+        // Add your assertion here based on the expected behavior when a null input is provided
+    }
+}
+``` 
+
+In the test method `testDecodeCyclicWithNullInput`, you can add an assertion based on the expected behavior when a `null` input is provided to the `decode_cyclic` method.

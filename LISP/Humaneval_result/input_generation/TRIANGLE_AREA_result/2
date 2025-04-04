@@ -1,0 +1,28 @@
+Based on the provided API method and input specification, we can write the test inputs in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_TRIANGLE_AREA {
+    
+    @Test
+    public void testTriangleAreaWithZeroBase() {
+        double a = 0.0;
+        double h = 5.0;
+        double expectedArea = 0.0;
+        double actualArea = TRIANGLE_AREA.triangle_area(a, h);
+        assertEquals(expectedArea, actualArea, 0.0001);
+    }
+    
+    @Test
+    public void testTriangleAreaWithPositiveBase() {
+        double a = 3.0;
+        double h = 8.0;
+        double expectedArea = 12.0;
+        double actualArea = TRIANGLE_AREA.triangle_area(a, h);
+        assertEquals(expectedArea, actualArea, 0.0001);
+    }
+}
+```
+
+In the above code snippet, we have written two test cases for the `triangle_area` method of the `TRIANGLE_AREA` class. The first test case checks the scenario when the base `a` is zero, and the second test case checks the scenario when the base `a` is a positive value. The `assertEquals` method is used to compare the expected area with the actual area calculated by the method, with a delta value of `0.0001` for double precision comparison.

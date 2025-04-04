@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_DIGITS {
+    
+    @Test
+    public void testDigitsWithZero() {
+        int n = 0;
+        int result = DIGITS.digits(n);
+        org.junit.Assert.assertEquals(0, result);
+    }
+}
+```
+
+This test case covers the scenario where the input `n` is zero, as specified in the input specification.

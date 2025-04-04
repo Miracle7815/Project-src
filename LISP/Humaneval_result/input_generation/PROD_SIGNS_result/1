@@ -1,0 +1,17 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class PROD_SIGNS_Test {
+
+    @Test
+    public void testEmptyArray() {
+        int[] arr = {};
+        assertEquals(-10, PROD_SIGNS.prod_signs(arr));
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input array is empty, and we expect the method to return -10 as specified in the input specification.

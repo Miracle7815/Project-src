@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases for the `MATCH_PARENS` class. We need to create instances of the `lst` array with two strings where the first string has more "(" than ")".
+
+Here are the required import statements and JUnit test cases:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+
+    @Test
+    public void testMatchParens_1() {
+        String[] lst = {"(((", "))"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testMatchParens_2() {
+        String[] lst = {"((", ")))"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```

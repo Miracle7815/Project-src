@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of an empty string `txt` and import the required classes.
+
+Here is the JUnit test code for the `split_words` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SPLIT_WORDS {
+    
+    @Test
+    public void testEmptyString() {
+        String txt = "";
+        String[] expected = {"0"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input string `txt` is an empty string. The expected output is an array containing the count of lowercase characters with odd indices.

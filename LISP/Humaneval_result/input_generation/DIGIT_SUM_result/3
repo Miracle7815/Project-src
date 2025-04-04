@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGIT_SUM {
+
+    @Test
+    public void testDigitSum_1() {
+        String s = "abc";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(294, result);
+    }
+
+    @Test
+    public void testDigitSum_2() {
+        String s = "xyz";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(381, result);
+    }
+
+    @Test
+    public void testDigitSum_3() {
+        String s = "def";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(321, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `digit_sum` method of the `DIGIT_SUM` class with different input strings containing only lowercase letters. The expected results are calculated based on the ASCII values of the characters in the input strings.

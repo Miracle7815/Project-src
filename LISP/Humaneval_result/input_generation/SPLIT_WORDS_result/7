@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases to cover the different branches of the `split_words` method. 
+
+Here are the test cases in JUnit format along with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SPLIT_WORDS {
+
+    @Test
+    public void testSplitWordsNoSpaceOrComma() {
+        String txt = "12345";
+        String[] expected = {"3"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSplitWordsWithSpace() {
+        String txt = "abc def ghi";
+        String[] expected = {"abc", "def", "ghi"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testSplitWordsWithComma() {
+        String txt = "apple,orange,banana";
+        String[] expected = {"apple", "orange", "banana"};
+        String[] result = SPLIT_WORDS.split_words(txt);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+These test cases cover the scenarios where the input `txt` does not contain space or comma characters, contains space, and contains comma.

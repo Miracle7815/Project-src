@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we need to create test cases for the `by_length` method in the `BY_LENGTH` class. The input `a` should contain integers that are not mapped in the `digit_map`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_BY_LENGTH {
+    
+    @Test
+    public void testByLength() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(3);
+        input.add(6);
+        input.add(2);
+        input.add(9);
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Nine");
+        expected.add("Six");
+        expected.add("Three");
+        expected.add("Two");
+        
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `by_length` method with an input list of integers `[3, 6, 2, 9]`. The expected output is a list of corresponding strings from the `digit_map` in reverse order.

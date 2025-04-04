@@ -1,0 +1,61 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `sorted_list_sum` method:
+
+```java
+import org.junit.Test;
+import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
+
+public class SORTED_LIST_SUMTest {
+
+    @Test
+    public void testSorted_list_sum_oddAndEvenLengthStrings() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("apple");
+        lst.add("banana");
+        lst.add("cat");
+        lst.add("dog");
+        lst.add("elephant");
+
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("apple");
+        expected.add("banana");
+        expected.add("elephant");
+
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSorted_list_sum_onlyOddLengthStrings() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("apple");
+        lst.add("banana");
+        lst.add("cat");
+
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("apple");
+        expected.add("banana");
+
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testSorted_list_sum_onlyEvenLengthStrings() {
+        ArrayList<String> lst = new ArrayList<>();
+        lst.add("dog");
+        lst.add("elephant");
+
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("elephant");
+
+        ArrayList<String> result = SORTED_LIST_SUM.sorted_list_sum(lst);
+
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `sorted_list_sum` method with different scenarios of input lists containing strings with both odd and even lengths.

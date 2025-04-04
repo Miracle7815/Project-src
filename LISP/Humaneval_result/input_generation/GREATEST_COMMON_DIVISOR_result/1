@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestGREATEST_COMMON_DIVISOR {
+
+    @Test
+    public void testGreatestCommonDivisor_1() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(12, 18);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testGreatestCommonDivisor_2() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(25, 35);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testGreatestCommonDivisor_3() {
+        int result = GREATEST_COMMON_DIVISOR.greatest_common_divisor(48, 18);
+        assertEquals(6, result);
+    }
+}
+``` 
+
+In the above code, we have written three test cases to test the `greatest_common_divisor` method of the `GREATEST_COMMON_DIVISOR` class. Each test case asserts the expected result with the actual result obtained from the method.

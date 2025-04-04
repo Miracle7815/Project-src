@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `closest_integer` method with an empty string as input. 
+
+Here is the JUnit test case code along with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_CLOSEST_INTEGER {
+    
+    @Test
+    public void testClosestIntegerWithEmptyString() {
+        String value = "";
+        int result = CLOSEST_INTEGER.closest_integer(value);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are passing an empty string as the `value` parameter to the `closest_integer` method and asserting that the result should be 0.

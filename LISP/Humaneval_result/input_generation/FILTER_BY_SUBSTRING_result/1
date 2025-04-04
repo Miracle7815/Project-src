@@ -1,0 +1,48 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `strings` and `substring` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FILTER_BY_SUBSTRING {
+    
+    @Test
+    public void testFilterBySubstring_NullStrings() {
+        List<String> strings = null;
+        String substring = "abc";
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        assertNotNull(result);
+        assertEquals(0, result.size());
+    }
+    
+    @Test
+    public void testFilterBySubstring_SubstringPresent() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("orange");
+        String substring = "an";
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        assertNotNull(result);
+        assertEquals(2, result.size());
+        assertTrue(result.contains("banana"));
+        assertTrue(result.contains("orange"));
+    }
+    
+    @Test
+    public void testFilterBySubstring_SubstringNotPresent() {
+        List<String> strings = new ArrayList<>();
+        strings.add("apple");
+        strings.add("banana");
+        strings.add("orange");
+        String substring = "grape";
+        List<String> result = FILTER_BY_SUBSTRING.filter_by_substring(strings, substring);
+        assertNotNull(result);
+        assertEquals(0, result.size());
+    }
+}
+```
+
+In the above code, we have written test cases to cover scenarios where `strings` is null, the `substring` is present in some strings, and the `substring` is not present in any strings.

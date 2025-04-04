@@ -1,0 +1,24 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `game` and `guess` arrays with elements having zero values.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class COMPARETest {
+
+    @Test
+    public void testCompare_WithZeroValues() {
+        int[] game = {0, 0, 0, 0};
+        int[] guess = {0, 0, 0, 0};
+        int[] expected = {0, 0, 0, 0};
+        
+        int[] result = COMPARE.compare(game, guess);
+        
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `compare` method with `game` and `guess` arrays having elements with zero values. The expected result is also an array with zero values.

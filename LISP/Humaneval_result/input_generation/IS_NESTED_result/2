@@ -1,0 +1,41 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test cases where the `brackets` string contains only opening brackets '[' with no closing brackets ']'. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_NESTED {
+
+    @Test
+    public void testIsNested_WithNoClosingBrackets() {
+        String brackets = "[[[[[[";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsNested_WithMultipleOpeningBrackets() {
+        String brackets = "[[[[";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsNested_WithTwoNestedBrackets() {
+        String brackets = "[[";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testIsNested_WithSingleOpeningBracket() {
+        String brackets = "[";
+        boolean result = IS_NESTED.is_nested(brackets);
+        assertFalse(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `is_nested` method with different scenarios of the `brackets` string as per the input specification.

@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class ORDER_BY_POINTS_Test {
+
+    @Test
+    public void testOrderByPoints_NullInput() {
+        Integer[] nums = null;
+        Integer[] expected = {};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `order_by_points` method with a `null` input array `nums`. The expected result is an empty array.

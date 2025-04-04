@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SPECIAL_FACTORIAL {
+
+    @Test
+    public void testSpecialFactorial_NegativeInput() {
+        long result = SPECIAL_FACTORIAL.special_factorial(-5);
+        assertEquals(1, result); // Special factorial of a negative number is 1
+    }
+
+    @Test
+    public void testSpecialFactorial_AnotherNegativeInput() {
+        long result = SPECIAL_FACTORIAL.special_factorial(-3);
+        assertEquals(1, result); // Special factorial of a negative number is 1
+    }
+}
+```
+
+These test cases cover the scenario of providing a negative integer `n` as input to the `special_factorial` method.

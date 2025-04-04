@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `count_nums` method. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class COUNT_NUMS_Test {
+    
+    @Test
+    public void testCountNums_1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(456);
+        arr.add(789);
+        
+        int result = COUNT_NUMS.count_nums(arr);
+        
+        assertEquals(3, result);
+    }
+    
+    @Test
+    public void testCountNums_2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(111);
+        arr.add(222);
+        arr.add(333);
+        
+        int result = COUNT_NUMS.count_nums(arr);
+        
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above code snippet, we have created two test cases to test the `count_nums` method with positive numbers in the input array `arr`. The `assertEquals` method is used to verify the expected result against the actual result returned by the method.

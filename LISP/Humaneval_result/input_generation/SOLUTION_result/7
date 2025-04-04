@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `ArrayList<Integer>` with large numbers to test the `solution` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestSOLUTION {
+    
+    @Test
+    public void testSolutionWithLargeNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(1000000);
+        lst.add(2000000);
+        lst.add(3000000);
+        lst.add(4000000);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(7000000, result);
+    }
+}
+```
+
+In this test case, we are testing the `solution` method with an `ArrayList` containing large numbers. The expected result is the sum of odd numbers at even indices in the list.

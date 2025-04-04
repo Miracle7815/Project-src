@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SMALLEST_CHANGE {
+
+    @Test
+    public void testSmallestChange_oddElements() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testSmallestChange_allSameElements() {
+        int[] arr = {7, 7, 7, 7, 7};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testSmallestChange_mixedElements() {
+        int[] arr = {1, 2, 3, 2, 1};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(2, result);
+    }
+}
+```
+
+In the test cases above, we have covered scenarios where the input array `arr` has an odd number of elements and tested for different cases such as all elements being the same, all elements being different, and a mix of different elements.

@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `nums` which contains integers with different numbers of digits.
+
+Here is an example of how we can write test cases for the `order_by_points` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class ORDER_BY_POINTSTest {
+
+    @Test
+    public void testOrder_by_points_1() {
+        Integer[] nums = {123, -45, 6789, -12, 34};
+        Integer[] expected = {-45, -12, 123, 34, 6789};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testOrder_by_points_2() {
+        Integer[] nums = {9, -8, 76, -543, 21};
+        Integer[] expected = {-543, -8, 9, 21, 76};
+        Integer[] result = ORDER_BY_POINTS.order_by_points(nums);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `order_by_points` method with different input arrays `nums` containing integers with different numbers of digits. The expected output arrays are defined based on the sorting logic implemented in the method.

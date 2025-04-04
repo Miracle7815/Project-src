@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SMALLEST_CHANGE {
+    
+    @Test
+    public void test_smallest_change_singleElement() {
+        int[] arr = {5};
+        int result = SMALLEST_CHANGE.smallest_change(arr);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `smallest_change` method with an input array `arr` that has only one element. The expected result is 0 since there are no differences to count in a single-element array.

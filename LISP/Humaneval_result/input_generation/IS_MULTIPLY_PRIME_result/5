@@ -1,0 +1,30 @@
+Based on the provided API method, we need to test the `is_multiply_prime` method with input `a` that is not a product of three prime numbers. We will need to create test cases to cover different scenarios.
+
+Here are some JUnit test cases for the `is_multiply_prime` method:
+
+```java
+import org.junit.Test;
+
+public class Test_IS_MULTIPLY_PRIME {
+
+    @Test
+    public void testIsMultiplyPrime_NotProductOfThreePrimes() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(15);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsMultiplyPrime_NotProductOfThreePrimes2() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(20);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testIsMultiplyPrime_NotProductOfThreePrimes3() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(25);
+        assertFalse(result);
+    }
+}
+```
+
+These test cases cover scenarios where the input `a` is not a product of three prime numbers. The tests will verify that the `is_multiply_prime` method returns `false` for such cases.

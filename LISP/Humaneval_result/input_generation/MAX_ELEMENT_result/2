@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty list as input for the `max_element` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_MAX_ELEMENT {
+    
+    @Test
+    public void testEmptyList() {
+        List<Integer> emptyList = new ArrayList<>();
+        int result = MAX_ELEMENT.max_element(emptyList);
+        assertEquals(Integer.MIN_VALUE, result);
+    }
+}
+```
+
+In this test case, we create an empty list and pass it to the `max_element` method. The expected result is `Integer.MIN_VALUE` as there are no elements in the list.

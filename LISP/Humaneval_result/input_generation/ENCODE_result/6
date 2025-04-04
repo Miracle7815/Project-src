@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `message` that contain vowels ('a', 'e', 'i', 'o', 'u') in both uppercase and lowercase.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestENCODE {
+
+    @Test
+    public void testEncode_1() {
+        String message = "Hello World";
+        String result = ENCODE.encode(message);
+        assertEquals("jIppU yOrld", result);
+    }
+
+    @Test
+    public void testEncode_2() {
+        String message = "aEiOu";
+        String result = ENCODE.encode(message);
+        assertEquals("cGkQw", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases with different input messages containing vowels in both uppercase and lowercase.
+- We call the `encode` method from the `ENCODE` class with the input message and assert that the output matches the expected result.

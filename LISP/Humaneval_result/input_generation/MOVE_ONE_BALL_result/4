@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_MOVE_ONE_BALL {
+
+    @Test
+    public void testMoveOneBall_WithDuplicates() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(3);
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        
+        boolean result = MOVE_ONE_BALL.move_one_ball(arr);
+        
+        assertFalse(result);
+    }
+    
+    @Test
+    public void testMoveOneBall_WithoutDuplicates() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        
+        boolean result = MOVE_ONE_BALL.move_one_ball(arr);
+        
+        assertTrue(result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios where the input array `arr` contains duplicates and where it does not contain duplicates.

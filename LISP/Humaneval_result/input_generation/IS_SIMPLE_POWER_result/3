@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_SIMPLE_POWER {
+    
+    @Test
+    public void testIsSimplePower_xZero_nPositive() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(0, 5);
+        assertFalse(result);
+    }
+    
+    @Test
+    public void testIsSimplePower_xZero_nNegative() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(0, -3);
+        assertFalse(result);
+    }
+    
+    @Test
+    public void testIsSimplePower_xZero_nZero() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(0, 0);
+        assertTrue(result);
+    }
+    
+    @Test
+    public void testIsSimplePower_xZero_nOne() {
+        boolean result = IS_SIMPLE_POWER.is_simple_power(0, 1);
+        assertTrue(result);
+    }
+}
+``` 
+
+These test cases cover scenarios where `x` is 0 and `n` takes different values including positive, negative, zero, and one.

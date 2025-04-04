@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases for the `sort_array_binary` method. We need to create instances of `arr` which contains negative integers and test the sorting functionality based on the number of ones in the binary representation of the integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SORT_ARRAY_BINARY {
+    
+    @Test
+    public void testSortArrayBinary() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-5);
+        arr.add(-3);
+        arr.add(-7);
+        arr.add(-1);
+        
+        ArrayList<Integer> sortedArr = SORT_ARRAY_BINARY.sort_array_binary(arr);
+        
+        ArrayList<Integer> expectedArr = new ArrayList<>();
+        expectedArr.add(-7);
+        expectedArr.add(-5);
+        expectedArr.add(-3);
+        expectedArr.add(-1);
+        
+        assertEquals(expectedArr, sortedArr);
+    }
+}
+```
+
+In this test case, we are testing the `sort_array_binary` method with an `ArrayList` containing negative integers. The expected output is the sorted `ArrayList` based on the number of ones in the binary representation of the integers.

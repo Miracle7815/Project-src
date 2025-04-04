@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write a JUnit test case to test the `truncate_number` method with negative infinity as input. 
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class TestTRUNCATE_NUMBER {
+    
+    @Test
+    public void testTruncateNumberWithNegativeInfinity() {
+        double result = TRUNCATE_NUMBER.truncate_number(Double.NEGATIVE_INFINITY);
+        assertEquals(Double.NaN, result, 0.0001);
+    }
+}
+```
+
+In this test case, we are passing `Double.NEGATIVE_INFINITY` as the input to the `truncate_number` method and expecting the result to be `Double.NaN`.

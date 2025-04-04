@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `ArrayList<Integer>` for input `a` which contains a mix of positive and negative integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Test_BY_LENGTH {
+    
+    @Test
+    public void testByLength() {
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(3, -2, 5, 1, -4, 9));
+        ArrayList<String> expected = new ArrayList<>(Arrays.asList("Nine", "Five", "Three", "One"));
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testByLengthWithDuplicates() {
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(2, 2, -3, 1, 1, 4, -4));
+        ArrayList<String> expected = new ArrayList<>(Arrays.asList("Four", "Two", "One"));
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created two test cases to test the `by_length` method of the `BY_LENGTH` class. The first test case includes a mix of positive and negative integers, and the second test case includes duplicates as well.

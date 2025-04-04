@@ -1,0 +1,39 @@
+Based on the provided API method and input specification, we can write test cases for the `FIND_ZERO` class. We need to create instances of `List<Double>` with coefficients that do not result in a zero value.
+
+Here is an example of how we can write JUnit test cases for the `FIND_ZERO` class:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_FIND_ZERO {
+
+    @Test
+    public void testFindZero_1() {
+        List<Double> coefficients = new ArrayList<>();
+        coefficients.add(1.0);
+        coefficients.add(2.0);
+        coefficients.add(3.0);
+        
+        double result = FIND_ZERO.find_zero(coefficients);
+        
+        // Assert that the result is close to the actual zero value
+        assertEquals(0.0, result, 1e-10);
+    }
+
+    @Test
+    public void testFindZero_2() {
+        List<Double> coefficients = new ArrayList<>();
+        coefficients.add(2.0);
+        coefficients.add(4.0);
+        coefficients.add(6.0);
+        
+        double result = FIND_ZERO.find_zero(coefficients);
+        
+        // Assert that the result is close to the actual zero value
+        assertEquals(0.0, result, 1e-10);
+    }
+}
+```
+
+In the above test cases, we are creating instances of `List<Double>` with coefficients that do not result in a zero value and then calling the `find_zero` method from the `FIND_ZERO` class. Finally, we are asserting that the result is close to the actual zero value with a tolerance of `1e-10`.

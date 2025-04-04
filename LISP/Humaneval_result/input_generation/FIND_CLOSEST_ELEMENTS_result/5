@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_FIND_CLOSEST_ELEMENTS {
+
+    @Test
+    public void testFindClosestElements_1() {
+        double[] numbers = {3.5, 2.0, 6.1, 4.8, 5.2};
+        double[] expected = {3.5, 4.8};
+        assertArrayEquals(expected, FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers), 0.001);
+    }
+
+    @Test
+    public void testFindClosestElements_2() {
+        double[] numbers = {10.2, 8.5, 9.8, 7.3, 11.0};
+        double[] expected = {8.5, 9.8};
+        assertArrayEquals(expected, FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers), 0.001);
+    }
+
+    @Test
+    public void testFindClosestElements_3() {
+        double[] numbers = {5.0, 5.0, 5.0, 5.0, 5.0};
+        double[] expected = {5.0, 5.0};
+        assertArrayEquals(expected, FIND_CLOSEST_ELEMENTS.find_closest_elements(numbers), 0.001);
+    }
+}
+```
+
+In the above test cases, we are testing the `find_closest_elements` method of the `FIND_CLOSEST_ELEMENTS` class with different input arrays containing more than two elements with some duplicate values. The expected results are provided based on the logic of the method. The `assertArrayEquals` method is used to compare the expected result with the actual result returned by the method.

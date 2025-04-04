@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to test the behavior of the `remove_vowels` method when the input string is null.
+
+Here is the JUnit test case code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_REMOVE_VOWELS {
+    
+    @Test
+    public void testRemoveVowelsWithNullString() {
+        String result = REMOVE_VOWELS.remove_vowels(null);
+        assertEquals("", result);
+    }
+}
+```
+
+In this test case, we are checking if the `remove_vowels` method correctly handles a null input string and returns an empty string as expected.

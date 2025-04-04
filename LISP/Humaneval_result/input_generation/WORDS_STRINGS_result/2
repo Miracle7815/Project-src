@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_WORDS_STRINGS {
+    
+    @Test
+    public void testEmptyString() {
+        String s = "";
+        ArrayList<String> expected = new ArrayList<String>();
+        ArrayList<String> result = WORDS_STRINGS.words_strings(s);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the scenario where the input string `s` is an empty string. The expected result is an empty ArrayList.

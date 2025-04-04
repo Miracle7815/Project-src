@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGIT_SUM {
+
+    @Test
+    public void testDigitSum_WithSpecialCharacters() {
+        String s = "Hello!123";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testDigitSum_WithLetters() {
+        String s = "AbCdEfG";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(429, result);
+    }
+
+    @Test
+    public void testDigitSum_WithDigits() {
+        String s = "123456";
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(0, result);
+    }
+}
+```
+
+These test cases cover scenarios with special characters, letters, and digits in the input string `s`.

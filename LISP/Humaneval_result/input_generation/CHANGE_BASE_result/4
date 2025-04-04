@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `x` and `base` as per the input specification.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_CHANGE_BASE {
+
+    @Test
+    public void testChangeBase_1() {
+        int x = 10;
+        int base = 2;
+        String result = CHANGE_BASE.change_base(x, base);
+        assertEquals("1010", result);
+    }
+
+    @Test
+    public void testChangeBase_2() {
+        int x = 15;
+        int base = 16;
+        String result = CHANGE_BASE.change_base(x, base);
+        assertEquals("F", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases to cover different scenarios of `x` and `base`.
+- We call the `change_base` method with the given inputs and assert that the result matches the expected output.

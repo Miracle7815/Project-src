@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `check_if_last_char_is_a_letter` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CHECK_IF_LAST_CHAR_IS_A_LETTER_Test {
+
+    @Test
+    public void testEmptyString() {
+        String txt = " ";
+        boolean result = CHECK_IF_LAST_CHAR_IS_A_LETTER.check_if_last_char_is_a_letter(txt);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testSingleSpace() {
+        String txt = "a ";
+        boolean result = CHECK_IF_LAST_CHAR_IS_A_LETTER.check_if_last_char_is_a_letter(txt);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testMultipleSpaces() {
+        String txt = "hello world ";
+        boolean result = CHECK_IF_LAST_CHAR_IS_A_LETTER.check_if_last_char_is_a_letter(txt);
+        assertFalse(result);
+    }
+}
+```
+
+In the above test cases, we are testing the `check_if_last_char_is_a_letter` method with different input scenarios based on the input specification provided.

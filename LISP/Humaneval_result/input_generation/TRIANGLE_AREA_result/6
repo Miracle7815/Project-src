@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+
+public class Test_TRIANGLE_AREA {
+
+    @Test
+    public void testTriangleArea_WithNonNumericA() {
+        double a = Double.NaN; // Any non-numeric value (e.g., NaN)
+        double h = 5.0; // Any positive double value
+        double result = TRIANGLE_AREA.triangle_area(a, h);
+        // Assert that the result is NaN
+        org.junit.Assert.assertTrue(Double.isNaN(result));
+    }
+
+    @Test
+    public void testTriangleArea_WithPositiveValues() {
+        double a = 4.0; // Any non-numeric value (e.g., NaN)
+        double h = 7.5; // Any positive double value
+        double expected = 15.0; // Expected result for a = 4.0, h = 7.5
+        double result = TRIANGLE_AREA.triangle_area(a, h);
+        // Assert that the result is equal to the expected value
+        org.junit.Assert.assertEquals(expected, result, 0.0001);
+    }
+}
+```
+
+These test cases cover the scenarios where `a` is a non-numeric value (NaN) and where `a` is a positive double value.

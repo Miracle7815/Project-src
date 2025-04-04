@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `HashMap<Object, Object>` with keys that are all of type String and are all in lowercase.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.HashMap;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_CHECK_DICT_CASE {
+
+    @Test
+    public void testAllLowerCaseKeys() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put("key1", "value1");
+        dict.put("key2", "value2");
+        dict.put("key3", "value3");
+
+        assertTrue(CHECK_DICT_CASE.check_dict_case(dict));
+    }
+
+    @Test
+    public void testMixedCaseKeys() {
+        HashMap<Object, Object> dict = new HashMap<>();
+        dict.put("Key1", "value1");
+        dict.put("key2", "value2");
+        dict.put("KEY3", "value3");
+
+        assertFalse(CHECK_DICT_CASE.check_dict_case(dict));
+    }
+
+    @Test
+    public void testEmptyDictionary() {
+        HashMap<Object, Object> dict = new HashMap<>();
+
+        assertFalse(CHECK_DICT_CASE.check_dict_case(dict));
+    }
+}
+```
+
+In the above code:
+- The `testAllLowerCaseKeys` method tests the case where all keys are in lowercase, which should return true.
+- The `testMixedCaseKeys` method tests the case where keys are in mixed cases, which should return false.
+- The `testEmptyDictionary` method tests the case of an empty dictionary, which should return false.
+
+Make sure to adjust the test cases according to the specific requirements and edge cases of the `check_dict_case` method.

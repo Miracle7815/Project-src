@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+
+public class TestSOLUTION {
+    
+    @Test
+    public void testEmptyList() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        int result = SOLUTION.solution(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `solution` method with an empty list as input. The expected result is 0 since there are no elements in the list that satisfy the given condition.

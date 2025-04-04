@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestEVEN_ODD_PALINDROME {
+
+    @Test
+    public void testEvenOddPalindromeWithZero() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(0, 0));
+        ArrayList<Integer> result = EVEN_ODD_PALINDROME.even_odd_palindrome(n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In this test case, we are testing the `even_odd_palindrome` method with input `n = 0` to check if it correctly handles the case where `n` is 0.

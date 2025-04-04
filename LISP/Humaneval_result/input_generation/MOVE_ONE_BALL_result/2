@@ -1,0 +1,19 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_MOVE_ONE_BALL {
+
+    @Test
+    public void testMoveOneBall_singleElement() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        assertTrue(MOVE_ONE_BALL.move_one_ball(arr));
+    }
+}
+```
+
+In this test case, we are testing the `move_one_ball` method with an `ArrayList` containing only one element. The test expects the method to return `true` as the input `arr` contains only one element.

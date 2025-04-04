@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we need to create test cases for the `intersection` method in the `INTERSECTION` class. We will need to provide valid values for `interval1` and `interval2` where the intersection has a prime length.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_INTERSECTION {
+    
+    @Test
+    public void testIntersection_PrimeLength() {
+        int[] interval1 = {3, 10}; // Prime length: 7
+        int[] interval2 = {5, 15}; // Prime length: 5
+        assertEquals("YES", INTERSECTION.intersection(interval1, interval2));
+    }
+    
+    @Test
+    public void testIntersection_NoPrimeLength() {
+        int[] interval1 = {2, 8}; // Prime length: 6
+        int[] interval2 = {4, 12}; // Prime length: 8
+        assertEquals("NO", INTERSECTION.intersection(interval1, interval2));
+    }
+}
+```
+
+In the above test cases, we have provided valid values for `interval1` and `interval2` where the intersection has prime lengths in the first test case and non-prime lengths in the second test case.

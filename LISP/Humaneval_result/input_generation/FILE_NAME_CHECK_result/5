@@ -1,0 +1,46 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `file_name_check` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class FILE_NAME_CHECKTest {
+
+    @Test
+    public void testValidFileName() {
+        String file_name = "document.txt";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testInvalidFileNameExtension() {
+        String file_name = "report.pdf";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void testInvalidFileNameStartsWithDigit() {
+        String file_name = "1file.txt";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void testInvalidFileNameTooManyDigits() {
+        String file_name = "document1234.txt";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void testInvalidFileNameNoExtension() {
+        String file_name = "document";
+        String result = FILE_NAME_CHECK.file_name_check(file_name);
+        assertEquals("No", result);
+    }
+}
+```
+
+In the above test cases, we are testing various scenarios such as a valid file name, an invalid file name with an incorrect extension, a file name starting with a digit, a file name with too many digits, and a file name without an extension.

@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class X_OR_YTest {
+
+    @Test
+    public void testNIs1() {
+        int n = 1;
+        int x = 5;
+        int y = 10;
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(y, result);
+    }
+
+    @Test
+    public void testNIsPrime() {
+        int n = 7;
+        int x = 3;
+        int y = 8;
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(x, result);
+    }
+
+    @Test
+    public void testNIsNotPrime() {
+        int n = 6;
+        int x = 2;
+        int y = 9;
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(y, result);
+    }
+}
+```

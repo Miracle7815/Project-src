@@ -1,0 +1,30 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `lst` array containing negative numbers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARES {
+    
+    @Test
+    public void testSumSquares_WithNegativeNumbers() {
+        int[] lst = {-2, 3, -5, 7, -1};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(78, result);
+    }
+    
+    @Test
+    public void testSumSquares_WithAllNegativeNumbers() {
+        int[] lst = {-4, -6, -2, -8};
+        int result = SUM_SQUARES.sum_squares(lst);
+        assertEquals(120, result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases, one with a mix of negative and positive numbers in the `lst` array and another with all negative numbers.
+- We call the `sum_squares` method with the test arrays and assert that the result matches the expected sum of squares.

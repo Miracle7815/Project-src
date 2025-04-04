@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we need to test the `compare_one` method with different types of objects for `a` and `b`. Here are some test cases in JUnit format:
+
+```java
+import org.junit.Test;
+
+public class Test_COMPARE_ONE {
+
+    @Test
+    public void testCompareOneWithIntegerAndString() {
+        Object a = 5;
+        Object b = "7.5";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        // Expected result is b since 7.5 is greater than 5
+        org.junit.Assert.assertEquals(b, result);
+    }
+
+    @Test
+    public void testCompareOneWithDoubleAndInteger() {
+        Object a = 3.8;
+        Object b = 4;
+        Object result = COMPARE_ONE.compare_one(a, b);
+        // Expected result is b since 4 is greater than 3.8
+        org.junit.Assert.assertEquals(b, result);
+    }
+
+    @Test
+    public void testCompareOneWithStringAndString() {
+        Object a = "2.5";
+        Object b = "2.5";
+        Object result = COMPARE_ONE.compare_one(a, b);
+        // Expected result is null since both are equal
+        org.junit.Assert.assertNull(result);
+    }
+}
+```

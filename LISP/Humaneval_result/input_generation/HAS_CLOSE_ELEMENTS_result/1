@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_HAS_CLOSE_ELEMENTS {
+
+    @Test
+    public void testEmptyList() {
+        List<Double> numbers = new ArrayList<>();
+        double threshold = 5.0;
+        boolean result = HAS_CLOSE_ELEMENTS.has_close_elements(numbers, threshold);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testNonEmptyList() {
+        List<Double> numbers = new ArrayList<>();
+        numbers.add(10.0);
+        numbers.add(15.0);
+        numbers.add(20.0);
+        double threshold = 5.0;
+        boolean result = HAS_CLOSE_ELEMENTS.has_close_elements(numbers, threshold);
+        assertTrue(result);
+    }
+}
+```
+
+In the above code:
+- We import the required classes `ArrayList` and `List`.
+- We create test cases to cover the scenarios of an empty list and a non-empty list with close elements based on the input specification.
+- The `assertTrue` and `assertFalse` methods are used to assert the expected results of the test cases.

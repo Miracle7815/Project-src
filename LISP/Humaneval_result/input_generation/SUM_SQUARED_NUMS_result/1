@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_SUM_SQUARED_NUMS {
+
+    @Test
+    public void testEmptyArray() {
+        double[] lst = new double[]{};
+        long result = SUM_SQUARED_NUMS.sum_squared_nums(lst);
+        assertEquals(0, result);
+    }
+}
+```
+
+In this test case, we are testing the `sum_squared_nums` method with an empty array as input, as specified in the input specification. The expected result is 0 since the sum of squares of elements in an empty array should be 0.

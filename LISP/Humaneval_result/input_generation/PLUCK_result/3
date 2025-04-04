@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class PLUCKTest {
+
+    @Test
+    public void testPluck_WithEvenNumbers() {
+        int[] arr = {2, 4, 6, 8, 10};
+        int[] expected = {2, 0};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+
+    @Test
+    public void testPluck_WithEmptyArray() {
+        int[] arr = {};
+        int[] expected = {};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+
+    @Test
+    public void testPluck_WithNegativeEvenNumbers() {
+        int[] arr = {-4, -6, -2, -8, -10};
+        int[] expected = {-10, 4};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+}
+```
+
+In the test cases above, we are testing the `pluck` method from the `PLUCK` class with different scenarios of input arrays containing only even numbers.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `a` which is not a prime number.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_IS_MULTIPLY_PRIME {
+    
+    @Test
+    public void testIsMultiplyPrime_1() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(15);
+        assertEquals(false, result);
+    }
+    
+    @Test
+    public void testIsMultiplyPrime_2() {
+        boolean result = IS_MULTIPLY_PRIME.is_multiply_prime(20);
+        assertEquals(true, result);
+    }
+}
+``` 
+
+In the above code, we have two test cases. The first test case checks if the method returns `false` for the input `15` which is not a prime number. The second test case checks if the method returns `true` for the input `20` which is not a prime number but can be expressed as a product of three prime numbers.

@@ -1,0 +1,25 @@
+Based on the provided API method and input specification, we can write test cases for the `MATCH_PARENS` class. We need to create instances of the `lst` array with two strings that form a balanced string when concatenated.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+
+    @Test
+    public void testMatchParens_balancedStrings() {
+        String[] lst = {"(())", "()"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void testMatchParens_unbalancedStrings() {
+        String[] lst = {"(()", "()"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+}
+```

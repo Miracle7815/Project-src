@@ -1,0 +1,40 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of `paren_string` that contain nested parentheses with different levels of nesting.
+
+Here is an example of how we can write test cases for the `parse_nested_parens` method:
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_PARSE_NESTED_PARENS {
+
+    @Test
+    public void testParseNestedParens_1() {
+        String paren_string = "((())) (()(()))";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(3);
+        expected.add(2);
+        
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testParseNestedParens_2() {
+        String paren_string = "((()()())) (()(()))";
+        List<Integer> expected = new ArrayList<>();
+        expected.add(4);
+        expected.add(2);
+        
+        List<Integer> result = PARSE_NESTED_PARENS.parse_nested_parens(paren_string);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `parse_nested_parens` method with different input `paren_string` containing nested parentheses with varying levels of nesting. The expected results are provided in the test cases, and we are asserting that the actual results match the expected results using JUnit's `assertEquals` method.

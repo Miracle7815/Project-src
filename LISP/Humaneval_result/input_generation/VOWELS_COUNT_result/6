@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestVowelsCount {
+
+    @Test
+    public void testVowelsCount1() {
+        String str = "aeiouy";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testVowelsCount2() {
+        String str = "AEIOUY";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+
+    @Test
+    public void testVowelsCount3() {
+        String str = "aEiOuY";
+        int result = VOWELS_COUNT.vowels_count(str);
+        assertEquals(6, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `vowels_count` method with different valid inputs that contain only vowels (a, e, i, o, u, A, E, I, O, U) and end with 'y' or 'Y'. The expected result for each test case is the total count of vowels in the input string.

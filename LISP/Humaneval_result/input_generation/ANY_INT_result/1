@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `any_int` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ANY_INTTest {
+
+    @Test
+    public void testAnyInt_ValidInput1() {
+        boolean result = ANY_INT.any_int(1, 2, 3);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testAnyInt_ValidInput2() {
+        boolean result = ANY_INT.any_int(-1, -2, -3);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testAnyInt_InvalidInput() {
+        boolean result = ANY_INT.any_int(1.5, 2.5, 3.5);
+        assertFalse(result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios with valid integer inputs where the condition should return `true`, and also an invalid input scenario where the condition should return `false`.

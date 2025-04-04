@@ -1,0 +1,21 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the object and the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_GET_ODD_COLLATZ {
+    
+    @Test
+    public void testGetOddCollatz() {
+        int n = 0;
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(0);
+        
+        ArrayList<Integer> result = GET_ODD_COLLATZ.get_odd_collatz(n);
+        
+        assertEquals(expected, result);
+    }
+}
+```

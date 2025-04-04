@@ -1,0 +1,20 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create an empty array as the input for the `median` method.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEDIAN {
+    
+    @Test
+    public void testEmptyArray() {
+        int[] emptyArray = new int[0];
+        double result = MEDIAN.median(emptyArray);
+        assertEquals(0.0, result, 0.0);
+    }
+}
+```
+
+In this test case, we create an empty array and pass it to the `median` method. The expected result for an empty array is 0.0.

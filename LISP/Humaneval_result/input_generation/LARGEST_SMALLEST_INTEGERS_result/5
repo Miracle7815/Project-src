@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create instances of the `lst` array containing a mix of positive, negative, and zero integers.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestLARGEST_SMALLEST_INTEGERS {
+
+    @Test
+    public void testLargestSmallestIntegers_1() {
+        int[] lst = {3, -5, 2, 0, -8, 7};
+        int[] expected = {3, -8};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+
+    @Test
+    public void testLargestSmallestIntegers_2() {
+        int[] lst = {10, 20, 30, 40, 50};
+        int[] expected = {0, 10};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+
+    @Test
+    public void testLargestSmallestIntegers_3() {
+        int[] lst = {-2, -4, -6, -8, -10};
+        int[] expected = {-2, 0};
+        assertArrayEquals(expected, LARGEST_SMALLEST_INTEGERS.largest_smallest_integers(lst));
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create three test cases with different input arrays to cover various scenarios.
+- Each test case asserts that the output of the `largest_smallest_integers` method matches the expected output.

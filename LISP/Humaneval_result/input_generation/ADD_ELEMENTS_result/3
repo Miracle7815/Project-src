@@ -1,0 +1,36 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class Test_ADD_ELEMENTS {
+    
+    @Test
+    public void testAddElements_case1() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(10);
+        arr.add(5);
+        arr.add(100);
+        int k = 3;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(15, result);
+    }
+    
+    @Test
+    public void testAddElements_case2() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(25);
+        arr.add(50);
+        arr.add(3);
+        int k = 2;
+        
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        
+        assertEquals(75, result);
+    }
+}
+```
+
+These test cases cover scenarios where the elements in the `arr` list have lengths less than or equal to 2, and `k` is set to different values.

@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write a JUnit test case as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGIT_SUM {
+    
+    @Test
+    public void testDigitSum_NullString() {
+        String s = null;
+        int result = DIGIT_SUM.digit_sum(s);
+        assertEquals(0, result);
+    }
+}
+```
+
+This test case covers the scenario where the input string `s` is null.

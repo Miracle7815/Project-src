@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class PLUCKTest {
+
+    @Test
+    public void testPluck_WithEvenAndOddNumbers() {
+        int[] arr = {3, 6, 8, 1, 5, 4};
+        int[] expected = {4, 5};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+
+    @Test
+    public void testPluck_WithOnlyOddNumbers() {
+        int[] arr = {3, 7, 11, 5, 9};
+        int[] expected = {};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+
+    @Test
+    public void testPluck_WithOnlyEvenNumbers() {
+        int[] arr = {2, 4, 6, 8, 10};
+        int[] expected = {2, 0};
+        assertArrayEquals(expected, PLUCK.pluck(arr));
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create test cases to cover scenarios where the input array `arr` contains a mix of odd and even numbers, only odd numbers, and only even numbers.
+- We use `assertArrayEquals` to compare the expected output with the actual output of the `pluck` method.

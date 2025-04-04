@@ -1,0 +1,38 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_X_OR_Y {
+
+    @Test
+    public void testXOrY_PrimeNumber() {
+        int n = 7; // Prime number greater than 1
+        int x = 10; // Any integer
+        int y = 20; // Any integer
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(y, result);
+    }
+
+    @Test
+    public void testXOrY_PrimeNumber2() {
+        int n = 13; // Prime number greater than 1
+        int x = 5; // Any integer
+        int y = 15; // Any integer
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(y, result);
+    }
+
+    @Test
+    public void testXOrY_NonPrimeNumber() {
+        int n = 6; // Non-prime number
+        int x = 3; // Any integer
+        int y = 9; // Any integer
+        int result = X_OR_Y.x_or_y(n, x, y);
+        assertEquals(x, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `x_or_y` method with different scenarios - a prime number, a different prime number, and a non-prime number as input `n`. We are also providing different values for `x` and `y` to cover various cases.

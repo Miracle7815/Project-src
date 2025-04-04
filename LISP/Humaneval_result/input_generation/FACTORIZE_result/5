@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `factorize` method:
+
+```java
+import static org.junit.Assert.assertEquals;
+import java.util.List;
+import org.junit.Test;
+
+public class TestFACTORIZE {
+    
+    @Test
+    public void testFactorize_1() {
+        int n = 10;
+        List<Integer> result = FACTORIZE.factorize(n);
+        assertEquals(result, List.of(2, 5));
+    }
+    
+    @Test
+    public void testFactorize_2() {
+        int n = 21;
+        List<Integer> result = FACTORIZE.factorize(n);
+        assertEquals(result, List.of(3, 7));
+    }
+    
+    @Test
+    public void testFactorize_3() {
+        int n = 36;
+        List<Integer> result = FACTORIZE.factorize(n);
+        assertEquals(result, List.of(2, 2, 3, 3));
+    }
+}
+```
+
+In the above code snippet, we have imported the necessary classes and written test cases for the `factorize` method. Each test case provides a different input value for `n` and asserts the expected output based on the input specification.

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class TestSOLUTION {
+    
+    @Test
+    public void testSolution_WithNegativeNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(-3);
+        lst.add(5);
+        lst.add(-2);
+        lst.add(7);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(2, result);
+    }
+    
+    @Test
+    public void testSolution_WithAllNegativeNumbers() {
+        ArrayList<Integer> lst = new ArrayList<>();
+        lst.add(-1);
+        lst.add(-3);
+        lst.add(-5);
+        
+        int result = SOLUTION.solution(lst);
+        
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `solution` method of the `SOLUTION` class with an `ArrayList` containing negative numbers as per the input specification. The first test case includes a mix of negative and positive numbers, while the second test case includes only negative numbers.

@@ -1,0 +1,23 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is an example of how to write test cases for the `is_happy` method:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class Test_IS_HAPPY {
+
+    @Test
+    public void testIsHappy_False() {
+        assertFalse(IS_HAPPY.is_happy("ab"));
+    }
+
+    @Test
+    public void testIsHappy_True() {
+        assertTrue(IS_HAPPY.is_happy("abc"));
+    }
+}
+```
+
+In the above code snippet, we import the necessary JUnit classes and then write two test cases. The first test case checks for a string with a length less than 3 characters, which should return `false` according to the input specification. The second test case checks for a string with a length of 3 characters, which should return `true` if the characters are all different.
+
+You can add more test cases based on different scenarios to ensure the correctness of the `is_happy` method.

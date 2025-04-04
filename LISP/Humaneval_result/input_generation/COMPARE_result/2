@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class COMPARETest {
+
+    @Test
+    public void testCompare_WithEmptyGameArray() {
+        int[] game = new int[0];
+        int[] guess = {1, 2, 3, 4};
+        int[] expected = new int[0];
+        int[] result = COMPARE.compare(game, guess);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testCompare_WithNonEmptyGameArray() {
+        int[] game = {5, 8, 10};
+        int[] guess = {2, 5, 7};
+        int[] expected = {3, 3, 3};
+        int[] result = COMPARE.compare(game, guess);
+        assertArrayEquals(expected, result);
+    }
+}
+```
+
+In the above test cases, we have covered scenarios for an empty `game` array and a non-empty `game` array with different `guess` arrays. The `assertArrayEquals` method is used to compare the expected and actual results of the `compare` method.

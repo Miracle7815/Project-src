@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_INTERSECTION {
+    
+    @Test
+    public void testIntersection_1() {
+        int[] interval1 = {};
+        int[] interval2 = {3, 7};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+    
+    @Test
+    public void testIntersection_2() {
+        int[] interval1 = {};
+        int[] interval2 = {5, 10};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("YES", result);
+    }
+}
+```
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases to test the `intersection` method of the `INTERSECTION` class.
+- In the first test case, we pass an empty array as `interval1` and an interval array `{3, 7}` as `interval2`. The expected result is "NO".
+- In the second test case, we pass an empty array as `interval1` and an interval array `{5, 10}` as `interval2`. The expected result is "YES".

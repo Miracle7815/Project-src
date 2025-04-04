@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class Test_ADD_ELEMENTS {
+    
+    @Test
+    public void testAddElements_emptyArrayList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int k = 5;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testAddElements_nonEmptyArrayList() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(123);
+        arr.add(45);
+        arr.add(6);
+        int k = 3;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(174, result);
+    }
+    
+    @Test
+    public void testAddElements_negativeNumbers() {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(-10);
+        arr.add(25);
+        arr.add(-5);
+        int k = 3;
+        int result = ADD_ELEMENTS.add_elements(arr, k);
+        assertEquals(10, result);
+    }
+}

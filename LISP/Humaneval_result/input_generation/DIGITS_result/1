@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_DIGITS {
+    
+    @Test
+    public void testDigits_WithMultipleOddDigits() {
+        int n = 13579;
+        int result = DIGITS.digits(n);
+        assertEquals(945, result);
+    }
+    
+    @Test
+    public void testDigits_WithNoOddDigits() {
+        int n = 2468;
+        int result = DIGITS.digits(n);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testDigits_WithSingleOddDigit() {
+        int n = 123456;
+        int result = DIGITS.digits(n);
+        assertEquals(3, result);
+    }
+}
+```
+
+In the above test cases:
+1. `testDigits_WithMultipleOddDigits` tests the scenario where the input `n` has multiple odd digits.
+2. `testDigits_WithNoOddDigits` tests the scenario where the input `n` has no odd digits.
+3. `testDigits_WithSingleOddDigit` tests the scenario where the input `n` has only one odd digit.

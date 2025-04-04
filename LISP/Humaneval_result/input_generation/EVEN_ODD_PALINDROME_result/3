@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. We need to create test cases for the `even_odd_palindrome` method in the `EVEN_ODD_PALINDROME` class. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class EVEN_ODD_PALINDROME_Test {
+
+    @Test
+    public void testEvenOddPalindrome_1() {
+        int n = 10;
+        ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(4, 5));
+        ArrayList<Integer> result = EVEN_ODD_PALINDROME.even_odd_palindrome(n);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testEvenOddPalindrome_2() {
+        int n = 15;
+        ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(7, 8));
+        ArrayList<Integer> result = EVEN_ODD_PALINDROME.even_odd_palindrome(n);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testEvenOddPalindrome_3() {
+        int n = 5;
+        ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(1, 2));
+        ArrayList<Integer> result = EVEN_ODD_PALINDROME.even_odd_palindrome(n);
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the above code, we have created three test cases to test the `even_odd_palindrome` method with different input values. Each test case verifies if the method returns the expected result for the given input.

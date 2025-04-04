@@ -1,0 +1,22 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import java.util.ArrayList;
+
+public class MAKE_A_PILE_Test {
+    
+    @Test
+    public void testMakeAPileWithOneElement() {
+        int n = 5;
+        ArrayList<Integer> expectedPile = new ArrayList<>();
+        expectedPile.add(5); // n + 2 * 0
+        
+        ArrayList<Integer> actualPile = MAKE_A_PILE.make_a_pile(n);
+        
+        assertEquals(expectedPile, actualPile);
+        assertEquals(1, actualPile.size());
+    }
+}
+```
+
+In this test case, we are testing the `make_a_pile` method with a positive integer `n` equal to 5. The expected result is an ArrayList with one element containing the value of `n + 2 * 0`.

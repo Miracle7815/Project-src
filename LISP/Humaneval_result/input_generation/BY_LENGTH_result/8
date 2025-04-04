@@ -1,0 +1,50 @@
+Based on the provided API method and input specification, we need to create test cases for the `by_length` method in the `BY_LENGTH` class. The method takes an ArrayList of integers and returns an ArrayList of strings based on the mapping defined in the `digit_map`.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import java.util.ArrayList;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_BY_LENGTH {
+    
+    @Test
+    public void testByLength_1() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(3);
+        input.add(1);
+        input.add(5);
+        input.add(2);
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Five");
+        expected.add("Three");
+        expected.add("Two");
+        expected.add("One");
+        
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void testByLength_2() {
+        ArrayList<Integer> input = new ArrayList<>();
+        input.add(9);
+        input.add(4);
+        input.add(7);
+        
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Nine");
+        expected.add("Seven");
+        expected.add("Four");
+        
+        ArrayList<String> result = BY_LENGTH.by_length(input);
+        
+        assertEquals(expected, result);
+    }
+}
+```
+
+In the test cases above, we are testing the `by_length` method with different input scenarios to ensure that the method correctly maps the integers to their corresponding strings and returns the expected output.

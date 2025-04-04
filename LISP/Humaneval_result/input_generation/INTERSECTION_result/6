@@ -1,0 +1,29 @@
+Based on the provided API method and input specification, we can write test cases to cover the scenarios where the intersection of `interval1` and `interval2` is empty. We will need to create instances of `interval1` and `interval2` with valid values where the intersection is empty.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_INTERSECTION {
+    
+    @Test
+    public void testEmptyIntersection1() {
+        int[] interval1 = {1, 5};
+        int[] interval2 = {7, 10};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+    
+    @Test
+    public void testEmptyIntersection2() {
+        int[] interval1 = {0, 3};
+        int[] interval2 = {5, 8};
+        String result = INTERSECTION.intersection(interval1, interval2);
+        assertEquals("NO", result);
+    }
+}
+```
+
+These test cases cover the scenarios where the intersection of `interval1` and `interval2` is empty, as specified in the input specification.

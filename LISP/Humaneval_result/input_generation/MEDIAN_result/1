@@ -1,0 +1,18 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MEDIAN {
+
+    @Test
+    public void testMedian_NullList() {
+        int[] list = null;
+        double result = MEDIAN.median(list);
+        assertEquals(Double.NaN, result, 0.001);
+    }
+}
+```
+
+In this test case, we are testing the `median` method with a `null` list as input. The expected result is `Double.NaN` as the method should handle a `null` list gracefully.

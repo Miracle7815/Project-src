@@ -1,0 +1,58 @@
+Based on the method signature and body, the instances of `accurate` and `approximate` should be generated to test the API method, which represents whether two double values are equal while ignoring missing fraction digits. To achieve high code coverage, diverse instances should be generated to reach different branches in the method body. Therefore, we can partition the following equivalence classes for `accurate` and `approximate`:
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: any valid double value where `Math.abs(accurate - approximate) >= 1`.  
+  This class tests the case where the delta between the two values is greater than or equal to 1, causing the method to skip the fraction digit logic and directly compare the double bits.
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: any valid double value where `Math.abs(accurate - approximate) < 1` and the fraction digit logic is not triggered (e.g., `p` is out of bounds for `POW10`).  
+  This class tests the case where the delta is less than 1, but the fraction digit logic is not applicable due to out-of-bounds conditions.
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: any valid double value where `Math.abs(accurate - approximate) < 1`, `p` is within bounds for `POW10`, and `Math.abs(approximate - diffInFractions) > Math.ulp(diffInFractions)`.  
+  This class tests the case where the fraction digit logic is triggered, but the difference in fractions exceeds the allowed tolerance.
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: any valid double value where `Math.abs(accurate - approximate) < 1`, `p` is within bounds for `POW10`, `Math.abs(approximate - diffInFractions) <= Math.ulp(diffInFractions)`, and `Math.abs(approximate - accurate) <= 0.5` after scaling.  
+  This class tests the case where the fraction digit logic is triggered, and the values are considered equal after scaling and rounding.
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: any valid double value where `Math.abs(accurate - approximate) < 1`, `p` is within bounds for `POW10`, `Math.abs(approximate - diffInFractions) <= Math.ulp(diffInFractions)`, and `Math.abs(approximate - accurate) > 0.5` after scaling.  
+  This class tests the case where the fraction digit logic is triggered, but the values are not considered equal after scaling and rounding.
+
+- **class**:
+  1. `accurate`: `Double.NaN`;  
+  2. `approximate`: any valid double value.  
+  This class tests the case where `accurate` is `NaN`, which should always return `false` unless `approximate` is also `NaN`.
+
+- **class**:
+  1. `accurate`: any valid double value;  
+  2. `approximate`: `Double.NaN`.  
+  This class tests the case where `approximate` is `NaN`, which should always return `false` unless `accurate` is also `NaN`.
+
+- **class**:
+  1. `accurate`: `Double.POSITIVE_INFINITY`;  
+  2. `approximate`: `Double.POSITIVE_INFINITY`.  
+  This class tests the case where both values are positive infinity, which should return `true`.
+
+- **class**:
+  1. `accurate`: `Double.NEGATIVE_INFINITY`;  
+  2. `approximate`: `Double.NEGATIVE_INFINITY`.  
+  This class tests the case where both values are negative infinity, which should return `true`.
+
+- **class**:
+  1. `accurate`: `Double.POSITIVE_INFINITY`;  
+  2. `approximate`: `Double.NEGATIVE_INFINITY`.  
+  This class tests the case where one value is positive infinity and the other is negative infinity, which should return `false`.
+
+- **class**:
+  1. `accurate`: `Double.NEGATIVE_INFINITY`;  
+  2. `approximate`: `Double.POSITIVE_INFINITY`.  
+  This class tests the case where one value is negative infinity and the other is positive infinity, which should return `false`.
+
+These equivalence classes ensure comprehensive coverage of the method's logic, including edge cases and special double values like `NaN` and infinity.

@@ -1,0 +1,33 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_CHANGE_BASE {
+
+    @Test
+    public void testChangeBase_1() {
+        int x = 10;
+        int base = 2;
+        String result = CHANGE_BASE.change_base(x, base);
+        assertEquals("1010", result);
+    }
+
+    @Test
+    public void testChangeBase_2() {
+        int x = 15;
+        int base = 16;
+        String result = CHANGE_BASE.change_base(x, base);
+        assertEquals("F", result);
+    }
+
+    @Test
+    public void testChangeBase_3() {
+        int x = 255;
+        int base = 8;
+        String result = CHANGE_BASE.change_base(x, base);
+        assertEquals("377", result);
+    }
+}
+```

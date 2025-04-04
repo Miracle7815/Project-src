@@ -1,0 +1,32 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class ENCODETest {
+
+    @Test
+    public void testEncode_1() {
+        String message = "hello";
+        String result = ENCODE.encode(message);
+        assertEquals("JGNNQ", result);
+    }
+
+    @Test
+    public void testEncode_2() {
+        String message = "world";
+        String result = ENCODE.encode(message);
+        assertEquals("YQTNF", result);
+    }
+
+    @Test
+    public void testEncode_3() {
+        String message = "testing";
+        String result = ENCODE.encode(message);
+        assertEquals("VGVKPI", result);
+    }
+}
+```
+
+In the above test cases, we are testing the `encode` method of the `ENCODE` class with different input messages containing only lowercase letters. The expected output after encoding the messages is compared with the actual output using the `assertEquals` method.

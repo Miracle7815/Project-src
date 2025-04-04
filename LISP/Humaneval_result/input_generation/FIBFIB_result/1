@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases for the `fibfib` method with negative values of `n`. 
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIBFIB {
+    
+    @Test
+    public void testNegativeValue() {
+        int result = FIBFIB.fibfib(-5);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testZeroValue() {
+        int result = FIBFIB.fibfib(0);
+        assertEquals(0, result);
+    }
+    
+    @Test
+    public void testNegativeOneValue() {
+        int result = FIBFIB.fibfib(-1);
+        assertEquals(0, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `fibfib` method with negative values of `n` as per the input specification.

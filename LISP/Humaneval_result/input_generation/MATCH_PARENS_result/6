@@ -1,0 +1,31 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. 
+
+Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MATCH_PARENS {
+    
+    @Test
+    public void testMatchParens_1() {
+        String[] lst = {"(", ")"};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("No", result);
+    }
+    
+    @Test
+    public void testMatchParens_2() {
+        String[] lst = {")", "("};
+        String result = MATCH_PARENS.match_parens(lst);
+        assertEquals("Yes", result);
+    }
+}
+``` 
+
+In the above code:
+- We import the necessary JUnit classes for testing.
+- We create two test cases to cover the scenarios mentioned in the input specification.
+- In the first test case, we provide an unbalanced string with more ")" than "(", and we expect the result to be "No".
+- In the second test case, we provide a different unbalanced string, and we expect the result to be "Yes".

@@ -1,0 +1,35 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format as follows:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Test_MAX_FILL {
+
+    @Test
+    public void test_max_fill_1() {
+        int[][] grid = {{3, 4, 2}, {1, 5, 3}};
+        int bucket_capacity = 3;
+        int result = MAX_FILL.max_fill(grid, bucket_capacity);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void test_max_fill_2() {
+        int[][] grid = {{2, 2, 2}, {3, 3, 3}};
+        int bucket_capacity = 2;
+        int result = MAX_FILL.max_fill(grid, bucket_capacity);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void test_max_fill_3() {
+        int[][] grid = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        int bucket_capacity = 1;
+        int result = MAX_FILL.max_fill(grid, bucket_capacity);
+        assertEquals(9, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `max_fill` method with different input scenarios to ensure that it calculates the maximum fill correctly based on the grid and bucket capacity provided.

@@ -1,0 +1,34 @@
+Based on the provided API method and input specification, we can write test cases to cover the different branches of the `split_words` method. We need to create test cases for scenarios where the input `txt` contains a space, a comma, and when it consists of lowercase letters with odd indices.
+
+Here are the test cases in JUnit format:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class Test_SPLIT_WORDS {
+
+    @Test
+    public void testSplitWordsWithSpace() {
+        String txt = "hello world";
+        String[] expected = {"hello", "world"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+
+    @Test
+    public void testSplitWordsWithComma() {
+        String txt = "apple,banana,orange";
+        String[] expected = {"apple", "banana", "orange"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+
+    @Test
+    public void testSplitWordsWithLowercaseOddIndices() {
+        String txt = "abcdefg";
+        String[] expected = {"2"};
+        assertArrayEquals(expected, SPLIT_WORDS.split_words(txt));
+    }
+}
+```
+
+These test cases cover the scenarios where the input `txt` contains a space, a comma, and consists of lowercase letters with odd indices.

@@ -1,0 +1,27 @@
+Based on the provided API method and input specification, we can write test cases using JUnit. Here is the code to instantiate the objects and the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class COUNT_DISTINCT_CHARACTERS_Test {
+
+    @Test
+    public void testCountDistinctCharacters_1() {
+        String inputString = "Hello123!";
+        int expectedResult = 7; // 'h', 'e', 'l', 'o', '1', '2', '3'
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(inputString);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testCountDistinctCharacters_2() {
+        String inputString = "Testing@123";
+        int expectedResult = 9; // 't', 'e', 's', 'i', 'n', 'g', '@', '1', '2', '3'
+        int result = COUNT_DISTINCT_CHARACTERS.count_distinct_characters(inputString);
+        assertEquals(expectedResult, result);
+    }
+}
+``` 
+
+These test cases cover scenarios where the input string contains special characters, numbers, and alphabets.

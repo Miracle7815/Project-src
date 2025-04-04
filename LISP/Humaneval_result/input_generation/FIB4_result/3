@@ -1,0 +1,37 @@
+Based on the provided API method and input specification, we can write test cases in JUnit format to test the `fib4` method. We need to create test cases where the input `n` is greater than 4.
+
+Here is the JUnit test code with the required import statements:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestFIB4 {
+    
+    @Test
+    public void testFib4_1() {
+        int n = 5;
+        int expectedResult = 2;
+        int result = FIB4.fib4(n);
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testFib4_2() {
+        int n = 8;
+        int expectedResult = 6;
+        int result = FIB4.fib4(n);
+        assertEquals(expectedResult, result);
+    }
+    
+    @Test
+    public void testFib4_3() {
+        int n = 10;
+        int expectedResult = 14;
+        int result = FIB4.fib4(n);
+        assertEquals(expectedResult, result);
+    }
+}
+```
+
+In the above test cases, we are testing the `fib4` method with different values of `n` greater than 4 and asserting the expected results.
